@@ -5,7 +5,7 @@
 
   <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg" alt="PyPI version"></a>
   <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="https://opticparse-python-sg.onrender.com/"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Status"></a>
+  <a href="https://opticparse-api.onrender.com/"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Status"></a>
 </div>
 
 ## What is OpticParse?
@@ -21,7 +21,7 @@ This repository contains all the open-source developer tools, extensions, and in
 
 ---
 
-## 💻 Quick Start (Python SDK)
+## ⚡ Quick Start (Python SDK)
 
 To get started, you will need a free API key. [Get your API Key here](https://opticparse-api.onrender.com/).
 
@@ -47,7 +47,7 @@ threat = client.detect_phishing("https://google.com")
 print(f"Threat Level: {threat.verdict} (Score: {threat.score})")
 ```
 
-## 🤖 Model Context Protocol (MCP)
+## 🔌 Model Context Protocol (MCP)
 
 Allow your AI coding assistants (like Cursor or Claude) to browse the web autonomously. 
 Add this to your MCP configuration file:
@@ -71,5 +71,6 @@ Add this to your MCP configuration file:
 ## 🤝 Contributing
 We welcome community contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting pull requests, requesting features, and setting up the local development environment.
 
-## 📝 License
+## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+```
