@@ -1,34 +1,32 @@
 # Contributing to OpticParse
 
-First off, thank you for considering contributing to OpticParse! It's people like you that make OpticParse such a great tool.
+We welcome community contributions! This guide will help you get started with contributing to the OpticParse open-core project.
 
 ## How to Contribute
 
-### 1. Bug Reports and Feature Requests
-If you spot a bug or have a feature request, please open an issue in the repository. Provide as much context as possible (code snippets, logs, browser versions) so we can debug effectively.
+1. **Reporting Bugs:** Create a GitHub issue describing the bug, steps to reproduce it, and the expected behavior.
+2. **Feature Requests:** Open an issue to discuss new feature proposals before writing code.
+3. **Pull Requests:** 
+   - Fork the repository and create your branch from `main`.
+   - Ensure all code conforms to clean styling and passing tests.
+   - Submit your pull request for review.
 
-### 2. Submitting Pull Requests
-1. Fork the repository and create your branch from `main`.
-2. If you've added code that should be tested, add tests.
-3. Ensure your code passes all linting/build steps.
-4. Open a Pull Request!
+## Development Setup (Python SDK)
 
-### 3. Developer Extensions
-If you are modifying the Chrome Extensions (`opticparse-extension` or `phishvision-extension`), you can load them locally into Chrome:
-1. Go to `chrome://extensions/`
-2. Enable **Developer mode**.
-3. Click **Load unpacked** and select the extension directory.
+To set up the `opticparse-py` client SDK locally:
 
-### 4. SDK Development (`opticparse-py`)
-For local SDK development:
-```bash
-cd opticparse-py
-pip install -e .
-```
-This installs the SDK in editable mode so changes apply instantly.
-
-### 5. Documentation (`docs/`)
-Feel free to submit PRs for fixing typos or improving the clarity of the documentation. Our documentation is built using plain HTML/CSS in the `docs` folder.
+1. Clone your fork and navigate to the SDK folder:
+   ```bash
+   cd opticparse-py
+   ```
+2. Install dependencies in a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+   pip install -e .
+   ```
+3. Test your changes locally before submitting a PR.
 
 ## Code of Conduct
-Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+Please be respectful and constructive in all community interactions.

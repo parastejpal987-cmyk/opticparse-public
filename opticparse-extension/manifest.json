@@ -5,7 +5,7 @@
   "description": "Extract structured JSON from any page using Vision AI.",
   "permissions": ["activeTab", "storage"],
   "host_permissions": [
-    "https://opticparse-python-sg.onrender.com/*",
+    "https://opticparse-api.onrender.com/*",
     "http://127.0.0.1:8000/*"
   ],
   "action": {

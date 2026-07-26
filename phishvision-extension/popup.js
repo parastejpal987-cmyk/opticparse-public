@@ -36,7 +36,7 @@ document.getElementById('scanBtn').addEventListener('click', async () => {
 
       statusDiv.textContent = "Analyzing with PhishVision AI...";
       
-      const response = await fetch('https://opticparse-python-sg.onrender.com/api/phish-detect', {
+      const response = await fetch('https://opticparse-api.onrender.com/api/phish-detect', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -54,7 +54,7 @@ document.getElementById('extractBtn').addEventListener('click', async () => {
         response_schema: schema
       };
 
-      const response = await fetch('https://opticparse-python-sg.onrender.com/api/vision-scrape', {
+      const response = await fetch('https://opticparse-api.onrender.com/api/vision-scrape', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
