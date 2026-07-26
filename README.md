@@ -23,7 +23,7 @@ This repository contains all the open-source developer tools, extensions, and in
 
 ## ⚡ Quick Start (Python SDK)
 
-To get started, you will need a free API key. [Get your API Key here](https://opticparse-api.onrender.com/).
+To get started, you will need a free API key. [Get your API Key here](https://dashboard.opticparse.com/).
 
 ```bash
 pip install opticparse-py
