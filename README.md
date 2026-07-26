@@ -5,7 +5,8 @@
 
   <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg" alt="PyPI version"></a>
   <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="https://opticparse-api.onrender.com/"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Status"></a>
+  <a href="https://opticparse-api.onrender.com/health"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Status"></a>
+
 </div>
 
 ## What is OpticParse?
