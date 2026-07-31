@@ -1,0 +1,36 @@
+name: 'PhishVision Security Scanner'
+description: 'Automated LLM integration security audits using OpticParse and PhishVision.'
+author: 'Paras Tejpal'
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  target_dir:
+    description: 'The directory to scan'
+    required: false
+    default: '.'
+  output_dir:
+    description: 'Where to output the AUDIT_REPORT.md'
+    required: false
+    default: './audits'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Run OpticParse Ingestion
+      run: python ${{ github.action_path }}/audit-pipeline/opticparse_wrapper.py --target ${{ inputs.target_dir }} --output /tmp/parsed_context.json
+      shell: bash
+      
+    - name: Run PhishVision Scan
+      run: python ${{ github.action_path }}/audit-pipeline/phishvision_wrapper.py --input /tmp/parsed_context.json --mode defensive-audit
+      shell: bash
+      
+    - name: Synthesize Report
+      run: python ${{ github.action_path }}/audit-pipeline/report_synthesizer.py --input /tmp/parsed_context_audit_results.json --outdir ${{ inputs.output_dir }}
+      shell: bash
