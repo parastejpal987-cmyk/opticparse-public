@@ -50,7 +50,16 @@ print(f"Threat Level: {threat.verdict} (Score: {threat.score})")
 ## 🤖 Model Context Protocol (MCP)
 
 Allow your AI coding assistants (like Cursor or Claude) to browse the web autonomously. 
-Add this to your MCP configuration file:
+
+### Install via Smithery
+
+The easiest way to install the OpticParse MCP Server is via [Smithery](https://smithery.ai/):
+```bash
+npx @smithery/cli install @parastejpal987-cmyk/opticparse-public --client claude
+```
+
+### Manual Configuration
+Alternatively, add this to your MCP configuration file:
 
 ```json
 {

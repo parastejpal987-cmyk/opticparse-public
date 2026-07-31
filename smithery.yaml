@@ -1,0 +1,10 @@
+version: 1
+
+mcpServers:
+  opticparse:
+    command: "python"
+    args:
+      - "-m"
+      - "mcp_server"
+    env:
+      OPTICPARSE_API_KEY: ""
