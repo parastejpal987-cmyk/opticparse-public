@@ -71,5 +71,25 @@ Add this to your MCP configuration file:
 ## 🤝 Contributing
 We welcome community contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting pull requests, requesting features, and setting up the local development environment.
 
+## 🛡️ PhishVision GitHub Action
+Automatically audit your LLM integration and prompt structures on every pull request using our composite action:
+
+```yaml
+name: PhishVision Security Scan
+on: [push, pull_request]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PhishVision Audit
+        uses: parastejpal987-cmyk/opticparse-public@main
+        with:
+          target_dir: '.'
+          output_dir: './audits'
+```
+Any found vulnerabilities will be written directly to your GitHub PR Summary!
+
 ## 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
