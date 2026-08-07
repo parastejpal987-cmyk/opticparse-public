@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation — OpticParse & PhishVision</title>
+  <meta name="description" content="Developer API documentation for OpticParse (AI Scraper) and PhishVision (AI Phishing Scan).">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; display: flex; min-height: 100vh; }
+    a { color: var(--purple); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--text); }
+
+    /* LAYOUT */
+    aside { width: 280px; background: var(--bg2); border-right: 1px solid var(--border); padding: 2rem 1.5rem; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 10; }
+    main { margin-left: 280px; flex: 1; padding: 4rem 3rem; max-width: 900px; }
+
+    /* NAV LOGO */
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; margin-bottom: 2rem; }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* SIDEBAR NAV */
+    .nav-sec { margin-bottom: 2rem; }
+    .nav-sec-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 0.8rem; }
+    .nav-sec ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .nav-sec a { color: var(--muted); font-size: 0.88rem; font-weight: 500; display: block; padding: 0.25rem 0; }
+    .nav-sec a:hover, .nav-sec a.active { color: var(--text); }
+    .method-tag { font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.4rem; border-radius: 4px; margin-right: 0.4rem; font-family: 'JetBrains Mono', monospace; display: inline-block; vertical-align: middle; }
+    .method-post { background: rgba(16,185,129,0.15); color: #10b981; }
+    .method-get { background: rgba(59,130,246,0.15); color: #3b82f6; }
+    .method-delete { background: rgba(239,68,68,0.15); color: #ef4444; }
+
+    /* CONTENT */
+    h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 0.5rem; }
+    .lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 3rem; }
+    section { margin-bottom: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.8rem; }
+    p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
+
+    /* TABLES */
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+    th { text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 700; }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+    .param-name { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--text); }
+    .param-type { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--purple); }
+    .param-req { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #ef4444; }
+    .param-opt { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--muted); }
+
+    /* CODE BLOCKS */
+    pre { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; line-height: 1.6; overflow-x: auto; color: #c4c4e0; margin: 1rem 0 2rem; }
+    .cmt { color: #4b5563; }
+    .str { color: #6ee7b7; }
+    .key { color: #7dd3fc; }
+    .val { color: #fde68a; }
+
+    /* BACK TO HOME */
+    .back-home { font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <div class="nav-logo">
+      <a href="/"><span>Opticparse</span> & PhishVision</a>
+    </div>
+    
+    <nav>
+      <div class="nav-sec">
+        <div class="nav-sec-title">Getting Started</div>
+        <ul>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#errors">Error Codes</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-sec">
+        <div class="nav-sec-title">OpticParse API</div>
+        <ul>
+          <li><a href="#op-scrape"><span class="method-tag method-post">POST</span>vision-scrape</a></li>
+          <li><a href="#op-crawl"><span class="method-tag method-post">POST</span>crawl</a></li>
+          <li><a href="#op-watch"><span class="method-tag method-post">POST</span>watch</a></li>
+          <li><a href="#op-batch"><span class="method-tag method-post">POST</span>batch</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-sec">
+        <div class="nav-sec-title">PhishVision API</div>
+        <ul>
+          <li><a href="#pv-detect"><span class="method-tag method-post">POST</span>phish-detect</a></li>
+          <li><a href="#pv-batch"><span class="method-tag method-post">POST</span>phish-batch</a></li>
+          <li><a href="#pv-report"><span class="method-tag method-get">GET</span>phish-report</a></li>
+          <li><a href="#pv-monitor"><span class="method-tag method-post">POST</span>monitor</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <main>
+    <a href="/" class="back-home">← Back to Homepage</a>
+    <h1>API Reference Documentation</h1>
+    <p class="lead">Welcome to the complete developer documentation. Integrate vision-powered dynamic scraping and automated phishing forensics into your apps in minutes.</p>
+
+    <!-- AUTHENTICATION -->
+    <section id="auth">
+      <h2>Authentication</h2>
+      <p>All API requests to production endpoints require authentication using a custom header. Create your keys in the developer dashboard.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Header</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="param-name">X-API-Key</td>
+            <td class="param-type">string</td>
+            <td>Your active production API Key. Starts with the prefix <code style="font-family:'JetBrains Mono',monospace;">op_live_</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><span class="cmt"># Authenticating with cURL</span>
+curl -H <span class="str">"X-API-Key: op_live_your_actual_key_here"</span> \\
+     https://opticparse-api.onrender.com/health</pre>
+    </section>
+
+    <!-- ERROR CODES -->
+    <section id="errors">
+      <h2>Error Codes</h2>
+      <p>Our APIs return standardized HTTP status codes for errors, with JSON detail bodies explaining the root cause.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Status</th>
+            <th>Description / Cause</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="param-name">400</td>
+            <td>Bad Request</td>
+            <td>Invalid parameters, payload too large, or malformed queries.</td>
+          </tr>
+          <tr>
+            <td class="param-name">401</td>
+            <td>Unauthorized</td>
+            <td>Invalid or missing API key. Key format must check out.</td>
+          </tr>
+          <tr>
+            <td class="param-name">429</td>
+            <td>Rate Limit Exceeded</td>
+            <td>Monthly request usage quota exceeded, or too many concurrent requests.</td>
+          </tr>
+          <tr>
+            <td class="param-name">500</td>
+            <td>Internal Server Error</td>
+            <td>AI reasoning error, Playwright navigation failure, or server-side issue.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- OPTICPARSE SCRAPE -->
+    <section id="op-scrape">
+      <h2>POST /api/vision-scrape</h2>
+      <p>Analyze a web page visually using headful browser rendering and return structured data according to your query and JSON schema.</p>
+      
+      <h3>Request Body</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="param-name">target_url</td>
+            <td class="param-type">string</td>
+            <td><span class="param-req">required</span></td>
+            <td>The full HTTP/HTTPS URL of the target webpage to scrape. Resolves only public URLs.</td>
+          </tr>
+          <tr>
+            <td class="param-name">extraction_query</td>
+            <td class="param-type">string</td>
+            <td><span class="param-req">required</span></td>
+            <td>Instructions in plain English describing what data fields you want to extract.</td>
+          </tr>
+          <tr>
+            <td class="param-name">response_schema</td>
+            <td class="param-type">object</td>
+            <td><span class="param-opt">optional</span></td>
+            <td>A raw JSON schema dict defining exactly how the returned JSON object must be shaped.</td>
+          </tr>
+          <tr>
+            <td class="param-name">wait_until</td>
+            <td class="param-type">string</td>
+            <td><span class="param-opt">optional</span></td>
+            <td>Browser wait condition. Allowed: <code style="font-family:'JetBrains Mono',monospace;">load</code> (default), <code style="font-family:'JetBrains Mono',monospace;">domcontentloaded</code>, <code style="font-family:'JetBrains Mono',monospace;">networkidle</code>.</td>
+          </tr>
+          <tr>
+            <td class="param-name">timeout</td>
+            <td class="param-type">integer</td>
+            <td><span class="param-opt">optional</span></td>
+            <td>Browser navigation timeout in ms. Default 30,000 (30 seconds). Max 60,000.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre><span class="cmt"># Example Request</span>
+curl -X POST \\
+  https://opticparse-api.onrender.com/api/vision-scrape \\
+  -H <span class="str">"X-API-Key: YOUR_API_KEY"</span> \\
+  -H <span class="str">"Content-Type: application/json"</span> \\
+  -d <span class="str">'{
+    "target_url": "https://news.ycombinator.com",
+    "extraction_query": "Extract the top story title and point score"
+  }'</span></pre>
+    </section>
+
+    <!-- OPTICPARSE CRAWL -->
+    <section id="op-crawl">
+      <h2>POST /api/crawl</h2>
+      <p>Crawl multiple pages of a website by following a CSS selector (e.g. "Next" pagination buttons) and extract structured data incrementally.</p>
+      
+      <h3>Request Body</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="param-name">start_url</td>
+            <td class="param-type">string</td>
+            <td><span class="param-req">required</span></td>
+            <td>The starting URL of the crawl.</td>
+          </tr>
+          <tr>
+            <td class="param-name">extraction_query</td>
+            <td class="param-type">string</td>
+            <td><span class="param-req">required</span></td>
+            <td>The prompt detailing what structured data to collect from each page.</td>
+          </tr>
+          <tr>
+            <td class="param-name">follow_selector</td>
+            <td class="param-type">string</td>
+            <td><span class="param-req">required</span></td>
+            <td>CSS selector for the pagination button to click to advance to the next page.</td>
+          </tr>
+          <tr>
+            <td class="param-name">max_pages</td>
+            <td class="param-type">integer</td>
+            <td><span class="param-opt">optional</span></td>
+            <td>Maximum number of pages to crawl. Default 5. Max 20.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- OPTICPARSE WATCH -->
+    <section id="op-watch">
+      <h2>POST /api/watch</h2>
+      <p>Establish a periodic monitoring task for a webpage. Compares visual states over time and fires a webhook when structural differences are detected.</p>
+    </section>
+
+    <!-- OPTICPARSE BATCH -->
+    <section id="op-batch">
+      <h2>POST /api/batch</h2>
+      <p>Scrape up to 20 target URLs concurrently. Distributes tasks across browser runners to bypass standard sequential latencies.</p>
+    </section>
+
+    <!-- PHISHVISION DETECT -->
+    <section id="pv-detect">
+      <h2>POST /api/phish-detect</h2>
+      <p>Visit a target URL, render the visual state, analyze it via our multimodal brand impersonation rules, and output threat forensics.</p>
+      
+      <h4>Parameters</h4>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>url</code></td><td>string</td><td>The target webpage to analyze. Must start with http:// or https://.</td></tr>
+          <tr><td><code>dry_run</code></td><td>boolean (optional)</td><td>If <code>true</code>, bypasses AI analysis and instantly returns the raw base64 screenshot and text payload. Useful for tuning thresholds without consuming AI tokens. Default is <code>false</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <pre><span class="cmt"># Example Request</span>
+curl -X POST \\
+  https://opticparse-1opticparse-node-sg.onrender.com/api/phish-detect \\
+  -H <span class="str">"X-API-Key: YOUR_API_KEY"</span> \\
+  -H <span class="str">"Content-Type: application/json"</span> \\
+  -d <span class="str">'{ "url": "https://example.com", "dry_run": false }'</span></pre>
+      
+      <pre><span class="cmt"># Example Response</span>
+{
+  <span class="str">"verdict"</span>: <span class="str">"malicious"</span>,
+  <span class="str">"confidence_score_percentage"</span>: 98,
+  <span class="str">"impersonated_brand"</span>: <span class="str">"Microsoft"</span>,
+  <span class="str">"threat_type"</span>: <span class="str">"brand_impersonation"</span>,
+  <span class="str">"visual_anomalies_detected"</span>: [<span class="str">"Mismatched logo aspect ratio"</span>],
+  <span class="str">"hidden_payload_detected"</span>: <span class="kw">null</span>,
+  <span class="str">"javascript_threats"</span>: [],
+  <span class="str">"redirect_risk"</span>: <span class="str">"High (3 hops through bit.ly)"</span>,
+  <span class="str">"domain_age_days"</span>: 2,
+  <span class="str">"registrar"</span>: <span class="str">"Namecheap"</span>,
+  <span class="str">"cached"</span>: <span class="kw">false</span>
+}</pre>
+    </section>
+
+    <!-- PHISHVISION BATCH -->
+    <section id="pv-batch">
+      <h2>POST /api/phish-batch</h2>
+      <p>Scan a list of URLs concurrently for visual threat analysis.</p>
+    </section>
+
+    <!-- PHISHVISION REPORT -->
+    <section id="pv-report">
+      <h2>GET /api/phish-report</h2>
+      <p>Download a detailed, brand-impersonation investigation PDF report for a previously scanned URL.</p>
+    </section>
+
+    <!-- PHISHVISION MONITOR -->
+    <section id="pv-monitor">
+      <h2>POST /api/monitor</h2>
+      <p>Create a scheduled checker that periodically visits a target URL to check for malicious payloads, domain redirection anomalies, or visual phishing signs.</p>
+    </section>
+  </main>
+
+  <script>
+    // Smooth scrolling nav highlights
+    window.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const id = entry.target.getAttribute('id');
+          if (entry.intersectionRatio > 0.5) {
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`nav a[href="#${id}"]`)?.classList.add('active');
+          }
+        });
+      });
+
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+</body>
+</html>

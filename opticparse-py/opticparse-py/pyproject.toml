@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "opticparse-py"
+version = "0.1.0"
+description = "Official Python SDK for the OpticParse AI Web Scraper and PhishVision API"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "httpx>=0.24.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opticparse"]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puppeteer Alternative — OpticParse AI Web Scraper</title>
+  <meta name="description" content="Tired of maintaining brittle Puppeteer scripts? OpticParse is the best Puppeteer alternative. Extract data visually using AI without writing a single CSS selector." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    .hero { min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,.15), transparent), radial-gradient(ellipse 60% 50% at 80% 80%, rgba(6,182,212,.1), transparent); pointer-events: none; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin-bottom: 2rem; }
+
+    section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1.5rem; }
+    .content-block { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--muted); }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: .8rem; margin-bottom: 1.5rem; }
+    .feature-list li { display: flex; align-items: flex-start; gap: .6rem; font-size: 1.05rem; color: var(--muted); }
+    .feature-list li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>Opticparse</span> & PhishVision</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Start Free →</a>
+</nav>
+
+<main>
+  <div class="hero">
+    <h1>The Best Puppeteer Alternative</h1>
+    <p>Stop maintaining brittle Puppeteer scripts. Extract JSON from any website using Vision AI—without touching a single CSS selector.</p>
+    <a href="https://dashboard.opticparse.com" class="nav-cta" style="padding: 1rem 2rem; font-size: 1.1rem;">Try OpticParse Free</a>
+  </div>
+
+  <section>
+    <div class="section-label">Why replace Puppeteer?</div>
+    <h2 class="section-title">Puppeteer Scripts Always Break</h2>
+    <div class="content-block">
+      <p>If you're using Puppeteer to scrape modern websites, you know the pain: you spend hours writing `page.$eval` and traversing complex DOM trees. Then, the website deploys an update. They change a Tailwind class from `mb-4` to `mb-6`, or React hydration shuffles the `div` order.</p>
+      <p>Suddenly, your entire scraping pipeline is broken. You get `TimeoutError: waiting for selector` and have to rewrite your script from scratch.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">The OpticParse Solution</div>
+    <h2 class="section-title">Visual AI Extraction</h2>
+    <div class="content-block">
+      <p>OpticParse is the ultimate Puppeteer alternative because it ignores the DOM entirely. Here is how it works:</p>
+      <ul class="feature-list">
+        <li><strong>No Selectors:</strong> We load the URL in a headless browser and take a screenshot.</li>
+        <li><strong>AI Vision:</strong> We pass the screenshot and your plain-English prompt to Vision AI (like LLaMA Vision or Gemini).</li>
+        <li><strong>Structured JSON:</strong> The AI extracts the exact data you want, returning it as perfectly formatted JSON.</li>
+      </ul>
+      <p>Even if the website completely redesigns its HTML structure, as long as the data is visible to a human on the screen, OpticParse will extract it perfectly.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Built-in Bot Protection</div>
+    <h2 class="section-title">Bypass Cloudflare Automatically</h2>
+    <div class="content-block">
+      <p>Puppeteer gets blocked by Cloudflare and Datadome instantly unless you install heavily-modified stealth plugins that are constantly being patched.</p>
+      <p>OpticParse handles all the browser management, IP rotation, and bot-challenge bypasses for you behind a single REST API call. You just ask for the data.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com" target="_blank">Opticparse Dashboard</a>
+    <a href="/api-docs.html">API Documentation</a>
+    <a href="/about.html">About Us</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </div>
+  <p>© 2026 OpticParse</p>
+</footer>
+</body>
+</html>

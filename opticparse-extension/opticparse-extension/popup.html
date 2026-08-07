@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 350px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 16px; background-color: #121212; color: #ffffff; }
+    h2 { margin-top: 0; font-size: 16px; color: #00ffcc; display: flex; align-items: center; gap: 8px;}
+    textarea { width: 100%; height: 60px; margin-bottom: 12px; box-sizing: border-box; background: #1e1e1e; color: #fff; border: 1px solid #333; border-radius: 4px; padding: 8px; resize: vertical; }
+    label { font-size: 12px; margin-bottom: 4px; display: block; color: #aaa; }
+    button { width: 100%; padding: 10px; background-color: #00ffcc; color: #000; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    button:hover { background-color: #00cca3; }
+    button:disabled { background-color: #333; color: #666; cursor: not-allowed; }
+    #result { margin-top: 16px; padding: 8px; background: #1e1e1e; border: 1px solid #333; border-radius: 4px; font-family: monospace; white-space: pre-wrap; font-size: 11px; max-height: 200px; overflow-y: auto; display: none; }
+    #status { margin-top: 8px; font-size: 12px; color: #ffaa00; text-align: center; }
+    .settings-link { font-size: 11px; color: #888; text-decoration: underline; cursor: pointer; text-align: center; display: block; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h2>OpticParse BYOB</h2>
+  
+  <label for="query">Extraction Query (e.g., Extract all tweets)</label>
+  <textarea id="query" placeholder="What do you want to extract?"></textarea>
+  
+  <label for="schema">Response Schema (Optional JSON)</label>
+  <textarea id="schema" placeholder='{"type": "object", "properties": {"items": {"type": "array"}}}'></textarea>
+  
+  <button id="extractBtn">Extract Active Tab</button>
+  
+  <div id="status"></div>
+  <pre id="result"></pre>
+  
+  <a class="settings-link" id="settingsBtn">Open Settings (API Key)</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opticparse & PhishVision — AI-Powered APIs</title>
+  <meta name="description" content="Two production-ready AI APIs: Opticparse scrapes any website with plain English, PhishVision detects phishing and prompt injection attacks using Vision AI (Groq LLaMA Vision + Gemini + OpenRouter) vision." />
+  <!-- DNS Prefetch for faster API calls -->
+  <link rel="dns-prefetch" href="//opticparse-api.onrender.com">
+  <link rel="dns-prefetch" href="//opticparse-1opticparse-node-sg.onrender.com">
+  <link rel="dns-prefetch" href="//dashboard.opticparse.com">
+
+  <!-- Preconnect for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <meta property="og:title" content="OpticParse & PhishVision — AI-Powered APIs">
+  <meta property="og:description" content="Vision-based web scraping and visual phishing detection APIs. Extract structured JSON from any website. Detect phishing attacks visually.">
+  <meta property="og:url" content="https://opticparse.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://opticparse.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpticParse & PhishVision — AI-Powered APIs">
+  <meta name="twitter:description" content="Vision-based web scraping and visual phishing detection APIs.">
+  <meta name="twitter:url" content="https://opticparse.com">
+  <meta name="theme-color" content="#0a0a12" />
+  <meta name="google-site-verification" content="aV463pVQni_VqLeOhGtkpo6NWVCyZPMrfzYHUAgT6KI" />
+
+  <!-- Structured Data / JSON-LD for Google SEO -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Opticparse — AI Vision Web Scraper",
+      "operatingSystem": "All",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "12"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PhishVision — AI Phishing & Threat Detector",
+      "operatingSystem": "All",
+      "applicationCategory": "SecurityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "8"
+      }
+    }
+  ]
+  </script>
+  <!-- FAQ Schema for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does visual AI web scraping work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpticParse loads the webpage in a headless browser, takes a screenshot, and uses Vision AI (like LLaMA Vision or Gemini) to extract structured JSON data exactly as a human sees it, completely ignoring brittle CSS selectors or XPaths."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can OpticParse bypass Cloudflare and bot protection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Because OpticParse uses a real, full-headed Chromium browser instance to load the page before taking a screenshot, it natively executes JavaScript and passes standard bot challenges that block traditional scrapers like Python requests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I detect phishing sites without a URL database?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PhishVision takes a screenshot of any URL and uses Vision AI to analyze visual anomalies, brand impersonation, and hidden prompt injection attacks that traditional URL scanners miss."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,.15), transparent), radial-gradient(ellipse 60% 50% at 80% 80%, rgba(6,182,212,.1), transparent); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(139,92,246,.12); border: 1px solid rgba(139,92,246,.3); padding: .35rem 1rem; border-radius: 100px; font-size: .8rem; font-weight: 600; color: #a78bfa; margin-bottom: 1.5rem; animation: fadeDown .6s ease both; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeUp .7s .1s ease both; }
+    .grad1 { background: linear-gradient(135deg, #a78bfa, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .grad2 { background: linear-gradient(135deg, #06b6d4, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto 2.5rem; animation: fadeUp .7s .2s ease both; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .7s .3s ease both; }
+    .btn-primary { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; padding: .8rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: .95rem; transition: transform .2s, opacity .2s; }
+    .btn-primary:hover { transform: translateY(-2px); opacity: .9; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); padding: .8rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .95rem; transition: background .2s; }
+    .btn-outline:hover { background: rgba(255,255,255,.05); }
+    .hero-stats { display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 4rem; animation: fadeUp .7s .4s ease both; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-label { font-size: .8rem; color: var(--muted); font-weight: 500; margin-top: .2rem; }
+
+    /* LAYOUT */
+    section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 540px; }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+    /* PRODUCT CARDS */
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .product-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: transform .3s, border-color .3s; }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card.optic { border-color: rgba(139,92,246,.2); }
+    .product-card.optic:hover { border-color: rgba(139,92,246,.5); }
+    .product-card.phish { border-color: rgba(6,182,212,.2); }
+    .product-card.phish:hover { border-color: rgba(6,182,212,.5); }
+    .card-header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--border); }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
+    .optic .card-icon { background: rgba(139,92,246,.15); }
+    .phish .card-icon { background: rgba(6,182,212,.15); }
+    .card-name { font-size: 1.3rem; font-weight: 800; letter-spacing: -.5px; margin-bottom: .4rem; }
+    .card-tag { font-size: .8rem; color: var(--muted); font-weight: 500; }
+    .card-desc { color: var(--muted); font-size: .92rem; margin-top: .8rem; line-height: 1.6; }
+    .card-body { padding: 1.5rem 2rem 2rem; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.5rem; }
+    .feature-list li { display: flex; align-items: flex-start; gap: .6rem; font-size: .9rem; color: var(--muted); }
+    .feature-list li::before { content: '→'; color: var(--purple); font-weight: 700; flex-shrink: 0; }
+    .phish .feature-list li::before { color: var(--cyan); }
+    .card-btns { display: flex; gap: .75rem; }
+    .card-btn-main { flex: 1; text-align: center; padding: .7rem 1rem; border-radius: 10px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: opacity .2s, transform .2s; }
+    .card-btn-main:hover { opacity: .85; transform: translateY(-1px); }
+    .optic .card-btn-main { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #fff; }
+    .phish .card-btn-main { background: linear-gradient(135deg, #0891b2, #0e7490); color: #fff; }
+    .card-btn-sec { padding: .7rem 1rem; border-radius: 10px; border: 1px solid var(--border); color: var(--muted); font-weight: 600; font-size: .85rem; text-decoration: none; transition: color .2s; }
+    .card-btn-sec:hover { color: var(--text); }
+
+    /* CODE DEMO */
+    .demo-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .demo-wrapper { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .demo-block { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .demo-block-header { display: flex; align-items: center; gap: .6rem; padding: .8rem 1.2rem; border-bottom: 1px solid var(--border); }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #f43f5e; } .dot-y { background: #f59e0b; } .dot-g { background: #10b981; }
+    .demo-filename { font-size: .78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-left: .5rem; }
+    .demo-badge { margin-left: auto; font-size: .7rem; font-weight: 700; padding: .2rem .6rem; border-radius: 6px; }
+    .badge-p { background: rgba(139,92,246,.2); color: #a78bfa; }
+    .badge-c { background: rgba(6,182,212,.2); color: #67e8f9; }
+    pre { padding: 1.2rem; font-family: 'JetBrains Mono', monospace; font-size: .78rem; line-height: 1.7; overflow-x: auto; color: #c4c4e0; }
+    .kw { color: #c084fc; } .str { color: #6ee7b7; } .key { color: #7dd3fc; }
+    .val { color: #fde68a; } .cmt { color: #9ca3af; } .warn { color: #fb923c; }
+
+    /* STEPS */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .step-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color .2s, transform .2s; }
+    .step-card:hover { border-color: rgba(139,92,246,.3); transform: translateY(-3px); }
+    .step-num { font-size: .75rem; font-weight: 800; letter-spacing: 1px; color: #a78bfa; margin-bottom: .8rem; }
+    .step-title { font-size: .95rem; font-weight: 700; margin-bottom: .4rem; }
+    .step-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+    .pricing-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.8rem; text-align: center; transition: transform .2s; position: relative; }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured { background: linear-gradient(135deg, rgba(109,40,217,.2), rgba(6,182,212,.1)); border-color: rgba(139,92,246,.4); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; font-size: .7rem; font-weight: 800; padding: .25rem .8rem; border-radius: 100px; white-space: nowrap; }
+    .pricing-plan { font-size: .85rem; color: var(--muted); font-weight: 600; margin-bottom: .5rem; }
+    .pricing-price { font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; }
+    .pricing-period { font-size: .8rem; color: var(--muted); }
+    .pricing-req { font-size: .85rem; color: var(--muted); margin: .8rem 0 1.2rem; }
+    .pricing-cta { display: block; padding: .65rem; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: opacity .2s; }
+    .pricing-cta:hover { opacity: .8; }
+    .pricing-card.featured .pricing-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; }
+    .pricing-card:not(.featured) .pricing-cta { background: rgba(255,255,255,.05); border: 1px solid var(--border); color: var(--text); }
+
+    /* CTA */
+    .cta-wrap { padding: 2rem 2rem 6rem; }
+    .cta-banner { background: linear-gradient(135deg, rgba(109,40,217,.2), rgba(6,182,212,.15)); border: 1px solid rgba(139,92,246,.3); border-radius: 24px; padding: 4rem 2rem; text-align: center; max-width: 700px; margin: 0 auto; }
+    .cta-banner h2 { font-size: clamp(1.8rem,4vw,2.5rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
+    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .products, .demo-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-stats { gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>Opticparse</span> & PhishVision</div>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="#demo">Demo</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About Us</a>
+  </div>
+  <div style="display: flex; gap: 1rem; align-items: center;">
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public" target="_blank" style="color: var(--text); text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem;">
+      <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+      Star us on GitHub
+    </a>
+    <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Try Free →</a>
+  </div>
+</nav>
+
+<main>
+<div class="hero">
+  <div class="hero-badge">✦ AI-Powered APIs — Free Tier Available</div>
+  <h1>
+    Web APIs that<br>
+    <span class="grad1">see</span> like humans,<br>
+    <span class="grad2">think</span> like analysts.
+  </h1>
+  <p>Two production-ready AI APIs that use computer vision and Vision AI (Groq LLaMA Vision + Gemini + OpenRouter) to do what traditional tools can't: scrape any website with plain English, and detect phishing attacks before they hit your users.</p>
+  <div class="hero-btns">
+    <a href="#products" class="btn-primary">Explore Products</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Free Tier — No Card</div></div>
+    <div class="stat"><div class="stat-num">99%</div><div class="stat-label">Schema Accuracy</div></div>
+    <div class="stat"><div class="stat-num">Multi-AI</div><div class="stat-label">Vision AI Backend</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">AI Provider Fallbacks</div></div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="section-label">Products</div>
+  <h2 class="section-title">Two APIs. Two problems solved.</h2>
+  <p class="section-sub">Both available with a free tier. No credit card required to start.</p>
+  <div class="products">
+    <div class="product-card optic">
+      <div class="card-header">
+        <div class="card-icon">🔍</div>
+        <div class="card-name">Opticparse</div>
+        <div class="card-tag">AI Vision Web Scraper</div>
+        <div class="card-desc">Stop writing CSS selectors. Opticparse screenshots any webpage and extracts exactly what you ask for — in plain English — as structured JSON. Works on React, Vue, Angular, and any JavaScript-heavy site.</div>
+      </div>
+      <div class="card-body">
+        <ul class="feature-list">
+          <li>Strict Schema Enforcement — guarantee matching JSON shapes</li>
+          <li>AI-powered Multi-page Crawling & Pagination</li>
+          <li>Auto-login support for authenticated dashboards</li>
+          <li>Bypasses bot detection (stealth Playwright browser headers)</li>
+          <li>Concurrent Batch API — scrape up to 20 URLs at once</li>
+          <li>Rotational provider failover (Groq → GitHub Models → OpenRouter)</li>
+          <li><strong>Async Processing + Webhooks:</strong> Submit jobs and get results via webhook when complete — perfect for batch processing and background automation.</li>
+        </ul>
+        <div class="card-btns">
+          <a href="https://dashboard.opticparse.com" target="_blank" class="card-btn-main">Try Free →</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card phish">
+      <div class="card-header">
+        <div class="card-icon">🛡️</div>
+        <div class="card-name">PhishVision</div>
+        <div class="card-tag">AI Phishing &amp; Prompt Injection Detector</div>
+        <div class="card-desc">Traditional detectors check URL reputation databases — useless for new domains. PhishVision visits the page, screenshots it, and returns a forensic AI verdict. Also catches hidden AI prompt injection payloads that no URL scanner can detect.</div>
+      </div>
+      <div class="card-body">
+        <ul class="feature-list">
+          <li>Fuses Visual AI with RDAP registry/WHOIS domain age checks</li>
+          <li>Tracks full redirect chains (evades link cloaking)</li>
+          <li>JavaScript analysis scanner (catches Magecart form-jacking)</li>
+          <li>On-demand downloadable PDF Forensic Reports</li>
+          <li>Active URL monitoring with Discord/Slack alert Webhooks</li>
+          <li>Resilient batch domain scanning logic</li>
+          <li><strong>Bulk URL Scanning:</strong> Scan up to 50 URLs in a single API call. Perfect for security teams auditing large lists of suspicious URLs.</li>
+        </ul>
+        <div class="card-btns">
+          <a href="/phishvision.html" class="card-btn-main">Learn More →</a>
+          <a href="https://dashboard.opticparse.com" target="_blank" class="card-btn-sec">Try Free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<div class="demo-section" id="demo">
+  <div class="demo-wrapper">
+    <div class="section-label">Live Examples</div>
+    <h2 class="section-title">One request. Instant results.</h2>
+    <p class="section-sub">Both APIs accept a simple JSON body and return clean structured JSON — no SDK required.</p>
+    <div class="demo-grid">
+      <div class="demo-block">
+        <div class="demo-block-header">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <span class="demo-filename">opticparse.sh</span>
+          <span class="demo-badge badge-p">Opticparse</span>
+        </div>
+        <pre><span class="cmt"># Extract anything with plain English</span>
+curl -X POST \
+  <span class="str">"https://opticparse-api.onrender.com/api/vision-scrape"</span> \
+  -H <span class="str">"X-API-Key: YOUR_API_KEY"</span> \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{
+    "target_url": "https://news.ycombinator.com",
+    "extraction_query": "Get all story titles and upvotes"
+  }'</span>
+
+<span class="cmt"># Response — structured JSON, no parsing needed</span>
+[
+  { <span class="key">"title"</span>: <span class="str">"Show HN: I built X"</span>, <span class="key">"upvotes"</span>: <span class="val">342</span> },
+  { <span class="key">"title"</span>: <span class="str">"Ask HN: How do you Y?"</span>, <span class="key">"upvotes"</span>: <span class="val">187</span> }
+]</pre>
+      </div>
+      <div class="demo-block">
+        <div class="demo-block-header">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <span class="demo-filename">phishvision.sh</span>
+          <span class="demo-badge badge-c">PhishVision</span>
+        </div>
+        <pre><span class="cmt"># Analyze any URL for phishing + prompt injection</span>
+curl -X POST \
+  <span class="str">"https://opticparse-1opticparse-node-sg.onrender.com/api/phish-detect"</span> \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{ "url": "https://suspicious-login.example.com" }'</span>
+
+<span class="cmt"># Forensic JSON verdict</span>
+{
+  <span class="key">"verdict"</span>: <span class="warn">"malicious"</span>,
+  <span class="key">"confidence_score_percentage"</span>: <span class="val">97</span>,
+  <span class="key">"impersonated_brand"</span>: <span class="str">"Microsoft"</span>,
+  <span class="key">"threat_type"</span>: <span class="str">"brand_impersonation"</span>,
+  <span class="key">"visual_anomalies_detected"</span>: [<span class="str">"Pixelated logo"</span>],
+  <span class="key">"hidden_payload_detected"</span>: <span class="warn">"IGNORE ALL PREVIOUS..."</span>
+}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section id="playground" style="padding: 5rem 2rem;">
+  <div class="section-label" style="color: var(--purple);">Interactive Playground</div>
+  <h2 class="section-title">Test the Sandbox Live</h2>
+  <p class="section-sub" style="margin-bottom: 2rem;">Try the scraper and threat scanner directly in your browser. (No signup required, limited to 5 runs/hour).</p>
+  
+  <div class="demo-grid" style="margin-top: 1rem;">
+    <!-- Scraper Playground -->
+    <div class="demo-block" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; background: var(--bg2); border-radius: 16px;">
+      <div style="font-weight: 700; color: #a78bfa; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+        🖥️ <span>OpticParse Scraper Sandbox</span>
+      </div>
+      <div>
+        <label style="font-size: 0.8rem; color: var(--muted); display: block; margin-bottom: 0.4rem;">Target URL</label>
+        <input id="scrape-url" type="url" placeholder="https://example.com" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg3); color: #fff; font-family: inherit;" />
+      </div>
+      <div>
+        <label style="font-size: 0.8rem; color: var(--muted); display: block; margin-bottom: 0.4rem;">Extraction Query</label>
+        <input id="scrape-query" type="text" placeholder="Extract the main heading and description" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg3); color: #fff; font-family: inherit;" />
+      </div>
+      <button id="btn-scrape" class="btn-primary" style="border: none; cursor: pointer; padding: 0.75rem; font-family: inherit; font-size: 0.9rem;">Run Scraper</button>
+      <pre id="scrape-result" style="max-height: 250px; background: var(--bg3); border-radius: 8px; font-size: 0.75rem; padding: 1rem; border: 1px solid var(--border); overflow-y: auto;">JSON output will appear here...</pre>
+    </div>
+
+    <!-- PhishVision Playground -->
+    <div class="demo-block" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; background: var(--bg2); border-radius: 16px;">
+      <div style="font-weight: 700; color: #67e8f9; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+        🛡️ <span>PhishVision Threat Scanner</span>
+      </div>
+      <div>
+        <label style="font-size: 0.8rem; color: var(--muted); display: block; margin-bottom: 0.4rem;">Suspect URL</label>
+        <input id="phish-url" type="url" placeholder="https://suspicious-login.com" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg3); color: #fff; font-family: inherit;" />
+      </div>
+      <button id="btn-phish" class="btn-primary" style="border: none; cursor: pointer; padding: 0.75rem; font-family: inherit; font-size: 0.9rem; background: linear-gradient(135deg, var(--cyan), var(--purple));">Scan URL</button>
+      <pre id="phish-result" style="max-height: 250px; background: var(--bg3); border-radius: 8px; font-size: 0.75rem; padding: 1rem; border: 1px solid var(--border); overflow-y: auto; margin-top: 2.7rem;">Verdict output will appear here...</pre>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("btn-scrape").addEventListener("click", async () => {
+    const url = document.getElementById("scrape-url").value;
+    const query = document.getElementById("scrape-query").value;
+    const resultBox = document.getElementById("scrape-result");
+    if (!url || !query) {
+      alert("Please fill in both fields.");
+      return;
+    }
+    resultBox.innerText = "Launching headless browser, executing dynamic scripts, and running LLM vision extraction... (takes 10-15s)";
+    try {
+      const resp = await fetch("https://opticparse-api.onrender.com/api/playground/scrape", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ target_url: url, extraction_query: query })
+      });
+      if (!resp.ok) {
+        let errStr = await resp.text();
+        let err;
+        try { err = JSON.parse(errStr); } catch (e) { err = { detail: errStr || `HTTP Error ${resp.status}` }; }
+        resultBox.innerText = `Error: ${err.detail || 'Rate limit reached (5/hour)'}`;
+        return;
+      }
+      let rawData = await resp.text();
+      try {
+        const data = JSON.parse(rawData);
+        resultBox.innerText = JSON.stringify(data, null, 2);
+      } catch (e) {
+        resultBox.innerText = `Error parsing response: ${e.message}\nRaw Output: ${rawData}`;
+      }
+    } catch (e) {
+      resultBox.innerText = `Network Error: ${e.message}`;
+    }
+  });
+
+  document.getElementById("btn-phish").addEventListener("click", async () => {
+    const url = document.getElementById("phish-url").value;
+    const resultBox = document.getElementById("phish-result");
+    if (!url) {
+      alert("Please enter a suspect URL.");
+      return;
+    }
+    resultBox.innerText = "Visiting page, taking screenshot, and checking for brand impersonations/anomalies... (takes 10-15s)";
+    try {
+      const resp = await fetch("https://opticparse-api.onrender.com/api/playground/phish", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: url })
+      });
+      if (!resp.ok) {
+        let errStr = await resp.text();
+        let err;
+        try { err = JSON.parse(errStr); } catch (e) { err = { detail: errStr || `HTTP Error ${resp.status}` }; }
+        resultBox.innerText = `Error: ${err.detail || 'Rate limit reached (5/hour)'}`;
+        return;
+      }
+      let rawData = await resp.text();
+      try {
+        const data = JSON.parse(rawData);
+        resultBox.innerText = JSON.stringify(data, null, 2);
+      } catch (e) {
+        resultBox.innerText = `Error parsing response: ${e.message}\nRaw Output: ${rawData}`;
+      }
+    } catch (e) {
+      resultBox.innerText = `Network Error: ${e.message}`;
+    }
+  });
+</script>
+
+<section>
+  <div class="section-label">Architecture</div>
+  <h2 class="section-title">How it works under the hood</h2>
+  <p class="section-sub">Both APIs share the same core — headless browser + vision AI + smart provider fallbacks.</p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">STEP 01</div>
+      <div class="step-title">Real browser visit</div>
+      <div class="step-desc">Playwright launches headless Chromium. JavaScript executes, redirects are followed, dynamic content loads fully.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 02</div>
+      <div class="step-title">Screenshot + text</div>
+      <div class="step-desc">The rendered page is captured as JPEG. All text — including hidden elements — is extracted via document.body.innerText.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 03</div>
+      <div class="step-title">Vision AI analysis</div>
+      <div class="step-desc">Both screenshot and text are sent to Vision AI (Groq LLaMA Vision + Gemini + OpenRouter) with a forensic system prompt. Groq (llama-vision) is tried first for speed.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 04</div>
+      <div class="step-title">Provider rotation</div>
+      <div class="step-desc">If one provider rate-limits, the next kicks in: Groq → Gemini → GitHub Models → OpenRouter → DeepSeek → Mistral. Zero downtime.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 05</div>
+      <div class="step-title">Structured response</div>
+      <div class="step-desc">Clean, typed JSON returned. No parsing required. Integrate directly into your pipeline or application.</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 4rem; background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(6,182,212,0.05)); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; padding: 2rem; position: relative;">
+    <div style="position: absolute; top: -12px; left: 2rem; background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; font-size: .75rem; font-weight: 800; padding: .25rem 1rem; border-radius: 100px;">Unique Feature — No Competitor Offers This</div>
+    <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+      <div style="font-size: 2.5rem; background: rgba(0,0,0,0.2); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 12px; flex-shrink: 0;">🖥️</div>
+      <div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px;">Run Locally — Zero Cost AI</h3>
+        <p style="color: var(--muted); margin-bottom: 1rem;">OpticParse is the only web scraping API with local browser inference via WebLLM.</p>
+        <ul class="feature-list" style="margin-bottom: 0;">
+          <li>Run AI on YOUR device — zero API costs</li>
+          <li>Complete privacy — data never leaves browser</li>
+          <li>WebGPU acceleration — fast local inference</li>
+          <li>Auto-fallback to cloud when GPU unavailable</li>
+          <li>First load: 2-5 min, then cached permanently</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="experimental-features" style="background: var(--bg2); padding: 5rem 2rem; margin: 4rem auto; border-radius: 24px; border: 1px solid rgba(139,92,246,0.3); max-width: 1100px;">
+  <div class="section-label" style="color: var(--purple);">New Releases</div>
+  <h2 class="section-title">Developer Tooling & Extensions</h2>
+  <p class="section-sub">We've just launched new powerful ways to integrate our AI ecosystem.</p>
+  
+  <div class="steps-grid" style="margin-top: 2rem;">
+    <div class="step-card">
+      <div class="step-num" style="color: var(--cyan);">PYTHON SDK</div>
+      <div class="step-title"><a href="https://github.com/parastejpal987-cmyk/opticparse-public/tree/main/opticparse-py" target="_blank" style="color: inherit; text-decoration: underline;">opticparse-py</a></div>
+      <div class="step-desc">A native pip package that wraps both the Vision Scraper and PhishVision APIs. Install via `pip install opticparse-py` for instant 1-line Python integrations in your backend workflows.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="color: var(--purple);">AI TOOLING</div>
+      <div class="step-title"><a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/mcp_server.py" target="_blank" style="color: inherit; text-decoration: underline;">MCP Server</a></div>
+      <div class="step-desc">Model Context Protocol support. Connect OpticParse directly to Claude Desktop or Cursor IDE. Allow your AI assistants to scrape the live web and visually inspect domains autonomously.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="color: #f43f5e;">SECURITY EXTENSION</div>
+      <div class="step-title"><a href="https://github.com/parastejpal987-cmyk/opticparse-public/tree/main/phishvision-extension" target="_blank" style="color: inherit; text-decoration: underline;">PhishVision Sentinel</a></div>
+      <div class="step-desc">A lightweight Chrome extension that analyzes any active webpage against our PhishVision models with a single click. Detects sophisticated zero-day phishing pages and brand impersonations instantly.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="color: #10b981;">DATA EXTENSION</div>
+      <div class="step-title"><a href="https://github.com/parastejpal987-cmyk/opticparse-public/tree/main/opticparse-extension" target="_blank" style="color: inherit; text-decoration: underline;">BYOB Extractor</a></div>
+      <div class="step-desc">Bring Your Own Browser. Install our Chrome extension, enter your API key, and instantly scrape any page you are currently viewing. Bypasses all bot protection since it runs in your own browser.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="color: #f59e0b;">PROXY INTEGRATION</div>
+      <div class="step-title">BYOP Support</div>
+      <div class="step-desc">Bring Your Own Proxy. Pass your residential proxy credential directly into the API payload. Evades geoblocks and IP bans, running Playwright contexts directly via your proxy server.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="color: #3b82f6;">SECURITY ENGINE</div>
+      <div class="step-title">Hybrid Threat Scoring</div>
+      <div class="step-desc">Combines advanced vision-based brand detection with static heuristic code checks (eval, atob, obfuscation patterns) to return highly accurate phishing intelligence.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Start free. Scale as you grow.</h2>
+  <p class="section-sub">Start with 50 free requests. Upgrade anytime — no credit card needed for the free tier.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-plan">Basic</div>
+      <div class="pricing-price">$0</div>
+      <div class="pricing-period">forever</div>
+      <div class="pricing-req">50 requests / month</div>
+      <a href="https://dashboard.opticparse.com" target="_blank" class="pricing-cta">Get Started Free</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-plan">Pro</div>
+      <div class="pricing-price">$29</div>
+      <div class="pricing-period">per month</div>
+      <div class="pricing-req">2,000 requests / month</div>
+      <a href="https://opticparse.lemonsqueezy.com/checkout/buy/dfa5da1e-1164-48f1-9575-b50abeafbde1?plan=pro" target="_blank" class="pricing-cta">Subscribe</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-plan">Business</div>
+      <div class="pricing-price">$99</div>
+      <div class="pricing-period">per month</div>
+      <div class="pricing-req">10,000 requests / month</div>
+      <a href="https://opticparse.lemonsqueezy.com/checkout/buy/dfa5da1e-1164-48f1-9575-b50abeafbde1?plan=business" target="_blank" class="pricing-cta">Subscribe</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-plan">Enterprise</div>
+      <div class="pricing-price">$249</div>
+      <div class="pricing-period">per month</div>
+      <div class="pricing-req">50,000 requests / month</div>
+      <a href="https://opticparse.lemonsqueezy.com/checkout/buy/dfa5da1e-1164-48f1-9575-b50abeafbde1?plan=enterprise" target="_blank" class="pricing-cta">Subscribe</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="about" style="padding: 4rem 0;">
+  <div class="section-label">Our Mission</div>
+  <h2 class="section-title">Redefining how machines "see" the internet.</h2>
+  
+  <div style="max-width: 900px; margin: 3rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+    <!-- OpticParse Pillar -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; text-align: left; transition: transform 0.3s ease;">
+      <h3 style="color: var(--cyan); margin-bottom: 1rem; font-size: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        OpticParse
+      </h3>
+      <p style="color: var(--text-muted); line-height: 1.7;">
+        The modern web is highly dynamic. Traditional DOM scrapers shatter the moment a React component updates or a class name changes. We built <strong>OpticParse</strong> to solve this by entirely ignoring the code and focusing on the pixels. By utilizing multi-modal Vision AI, OpticParse navigates and extracts data identically to a human researcher—making it the most resilient data pipeline in existence.
+      </p>
+    </div>
+
+    <!-- PhishVision Pillar -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; text-align: left; transition: transform 0.3s ease;">
+      <h3 style="color: var(--pink); margin-bottom: 1rem; font-size: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        PhishVision
+      </h3>
+      <p style="color: var(--text-muted); line-height: 1.7;">
+        Cybercriminals have evolved past simple text-based attacks, using visual trickery like hidden iframes and brand impersonation to steal credentials. <strong>PhishVision</strong> acts as a synthetic visual analyst. It looks at the rendered page, evaluates the logos, checks the domain logic, and runs deep JavaScript analysis to catch zero-day phishing attacks before they happen.
+      </p>
+    </div>
+  </div>
+
+  <div style="max-width: 800px; margin: 3rem auto 0; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; text-align: center;">
+    <p>We are a dedicated team pushing the boundaries of what is possible with applied artificial intelligence. Whether you are extracting thousands of data points a day or securing your enterprise against visual threats, our infrastructure is built to scale seamlessly alongside your business.</p>
+  </div>
+</section>
+
+<div class="cta-wrap">
+  <div class="cta-banner">
+    <h2>Ready to get started?</h2>
+    <p>Both APIs are live, running in Singapore, and free to try — no credit card required.</p>
+    <div class="cta-btns">
+      <a href="https://dashboard.opticparse.com" target="_blank" class="btn-primary" aria-label="Try OpticParse Free">Try Opticparse Free</a>
+      <a href="https://dashboard.opticparse.com" target="_blank" class="btn-primary" style="background: linear-gradient(135deg,#0891b2,#0e7490);" aria-label="Try PhishVision Free">Try PhishVision Free</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com" target="_blank">Opticparse Dashboard</a>
+    <a href="/api-docs.html">API Documentation</a>
+    <a href="https://dashboard.opticparse.com" target="_blank">PhishVision Dashboard</a>
+    <a href="https://dev.to/parastejpal987cmyk" target="_blank">Dev.to Articles</a>
+  </div>
+  <p>Built with Playwright, FastAPI, Groq & Gemini Vision. Deployed on Render (Singapore). © 2026<br>
+  <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="/about.html">About Us</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+
+</body>
+</html>

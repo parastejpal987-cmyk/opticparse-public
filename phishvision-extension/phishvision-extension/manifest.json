@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PhishVision Sentinel",
+  "version": "1.0.0",
+  "description": "Visual Phishing Detection using AI.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://opticparse-api.onrender.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Scan with PhishVision"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

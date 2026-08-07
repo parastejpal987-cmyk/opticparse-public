@@ -1,0 +1,579 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Vision-Scrape API",
+    "description": "Extracts data from webpages using Playwright screenshotting and an AI Agent.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/vision-scrape": {
+      "post": {
+        "summary": "Vision Scrape",
+        "operationId": "vision_scrape_api_vision_scrape_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScrapeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/api/crawl": {
+      "post": {
+        "summary": "Api Crawl",
+        "operationId": "api_crawl_api_crawl_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrawlRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/api/watch": {
+      "post": {
+        "summary": "Create Watch",
+        "operationId": "create_watch_api_watch_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WatchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/api/watch/{watch_id}/diff": {
+      "get": {
+        "summary": "Get Watch Diff",
+        "operationId": "get_watch_diff_api_watch__watch_id__diff_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "watch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Watch Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/watch/{watch_id}": {
+      "delete": {
+        "summary": "Delete Watch",
+        "operationId": "delete_watch_api_watch__watch_id__delete",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "watch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Watch Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/batch": {
+      "post": {
+        "summary": "Api Batch",
+        "operationId": "api_batch_api_batch_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BatchItem": {
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "title": "Target Url"
+          },
+          "extraction_query": {
+            "type": "string",
+            "title": "Extraction Query"
+          },
+          "viewport_width": {
+            "type": "integer",
+            "title": "Viewport Width",
+            "default": 1280
+          },
+          "viewport_height": {
+            "type": "integer",
+            "title": "Viewport Height",
+            "default": 800
+          },
+          "wait_until": {
+            "type": "string",
+            "title": "Wait Until",
+            "default": "networkidle"
+          },
+          "timeout": {
+            "type": "integer",
+            "title": "Timeout",
+            "default": 30000
+          },
+          "response_schema": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Response Schema"
+          },
+          "login": {
+            "$ref": "#/components/schemas/LoginInfo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target_url",
+          "extraction_query"
+        ],
+        "title": "BatchItem"
+      },
+      "BatchRequest": {
+        "properties": {
+          "requests": {
+            "items": {
+              "$ref": "#/components/schemas/BatchItem"
+            },
+            "type": "array",
+            "title": "Requests"
+          }
+        },
+        "type": "object",
+        "required": [
+          "requests"
+        ],
+        "title": "BatchRequest"
+      },
+      "CrawlRequest": {
+        "properties": {
+          "start_url": {
+            "type": "string",
+            "title": "Start Url"
+          },
+          "extraction_query": {
+            "type": "string",
+            "title": "Extraction Query"
+          },
+          "follow_selector": {
+            "type": "string",
+            "title": "Follow Selector"
+          },
+          "max_pages": {
+            "type": "integer",
+            "title": "Max Pages",
+            "default": 5
+          },
+          "viewport_width": {
+            "type": "integer",
+            "title": "Viewport Width",
+            "default": 1280
+          },
+          "viewport_height": {
+            "type": "integer",
+            "title": "Viewport Height",
+            "default": 800
+          },
+          "wait_until": {
+            "type": "string",
+            "title": "Wait Until",
+            "default": "networkidle"
+          },
+          "timeout": {
+            "type": "integer",
+            "title": "Timeout",
+            "default": 30000
+          },
+          "response_schema": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Response Schema"
+          }
+        },
+        "type": "object",
+        "required": [
+          "start_url",
+          "extraction_query",
+          "follow_selector"
+        ],
+        "title": "CrawlRequest"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LoginInfo": {
+        "properties": {
+          "login_url": {
+            "type": "string",
+            "title": "Login Url"
+          },
+          "username_field": {
+            "type": "string",
+            "title": "Username Field"
+          },
+          "password_field": {
+            "type": "string",
+            "title": "Password Field"
+          },
+          "username": {
+            "type": "string",
+            "title": "Username"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          },
+          "submit_button": {
+            "type": "string",
+            "title": "Submit Button"
+          }
+        },
+        "type": "object",
+        "required": [
+          "login_url",
+          "username_field",
+          "password_field",
+          "username",
+          "password"
+        ],
+        "title": "LoginInfo"
+      },
+      "ScrapeRequest": {
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "title": "Target Url"
+          },
+          "extraction_query": {
+            "type": "string",
+            "title": "Extraction Query"
+          },
+          "viewport_width": {
+            "type": "integer",
+            "title": "Viewport Width",
+            "default": 1280
+          },
+          "viewport_height": {
+            "type": "integer",
+            "title": "Viewport Height",
+            "default": 800
+          },
+          "wait_until": {
+            "type": "string",
+            "title": "Wait Until",
+            "default": "networkidle"
+          },
+          "timeout": {
+            "type": "integer",
+            "title": "Timeout",
+            "default": 30000
+          },
+          "response_schema": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Response Schema"
+          },
+          "login": {
+            "$ref": "#/components/schemas/LoginInfo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target_url",
+          "extraction_query"
+        ],
+        "title": "ScrapeRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WatchRequest": {
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "title": "Target Url"
+          },
+          "extraction_query": {
+            "type": "string",
+            "title": "Extraction Query"
+          },
+          "viewport_width": {
+            "type": "integer",
+            "title": "Viewport Width",
+            "default": 1280
+          },
+          "viewport_height": {
+            "type": "integer",
+            "title": "Viewport Height",
+            "default": 800
+          },
+          "wait_until": {
+            "type": "string",
+            "title": "Wait Until",
+            "default": "networkidle"
+          },
+          "timeout": {
+            "type": "integer",
+            "title": "Timeout",
+            "default": 30000
+          },
+          "response_schema": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Response Schema"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target_url",
+          "extraction_query"
+        ],
+        "title": "WatchRequest"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  }
+}

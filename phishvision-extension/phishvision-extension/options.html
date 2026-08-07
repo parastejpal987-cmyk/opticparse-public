@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OpticParse Settings</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 20px; background-color: #121212; color: #ffffff; max-width: 400px; margin: 0 auto; }
+    h2 { color: #00ffcc; }
+    input { width: 100%; padding: 10px; box-sizing: border-box; margin-bottom: 15px; background: #1e1e1e; border: 1px solid #333; color: #fff; border-radius: 4px; }
+    button { padding: 10px 20px; background-color: #00ffcc; color: #000; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    button:hover { background-color: #00cca3; }
+    #status { margin-top: 15px; color: #ffaa00; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>OpticParse Settings</h2>
+  <p>Enter your OpticParse API key. You can generate one from the <a href="https://dashboard.opticparse.com" target="_blank" style="color: #00ffcc;">dashboard</a>.</p>
+  
+  <label for="apiKey">API Key</label>
+  <input type="text" id="apiKey" placeholder="op_live_..." />
+  
+  <button id="saveBtn">Save Settings</button>
+  
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

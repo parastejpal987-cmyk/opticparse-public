@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Opticparse & PhishVision</title>
+  <meta name="description" content="The story behind Opticparse and PhishVision, built from Punjab, India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .hero { min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,.15), transparent), radial-gradient(ellipse 60% 50% at 80% 80%, rgba(6,182,212,.1), transparent); pointer-events: none; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; }
+
+    /* LAYOUT */
+    section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1.5rem; }
+    .content-block { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--muted); }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: .8rem; margin-bottom: 1.5rem; }
+    .feature-list li { display: flex; align-items: flex-start; gap: .6rem; font-size: 1.05rem; color: var(--muted); }
+    .feature-list li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>Opticparse</span> & PhishVision</div>
+  <div class="nav-links">
+    <a href="/index.html#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/index.html#demo">Demo</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/index.html#pricing">Pricing</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Try Free →</a>
+</nav>
+
+<main>
+  <div class="hero">
+    <h1>About OpticParse & PhishVision</h1>
+  </div>
+
+  <section>
+    <div class="section-label">Our Story</div>
+    <h2 class="section-title">Built from Punjab, India</h2>
+    <div class="content-block">
+      <p>OpticParse and PhishVision were built by Paras Tejpal, a solo developer from Nurmahal, Punjab, India.</p>
+      <p>The idea came from a simple frustration: web scrapers break constantly. Every time a website updates its design, developers spend hours fixing selectors, XPaths, and CSS classes. There had to be a better way.</p>
+      <p>The answer was obvious in hindsight — stop parsing HTML and start looking at what humans actually see. If a human can read a webpage, an AI looking at a screenshot can too.</p>
+      <p>PhishVision came from the same insight applied to cybersecurity. Traditional phishing detection checks URLs against blacklists. But attackers create new domains every day. Visual detection — actually looking at what the page shows users — catches what blacklists miss.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">What We Built</div>
+    <h2 class="section-title">Production-Ready from Day One</h2>
+    <div class="content-block">
+      <ul class="feature-list">
+        <li><strong>OpticParse:</strong> Vision-based web scraping API that ignores HTML entirely. If data is visible on screen, we can extract it — regardless of DOM structure, JavaScript rendering, or bot protection.</li>
+        <li><strong>PhishVision:</strong> Visual phishing detection API that analyzes page UI for brand impersonation, urgency tactics, and hidden prompt injection attacks targeting AI agents. Faster than funded competitors.</li>
+      </ul>
+      <p style="margin-top: 2rem;"><strong>Tech stack:</strong> Python/FastAPI, Node.js/Express, Playwright, Browserless.io, Supabase, Cloudflare, 6-provider AI rotation (Groq, Gemini, GitHub Models, OpenRouter, DeepSeek, Mistral)</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Our Unique Approach</div>
+    <h2 class="section-title">Privacy-First with WebLLM</h2>
+    <div class="content-block">
+      <p>We are the only web scraping API that lets you run AI inference entirely on your own device using WebLLM.</p>
+      <p>When you enable local mode in your dashboard, the AI model downloads to your browser and runs on your GPU — no data leaves your machine, no API tokens consumed, complete privacy.</p>
+      <p>For teams that prefer cloud processing, our 6-provider rotation ensures maximum uptime with automatic failover across Groq, Gemini, GitHub Models, OpenRouter, DeepSeek, and Mistral.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="content-block">
+      <p><strong>Email:</strong> support@opticparse.com<br>
+      <strong>Website:</strong> <a href="https://opticparse.com" style="color: var(--cyan);">opticparse.com</a><br>
+      <strong>Dashboard:</strong> <a href="https://dashboard.opticparse.com" style="color: var(--cyan);">dashboard.opticparse.com</a></p>
+      <p>For enterprise inquiries, partnerships, or grant-related questions, email us directly.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com" target="_blank">Opticparse Dashboard</a>
+    <a href="/api-docs.html">API Documentation</a>
+    <a href="https://dashboard.opticparse.com" target="_blank">PhishVision Dashboard</a>
+    <a href="https://dev.to/parastejpal987cmyk" target="_blank">Dev.to Articles</a>
+  </div>
+  <p>Built with Playwright, FastAPI, Groq & Gemini Vision. Deployed on Render (Singapore). © 2026<br>
+  <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="/about.html">About Us</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+
+</body>
+</html>

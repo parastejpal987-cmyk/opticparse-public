@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VirusTotal Alternative — PhishVision Visual AI Detection</title>
+  <meta name="description" content="Looking for a VirusTotal alternative? PhishVision doesn't rely on URL blacklists. We use Vision AI to instantly detect zero-day phishing attacks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    .hero { min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,.15), transparent), radial-gradient(ellipse 60% 50% at 80% 80%, rgba(6,182,212,.1), transparent); pointer-events: none; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin-bottom: 2rem; }
+
+    section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1.5rem; }
+    .content-block { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+    .content-block p { margin-bottom: 1.5rem; color: var(--muted); }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: .8rem; margin-bottom: 1.5rem; }
+    .feature-list li { display: flex; align-items: flex-start; gap: .6rem; font-size: 1.05rem; color: var(--muted); }
+    .feature-list li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>Opticparse</span> & PhishVision</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Start Free →</a>
+</nav>
+
+<main>
+  <div class="hero">
+    <h1>The Best VirusTotal Alternative</h1>
+    <p>URL databases are always 24 hours behind the attackers. PhishVision uses Vision AI to detect zero-day phishing attacks instantly.</p>
+    <a href="https://dashboard.opticparse.com" class="nav-cta" style="padding: 1rem 2rem; font-size: 1.1rem;">Try PhishVision Free</a>
+  </div>
+
+  <section>
+    <div class="section-label">The Problem with URL Scanners</div>
+    <h2 class="section-title">Blacklists are too slow</h2>
+    <div class="content-block">
+      <p>VirusTotal and Google Safe Browsing rely heavily on URL blacklists. But modern attackers register new domains instantly using automated tools. A brand new phishing site looks perfectly safe to a URL scanner because it hasn't been reported yet.</p>
+      <p>By the time the URL is added to the blacklist 24 hours later, the damage is already done.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">The PhishVision Solution</div>
+    <h2 class="section-title">Zero-Day Visual Detection</h2>
+    <div class="content-block">
+      <p>PhishVision is a next-generation VirusTotal alternative because we look at the website exactly like a human security analyst would.</p>
+      <ul class="feature-list">
+        <li><strong>Live Browser:</strong> We launch a real headless browser and visit the suspicious URL.</li>
+        <li><strong>AI Vision Analysis:</strong> We take a screenshot and pass it to our Vision AI (LLaMA Vision / Gemini).</li>
+        <li><strong>Brand Impersonation:</strong> The AI instantly recognizes fake Microsoft or PayPal logins, even on brand new domains.</li>
+        <li><strong>Prompt Injection:</strong> We extract invisible DOM text to catch hidden prompt-injection attacks targeting AI agents.</li>
+      </ul>
+      <p>Stop relying on yesterday's blacklists. Detect tomorrow's phishing attacks today with PhishVision.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com" target="_blank">Opticparse Dashboard</a>
+    <a href="/api-docs.html">API Documentation</a>
+    <a href="/about.html">About Us</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </div>
+  <p>© 2026 OpticParse</p>
+</footer>
+</body>
+</html>

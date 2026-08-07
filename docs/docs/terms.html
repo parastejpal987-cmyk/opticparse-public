@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — OpticParse & PhishVision</title>
+  <meta name="description" content="Terms of Service for OpticParse and PhishVision API platforms." />
+  <meta name="theme-color" content="#0a0a12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; color: var(--text); }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* LEGAL CONTENT */
+    .legal-content { max-width: 800px; margin: 8rem auto 4rem; padding: 0 2rem; }
+    .legal-content h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -1px; }
+    .legal-content .last-updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 3rem; }
+    .legal-content h2 { font-size: 1.2rem; font-weight: 700; color: #fff; margin: 2.5rem 0 1rem; letter-spacing: 0.5px; }
+    .legal-content p, .legal-content ul { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; line-height: 1.7; }
+    .legal-content ul { padding-left: 1.5rem; }
+    .legal-content li { margin-bottom: 0.5rem; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" style="text-decoration: none;"><span>Opticparse</span> & PhishVision</a>
+  <div class="nav-links">
+    <a href="/#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/#demo">Demo</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#about">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" class="nav-cta">Go to Dashboard →</a>
+</nav>
+
+<div class="legal-content">
+  <h1>Terms of Service</h1>
+  <div class="last-updated">Last updated: July 10, 2026</div>
+
+  <h2>1. ACCEPTANCE</h2>
+  <p>By using OpticParse or PhishVision APIs, you agree to these terms.</p>
+
+  <h2>2. SERVICE DESCRIPTION</h2>
+  <p>OpticParse provides vision-based web scraping APIs.<br>
+  PhishVision provides visual phishing detection APIs.<br>
+  Both services are provided "as is".</p>
+
+  <h2>3. ACCEPTABLE USE</h2>
+  <p>You may NOT use our APIs to:</p>
+  <ul>
+    <li>Scrape websites you don't have permission to access</li>
+    <li>Submit malicious URLs designed to attack our infrastructure</li>
+    <li>Resell API access without written permission</li>
+    <li>Exceed your plan's monthly request limits</li>
+    <li>Use the service for illegal activities</li>
+  </ul>
+
+  <h2>4. API USAGE LIMITS</h2>
+  <ul>
+    <li>Free: Limited requests per month</li>
+    <li>Pro ($29/month): 2,000 requests/month</li>
+    <li>Business ($99/month): 10,000 requests/month</li>
+    <li>Enterprise ($249/month): 50,000 requests/month</li>
+  </ul>
+  <p>Exceeding limits will result in 429 errors until the next billing cycle.</p>
+
+  <h2>5. PAYMENT AND REFUNDS</h2>
+  <p>Payments are processed by LemonSqueezy.<br>
+  Monthly subscriptions renew automatically.<br>
+  Refunds are available within 7 days of purchase if the service did not work as described.<br>
+  No refunds after 7 days.</p>
+
+  <h2>6. LIMITATION OF LIABILITY</h2>
+  <p>We are not liable for any damages resulting from use of our APIs. Maximum liability is limited to the amount you paid in the last 30 days.</p>
+
+  <h2>7. CHANGES TO SERVICE</h2>
+  <p>We reserve the right to change pricing or features with 30 days notice to registered users.</p>
+
+  <h2>8. TERMINATION</h2>
+  <p>We reserve the right to terminate accounts that violate these terms.</p>
+
+  <h2>9. CONTACT</h2>
+  <p>For questions: support@opticparse.com<br>
+  Company: OpticParse Technologies<br>
+  Location: Punjab, India</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com" target="_blank">Opticparse Dashboard</a>
+    <a href="https://dashboard.opticparse.com" target="_blank">PhishVision Dashboard</a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse" target="_blank">GitHub (MIT)</a>
+    <a href="https://dev.to/parastejpal987cmyk" target="_blank">Dev.to Articles</a>
+  </div>
+  <p>Built with Playwright, FastAPI, Groq & Gemini Vision. Deployed on Render (Singapore). © 2026<br>
+  <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

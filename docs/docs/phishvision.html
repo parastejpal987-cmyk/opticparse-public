@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishVision — Multimodal AI Phishing & Threat Detector</title>
+  <meta name="description" content="PhishVision uses multimodal Vision AI to detect phishing attacks, brand impersonation, and JavaScript skimmers before they hit your users." />
+  
+  <!-- DNS Prefetch for faster API calls -->
+  <link rel="dns-prefetch" href="//opticparse-1opticparse-node-sg.onrender.com">
+  <link rel="dns-prefetch" href="//dashboard.opticparse.com">
+
+  <!-- Preconnect for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+
+  <meta property="og:title" content="PhishVision — Multimodal AI Threat Detector">
+  <meta property="og:description" content="Detect phishing attacks visually. Extract forensic JSON from any website.">
+  <meta property="og:url" content="https://opticparse.com/phishvision.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://opticparse.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PhishVision">
+  <meta name="theme-color" content="#0a0a12" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --cyan: #06b6d4; --cyan2: #0891b2; --purple: #8b5cf6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; color: white;}
+    .nav-logo span { background: linear-gradient(135deg, var(--cyan), var(--cyan2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--cyan), var(--cyan2)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .hero { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6,182,212,.15), transparent); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(6,182,212,.12); border: 1px solid rgba(6,182,212,.3); padding: .35rem 1rem; border-radius: 100px; font-size: .8rem; font-weight: 600; color: #67e8f9; margin-bottom: 1.5rem; animation: fadeDown .6s ease both; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeUp .7s .1s ease both; }
+    .grad2 { background: linear-gradient(135deg, #06b6d4, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto 2.5rem; animation: fadeUp .7s .2s ease both; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .7s .3s ease both; }
+    .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--cyan2)); color: #fff; padding: .8rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: .95rem; transition: transform .2s, opacity .2s; }
+    .btn-primary:hover { transform: translateY(-2px); opacity: .9; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); padding: .8rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .95rem; transition: background .2s; }
+    .btn-outline:hover { background: rgba(255,255,255,.05); }
+
+    /* LAYOUT */
+    section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 540px; }
+    
+    /* STEPS */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .step-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color .2s, transform .2s; }
+    .step-card:hover { border-color: rgba(6,182,212,.3); transform: translateY(-3px); }
+    .step-num { font-size: .85rem; font-weight: 800; letter-spacing: 1px; color: var(--cyan); margin-bottom: 1rem; }
+    .step-title { font-size: 1.1rem; font-weight: 700; margin-bottom: .6rem; }
+    .step-desc { font-size: .95rem; color: var(--muted); line-height: 1.6; }
+
+    /* CODE DEMO */
+    .demo-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 2rem;}
+    .demo-wrapper { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .demo-block { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .demo-block-header { display: flex; align-items: center; gap: .6rem; padding: .8rem 1.2rem; border-bottom: 1px solid var(--border); }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #f43f5e; } .dot-y { background: #f59e0b; } .dot-g { background: #10b981; }
+    .demo-filename { font-size: .78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-left: .5rem; }
+    pre { padding: 1.2rem; font-family: 'JetBrains Mono', monospace; font-size: .8rem; line-height: 1.7; overflow-x: auto; color: #c4c4e0; }
+    .kw { color: #c084fc; } .str { color: #6ee7b7; } .key { color: #7dd3fc; }
+    .val { color: #fde68a; }
+
+    /* FOOTER */
+    footer { padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .demo-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" style="text-decoration:none;"><span>Opticparse</span> & PhishVision</a>
+  <div class="nav-links">
+    <a href="/#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/#demo">Demo</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#about">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Get API Key →</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">✦ Powered by Multimodal AI Fallback Rotation</div>
+  <h1>
+    Stop Phishing Before It Happens.<br>
+    <span class="grad2">Zero-Day Visual Detection.</span>
+  </h1>
+  <p>Unlike traditional databases that rely on known blocklists, PhishVision actually <em>looks</em> at the website. We capture a visual snapshot and detect brand impersonations and malicious JS skimmers instantly.</p>
+  <div class="hero-btns">
+    <a href="/api-docs.html" class="btn-primary">View API Reference</a>
+    <a href="https://dashboard.opticparse.com" target="_blank" class="btn-outline">Start Free Trial</a>
+  </div>
+</div>
+
+<section id="how-it-works">
+  <div class="section-label">The Process</div>
+  <h2 class="section-title">How PhishVision works</h2>
+  <p class="section-sub">We combine headless browser automation with multimodal vision LLMs to detect the undetectable.</p>
+  
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">STEP 1</div>
+      <div class="step-title">Submit URL</div>
+      <div class="step-desc">Send the target URL to our API. Our systems validate the URL format and execute SSRF-protection checks.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 2</div>
+      <div class="step-title">Visual Capture</div>
+      <div class="step-desc">A secure headless browser visits the site, blocks tracking/media for speed, and captures a high-fidelity visual snapshot.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 3</div>
+      <div class="step-title">Forensic Analysis</div>
+      <div class="step-desc">Multimodal AI (Groq/Gemini/DeepSeek) visually inspects the page for brand impersonation, urgent messaging, and skimmers.</div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-section">
+  <div class="demo-wrapper">
+    <div class="section-label">Integration</div>
+    <h2 class="section-title">Detect threats with one cURL.</h2>
+    <div class="demo-grid">
+      
+      <!-- Request -->
+      <div class="demo-block">
+        <div class="demo-block-header">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <div class="demo-filename">Request</div>
+        </div>
+        <pre>
+curl -X POST https://opticparse-1opticparse-node-sg.onrender.com/api/phish-detect \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d '{
+    <span class="key">"url"</span>: <span class="str">"http://secure-login-paypal.com.scam-site.net"</span>
+  }'</pre>
+      </div>
+
+      <!-- Response -->
+      <div class="demo-block">
+        <div class="demo-block-header">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <div class="demo-filename">response.json</div>
+        </div>
+        <pre>
+{
+  <span class="key">"verdict"</span>: <span class="str">"phishing"</span>,
+  <span class="key">"confidence_score_percentage"</span>: <span class="val">98</span>,
+  <span class="key">"impersonated_brand"</span>: <span class="str">"PayPal"</span>,
+  <span class="key">"threat_indicators"</span>: [
+    <span class="str">"Urgent call to action requesting credentials"</span>,
+    <span class="str">"Logo mismatch with official PayPal branding"</span>,
+    <span class="str">"Suspicious form action pointing to external IP"</span>
+  ]
+}</pre>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">OpticParse Home</a>
+    <a href="/api-docs.html">Documentation</a>
+    <a href="https://dashboard.opticparse.com">Dashboard</a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse">GitHub</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </div>
+  <p>© 2026 Opticparse Inc. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
