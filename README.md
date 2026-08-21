@@ -11,6 +11,13 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
     <a href="https://opticparse.parastejpal987.workers.dev"><img src="https://img.shields.io/badge/Edge%20API-Global%20285%2B%20Colos-success" alt="Edge Network"></a>
   </p>
+
+  <p>
+    <a href="https://opticparse.parastejpal987.workers.dev"><b>🌐 Live Platform & Dashboard</b></a> •
+    <a href="https://opticparse.parastejpal987.workers.dev/api-docs.html"><b>📖 API Documentation</b></a> •
+    <a href="https://opticparse.parastejpal987.workers.dev/threat-db/"><b>🛡️ Threat Intelligence DB</b></a> •
+    <a href="TEMPLATES.md"><b>📚 150 Extraction Templates</b></a>
+  </p>
 </div>
 
 ---
