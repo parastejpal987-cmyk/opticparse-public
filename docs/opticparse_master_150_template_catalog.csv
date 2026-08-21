@@ -1,0 +1,151 @@
+Watch_ID,Template_ID,Category,Target_Feed_URL,Execution_Schedule,Last_Harvested_At,Visibility
+sys_watch_001,amazon-price-undercut-alert,🛒 E-Commerce & Retail (Price & Inventory Automation),https://fakestoreapi.com/products,0 */6 * * *,Pending Initial Cron,public
+sys_watch_002,shopify-new-product-alert,🛒 E-Commerce & Retail (Price & Inventory Automation),https://dummyjson.com/products,0 0 * * *,Pending Initial Cron,public
+sys_watch_003,out-of-stock-auto-buyer,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.ebay.com/deals,0 12 * * *,Pending Initial Cron,public
+sys_watch_004,meesho-to-amazon-arbitrage,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.target.com/c/deals,0 0 * * 0,Pending Initial Cron,public
+sys_watch_005,customer-review-sentiment,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299784494.c,*/30 * * * *,Pending Initial Cron,public
+sys_watch_006,etsy-trending-search,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.walmart.com/shop/deals,0 */6 * * *,Pending Initial Cron,public
+sys_watch_007,flipkart-flash-sale-auto-cart,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.newegg.com/todays-deals,0 0 * * *,Pending Initial Cron,public
+sys_watch_008,aliexpress-supplier-finder,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.aliexpress.com/glosearch/api/hotsearch,0 12 * * *,Pending Initial Cron,public
+sys_watch_009,map-(minimum-advertised-price)-violator-tracker,🛒 E-Commerce & Retail (Price & Inventory Automation),https://store.steampowered.com/api/featured,0 0 * * 0,Pending Initial Cron,public
+sys_watch_010,coupon-code-aggregator,🛒 E-Commerce & Retail (Price & Inventory Automation),https://api.escuelajs.co/api/v1/products,*/30 * * * *,Pending Initial Cron,public
+sys_watch_011,walmart-vs-target-local-pricing,🛒 E-Commerce & Retail (Price & Inventory Automation),https://fakestoreapi.com/products,0 */6 * * *,Pending Initial Cron,public
+sys_watch_012,sneaker-drop-monitor,🛒 E-Commerce & Retail (Price & Inventory Automation),https://dummyjson.com/products,0 0 * * *,Pending Initial Cron,public
+sys_watch_013,facebook-ad-library-spy,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.ebay.com/deals,0 12 * * *,Pending Initial Cron,public
+sys_watch_014,amazon-best-seller-rank-tracker,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.target.com/c/deals,0 0 * * 0,Pending Initial Cron,public
+sys_watch_015,product-image-downloader,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299784494.c,*/30 * * * *,Pending Initial Cron,public
+sys_watch_016,fsbo-(for-sale-by-owner)-sms-alert,🏢 Real Estate & Property Management,https://www.loopnet.com/california/san-francisco-commercial-real-estate/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_017,airbnb-pricing-spy,🏢 Real Estate & Property Management,https://www.realtor.com/realestateandhomes-search/San-Francisco_CA,0 0 * * *,Pending Initial Cron,public
+sys_watch_018,zillow-rent-estimate-aggregator,🏢 Real Estate & Property Management,https://www.zillow.com/homes/for_sale/,0 12 * * *,Pending Initial Cron,public
+sys_watch_019,foreclosure-auction-monitor,🏢 Real Estate & Property Management,https://www.redfin.com/city/17151/CA/San-Francisco,0 0 * * 0,Pending Initial Cron,public
+sys_watch_020,commercial-property-tender-alert,🏢 Real Estate & Property Management,https://www.trulia.com/CA/San_Francisco/,*/30 * * * *,Pending Initial Cron,public
+sys_watch_021,magicbricks-under-value-alert,🏢 Real Estate & Property Management,https://www.apartments.com/san-francisco-ca/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_022,property-tax-assessor-scraper,🏢 Real Estate & Property Management,https://www.rent.com/california/san-francisco-apartments,0 0 * * *,Pending Initial Cron,public
+sys_watch_023,broker-contact-extractor,🏢 Real Estate & Property Management,https://www.commercialexchange.com/,0 12 * * *,Pending Initial Cron,public
+sys_watch_024,open-house-auto-scheduler,🏢 Real Estate & Property Management,https://www.loopnet.com/california/san-francisco-commercial-real-estate/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_025,airbnb-new-competitor-alert,🏢 Real Estate & Property Management,https://www.realtor.com/realestateandhomes-search/San-Francisco_CA,*/30 * * * *,Pending Initial Cron,public
+sys_watch_026,linkedin-decision-maker-finder,💼 B2B Sales & Lead Generation,https://jobicy.com/api/v2/remote-jobs,0 */6 * * *,Pending Initial Cron,public
+sys_watch_027,justdial-yelp-local-lead-extractor,💼 B2B Sales & Lead Generation,https://remotive.com/api/remote-jobs,0 0 * * *,Pending Initial Cron,public
+sys_watch_028,google-maps-local-seo-scraper,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/news,0 12 * * *,Pending Initial Cron,public
+sys_watch_029,crunchbase-new-funding-alert,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/jobs,0 0 * * 0,Pending Initial Cron,public
+sys_watch_030,y-combinator-batch-scraper,💼 B2B Sales & Lead Generation,https://remoteok.com/api,*/30 * * * *,Pending Initial Cron,public
+sys_watch_031,trade-show-exhibitor-extractor,💼 B2B Sales & Lead Generation,https://www.crunchbase.com/discover/organization.companies,0 */6 * * *,Pending Initial Cron,public
+sys_watch_032,job-board-hiring-intent,💼 B2B Sales & Lead Generation,https://wellfound.com/jobs,0 0 * * *,Pending Initial Cron,public
+sys_watch_033,angellist-wellfound-talent-scraper,💼 B2B Sales & Lead Generation,https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss,0 12 * * *,Pending Initial Cron,public
+sys_watch_034,upwork-auto-bidder,💼 B2B Sales & Lead Generation,https://hnhiring.com/api/jobs,0 0 * * 0,Pending Initial Cron,public
+sys_watch_035,freelancer.com-project-monitor,💼 B2B Sales & Lead Generation,https://jobicy.com/api/v2/remote-jobs,*/30 * * * *,Pending Initial Cron,public
+sys_watch_036,chamber-of-commerce-scraper,💼 B2B Sales & Lead Generation,https://remotive.com/api/remote-jobs,0 */6 * * *,Pending Initial Cron,public
+sys_watch_037,apollo.io-free-tier-maximizer,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/news,0 0 * * *,Pending Initial Cron,public
+sys_watch_038,github-repo-star-gazer-lead-gen,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/jobs,0 12 * * *,Pending Initial Cron,public
+sys_watch_039,product-hunt-maker-extractor,💼 B2B Sales & Lead Generation,https://remoteok.com/api,0 0 * * 0,Pending Initial Cron,public
+sys_watch_040,glassdoor-negative-review-alert,💼 B2B Sales & Lead Generation,https://www.crunchbase.com/discover/organization.companies,*/30 * * * *,Pending Initial Cron,public
+sys_watch_041,crypto-exchange-arbitrage,📊 Finance & Crypto,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC,0 */6 * * *,Pending Initial Cron,public
+sys_watch_042,sec-edgar-filing-alert,📊 Finance & Crypto,https://api.coindesk.com/v1/bpi/currentprice.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_043,twitter-crypto-sentiment,📊 Finance & Crypto,https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 12 * * *,Pending Initial Cron,public
+sys_watch_044,earnings-call-transcript-summarizer,📊 Finance & Crypto,https://api.binance.com/api/v3/ticker/24hr,0 0 * * 0,Pending Initial Cron,public
+sys_watch_045,insider-trading-tracker,📊 Finance & Crypto,https://api.kraken.com/0/public/Ticker,*/30 * * * *,Pending Initial Cron,public
+sys_watch_046,forex-rate-monitor,📊 Finance & Crypto,https://api.coinbase.com/v2/exchange-rates,0 */6 * * *,Pending Initial Cron,public
+sys_watch_047,nft-floor-price-tracker,📊 Finance & Crypto,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC,0 0 * * *,Pending Initial Cron,public
+sys_watch_048,stock-options-unusual-volume,📊 Finance & Crypto,https://api.coindesk.com/v1/bpi/currentprice.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_049,ipo-calendar-monitor,📊 Finance & Crypto,https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 0 * * 0,Pending Initial Cron,public
+sys_watch_050,yahoo-finance-daily-movers,📊 Finance & Crypto,https://api.binance.com/api/v3/ticker/24hr,*/30 * * * *,Pending Initial Cron,public
+sys_watch_051,brand-mention-monitor-(news),"📰 Marketing, SEO & PR",https://moz.com/blog/rss,0 */6 * * *,Pending Initial Cron,public
+sys_watch_052,reddit-keyword-sniper,"📰 Marketing, SEO & PR",https://techcrunch.com/feed/,0 0 * * *,Pending Initial Cron,public
+sys_watch_053,broken-link-builder,"📰 Marketing, SEO & PR",https://feeds.feedburner.com/oreilly/radar/atom,0 12 * * *,Pending Initial Cron,public
+sys_watch_054,competitor-blog-post-alert,"📰 Marketing, SEO & PR",https://www.theverge.com/rss/index.xml,0 0 * * 0,Pending Initial Cron,public
+sys_watch_055,youtube-trending-keyword-extractor,"📰 Marketing, SEO & PR",https://trends.google.com/trends/trendingsearches/daily/rss?geo=US,*/30 * * * *,Pending Initial Cron,public
+sys_watch_056,tiktok-viral-audio-tracker,"📰 Marketing, SEO & PR",https://www.searchenginejournal.com/feed/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_057,domain-authority-scraper,"📰 Marketing, SEO & PR",https://moz.com/blog/rss,0 0 * * *,Pending Initial Cron,public
+sys_watch_058,expired-domain-appraiser,"📰 Marketing, SEO & PR",https://techcrunch.com/feed/,0 12 * * *,Pending Initial Cron,public
+sys_watch_059,wikipedia-backlink-monitor,"📰 Marketing, SEO & PR",https://feeds.feedburner.com/oreilly/radar/atom,0 0 * * 0,Pending Initial Cron,public
+sys_watch_060,influencer-sponsorship-spy,"📰 Marketing, SEO & PR",https://www.theverge.com/rss/index.xml,*/30 * * * *,Pending Initial Cron,public
+sys_watch_061,flight-price-drop-alert,"✈️ Travel, Events & Lifestyle",https://api.spacexdata.com/v4/launches/upcoming,0 */6 * * *,Pending Initial Cron,public
+sys_watch_062,hotel-flash-sale-sniper,"✈️ Travel, Events & Lifestyle",https://data.sfgov.org/resource/yitu-d5am.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_063,visa-appointment-auto-checker,"✈️ Travel, Events & Lifestyle",https://open-meteo.com/en/docs,0 12 * * *,Pending Initial Cron,public
+sys_watch_064,ticketmaster-scalp-monitor,"✈️ Travel, Events & Lifestyle",https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson,0 0 * * 0,Pending Initial Cron,public
+sys_watch_065,restaurant-reservation-sniper,"✈️ Travel, Events & Lifestyle",https://api.eventful.com/json/events/search,*/30 * * * *,Pending Initial Cron,public
+sys_watch_066,eventbrite-local-aggregator,"✈️ Travel, Events & Lifestyle",https://api.spacexdata.com/v4/launches/upcoming,0 */6 * * *,Pending Initial Cron,public
+sys_watch_067,weather-triggered-ad-adjuster,"✈️ Travel, Events & Lifestyle",https://data.sfgov.org/resource/yitu-d5am.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_068,movie-ticket-pre-sale-alert,"✈️ Travel, Events & Lifestyle",https://open-meteo.com/en/docs,0 12 * * *,Pending Initial Cron,public
+sys_watch_069,marathon-registration-monitor,"✈️ Travel, Events & Lifestyle",https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson,0 0 * * 0,Pending Initial Cron,public
+sys_watch_070,theme-park-wait-time-tracker,"✈️ Travel, Events & Lifestyle",https://api.eventful.com/json/events/search,*/30 * * * *,Pending Initial Cron,public
+sys_watch_071,github-issue-auto-responder,🧑‍💻 Developer & IT Operations,https://hub.docker.com/v2/repositories/library/?page_size=20,0 */6 * * *,Pending Initial Cron,public
+sys_watch_072,npm-package-vulnerability-alert,🧑‍💻 Developer & IT Operations,https://status.github.com/api/v2/summary.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_073,stackoverflow-answer-monitor,🧑‍💻 Developer & IT Operations,https://cve.circl.lu/api/last/30,0 12 * * *,Pending Initial Cron,public
+sys_watch_074,hacker-news-front-page-scraper,🧑‍💻 Developer & IT Operations,https://api.github.com/events,0 0 * * 0,Pending Initial Cron,public
+sys_watch_075,aws-azure-status-monitor,🧑‍💻 Developer & IT Operations,https://registry.npmjs.org/-/v1/search?text=security&size=20,*/30 * * * *,Pending Initial Cron,public
+sys_watch_076,app-store-review-aggregator,🧑‍💻 Developer & IT Operations,https://pypi.org/rss/updates.xml,0 */6 * * *,Pending Initial Cron,public
+sys_watch_077,domain-name-expiry-sniper,🧑‍💻 Developer & IT Operations,https://hub.docker.com/v2/repositories/library/?page_size=20,0 0 * * *,Pending Initial Cron,public
+sys_watch_078,wordpress-theme-detector,🧑‍💻 Developer & IT Operations,https://status.github.com/api/v2/summary.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_079,api-documentation-change-alert,🧑‍💻 Developer & IT Operations,https://cve.circl.lu/api/last/30,0 0 * * 0,Pending Initial Cron,public
+sys_watch_080,dark-web-leak-alert-(opticparse-onion),🧑‍💻 Developer & IT Operations,https://api.github.com/events,*/30 * * * *,Pending Initial Cron,public
+sys_watch_081,typosquatting-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 */6 * * *,Pending Initial Cron,public
+sys_watch_082,fake-app-store-listing-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_083,credential-harvester-takedown-generator,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,0 12 * * *,Pending Initial Cron,public
+sys_watch_084,social-media-impersonator-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,0 0 * * 0,Pending Initial Cron,public
+sys_watch_085,ssl-certificate-expiry-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,*/30 * * * *,Pending Initial Cron,public
+sys_watch_086,open-directory-finder-(dorks),🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_087,subdomain-takeover-scanner,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 0 * * *,Pending Initial Cron,public
+sys_watch_088,dark-web-marketplace-scanner,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 12 * * *,Pending Initial Cron,public
+sys_watch_089,vip-executive-threat-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,0 0 * * 0,Pending Initial Cron,public
+sys_watch_090,counterfeit-product-takedown,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,*/30 * * * *,Pending Initial Cron,public
+sys_watch_091,malicious-telegram-group-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,0 */6 * * *,Pending Initial Cron,public
+sys_watch_092,github-secrets-leaked-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 0 * * *,Pending Initial Cron,public
+sys_watch_093,defacement-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 12 * * *,Pending Initial Cron,public
+sys_watch_094,ransomware-blog-tracker,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 0 * * 0,Pending Initial Cron,public
+sys_watch_095,phishing-email-attachment-sandbox,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,*/30 * * * *,Pending Initial Cron,public
+sys_watch_096,public-wi-fi-fake-portal-detector,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,0 */6 * * *,Pending Initial Cron,public
+sys_watch_097,stolen-credit-card-shop-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_098,fake-customer-support-number-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 12 * * *,Pending Initial Cron,public
+sys_watch_099,malware-payload-extractor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 0 * * 0,Pending Initial Cron,public
+sys_watch_100,bounty-program-auto-submitter,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,*/30 * * * *,Pending Initial Cron,public
+sys_watch_101,typosquatting-auto-assassin,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.chase.com&output=json,0 */6 * * *,Pending Initial Cron,public
+sys_watch_102,homograph-attack-detector,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.binance.com&output=json,0 0 * * *,Pending Initial Cron,public
+sys_watch_103,vip-executive-deepfake-shield,🏦 Brand & Asset Protection (Enterprise Retainers),https://openphish.com/feed.txt,0 12 * * *,Pending Initial Cron,public
+sys_watch_104,counterfeit-goods-sniper,🏦 Brand & Asset Protection (Enterprise Retainers),https://urlhaus.abuse.ch/api/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_105,supply-chain-defacement-alert,🏦 Brand & Asset Protection (Enterprise Retainers),https://phishstats.info/phish_score.csv,*/30 * * * *,Pending Initial Cron,public
+sys_watch_106,fake-customer-support-number-detector,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.paypal.com&output=json,0 */6 * * *,Pending Initial Cron,public
+sys_watch_107,app-store-fake-clone-scanner,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.chase.com&output=json,0 0 * * *,Pending Initial Cron,public
+sys_watch_108,malicious-browser-extension-scanner,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.binance.com&output=json,0 12 * * *,Pending Initial Cron,public
+sys_watch_109,rogue-social-media-account-takedown,🏦 Brand & Asset Protection (Enterprise Retainers),https://openphish.com/feed.txt,0 0 * * 0,Pending Initial Cron,public
+sys_watch_110,logo-infringement-web-crawler,🏦 Brand & Asset Protection (Enterprise Retainers),https://urlhaus.abuse.ch/api/,*/30 * * * *,Pending Initial Cron,public
+sys_watch_111,wallet-drainer-real-time-block,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *,Pending Initial Cron,public
+sys_watch_112,fake-airdrop-identifier,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *,Pending Initial Cron,public
+sys_watch_113,smart-contract-front-end-spoof-alert,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_114,discord-malicious-bot-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0,Pending Initial Cron,public
+sys_watch_115,telegram-fake-token-presale-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *,Pending Initial Cron,public
+sys_watch_116,nft-collection-clone-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *,Pending Initial Cron,public
+sys_watch_117,phishing-seed-phrase-harvester-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *,Pending Initial Cron,public
+sys_watch_118,crypto-influencer-hack-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_119,defi-yield-protocol-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0,Pending Initial Cron,public
+sys_watch_120,mempool-sniping-phish-bait,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *,Pending Initial Cron,public
+sys_watch_121,zero-day-phishing-kit-extractor,🕵️ Threat Intelligence & Dark Web (Selling Data),https://urlhaus.abuse.ch/api/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_122,stolen-credit-card-(bin)-shop-scanner,🕵️ Threat Intelligence & Dark Web (Selling Data),https://feodotracker.abuse.ch/downloads/ipblocklist.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_123,ransomware-leak-site-tracker,🕵️ Threat Intelligence & Dark Web (Selling Data),https://sslbl.abuse.ch/blacklist/sslblacklist.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_124,hackerone-bounty-auto-submitter,🕵️ Threat Intelligence & Dark Web (Selling Data),https://bazaar.abuse.ch/export/json/recent/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_125,pastebin-leak-monitor,🕵️ Threat Intelligence & Dark Web (Selling Data),https://cve.circl.lu/api/last/30,*/30 * * * *,Pending Initial Cron,public
+sys_watch_126,github-secrets-exposure-alert,🕵️ Threat Intelligence & Dark Web (Selling Data),https://urlhaus.abuse.ch/api/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_127,open-directory-finder-(dorks),🕵️ Threat Intelligence & Dark Web (Selling Data),https://feodotracker.abuse.ch/downloads/ipblocklist.json,0 0 * * *,Pending Initial Cron,public
+sys_watch_128,subdomain-takeover-scanner,🕵️ Threat Intelligence & Dark Web (Selling Data),https://sslbl.abuse.ch/blacklist/sslblacklist.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_129,malware-payload-sandbox-analyzer,🕵️ Threat Intelligence & Dark Web (Selling Data),https://bazaar.abuse.ch/export/json/recent/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_130,dark-web-credential-harvester-aggregator,🕵️ Threat Intelligence & Dark Web (Selling Data),https://cve.circl.lu/api/last/30,*/30 * * * *,Pending Initial Cron,public
+sys_watch_131,email-attachment-sandbox-scraper,🏢 Corporate IT & Employee Security,https://cve.circl.lu/api/last/30,0 */6 * * *,Pending Initial Cron,public
+sys_watch_132,public-wi-fi-fake-portal-detector,🏢 Corporate IT & Employee Security,https://openphish.com/feed.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_133,saas-login-portal-spoof-alert,🏢 Corporate IT & Employee Security,https://status.okta.com/api/v2/summary.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_134,slack-teams-malicious-link-scanner,🏢 Corporate IT & Employee Security,https://status.slack.com/api/v2.0.0/current,0 0 * * 0,Pending Initial Cron,public
+sys_watch_135,employee-remote-worker-ip-check,🏢 Corporate IT & Employee Security,https://status.azure.com/api/v2/summary.json,*/30 * * * *,Pending Initial Cron,public
+sys_watch_136,intranet-defacement-monitor,🏢 Corporate IT & Employee Security,https://cve.circl.lu/api/last/30,0 */6 * * *,Pending Initial Cron,public
+sys_watch_137,shadow-it-detector,🏢 Corporate IT & Employee Security,https://openphish.com/feed.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_138,spear-phishing-landing-page-analyzer,🏢 Corporate IT & Employee Security,https://status.okta.com/api/v2/summary.json,0 12 * * *,Pending Initial Cron,public
+sys_watch_139,corporate-document-watermark-tracker,🏢 Corporate IT & Employee Security,https://status.slack.com/api/v2.0.0/current,0 0 * * 0,Pending Initial Cron,public
+sys_watch_140,multi-factor-auth-(mfa)-bypass-detector,🏢 Corporate IT & Employee Security,https://status.azure.com/api/v2/summary.json,*/30 * * * *,Pending Initial Cron,public
+sys_watch_141,affiliate-marketing-clone-fraud,📈 Fraud Prevention & Compliance,https://urlhaus.abuse.ch/api/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_142,seo-toxic-backlink-shield,📈 Fraud Prevention & Compliance,https://openphish.com/feed.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_143,fake-review-ring-detector,📈 Fraud Prevention & Compliance,https://phishstats.info/phish_score.csv,0 12 * * *,Pending Initial Cron,public
+sys_watch_144,e-commerce-chargeback-scammer-tracker,📈 Fraud Prevention & Compliance,https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_145,kyc-document-forgery-detector,📈 Fraud Prevention & Compliance,https://api.ftc.gov/v0/complaints,*/30 * * * *,Pending Initial Cron,public
+sys_watch_146,counterfeit-ticket-resale-monitor,📈 Fraud Prevention & Compliance,https://urlhaus.abuse.ch/api/,0 */6 * * *,Pending Initial Cron,public
+sys_watch_147,illegal-streaming-site-takedown,📈 Fraud Prevention & Compliance,https://openphish.com/feed.txt,0 0 * * *,Pending Initial Cron,public
+sys_watch_148,pharmaceutical-fake-drug-alert,📈 Fraud Prevention & Compliance,https://phishstats.info/phish_score.csv,0 12 * * *,Pending Initial Cron,public
+sys_watch_149,investment-scam-boiler-room-tracker,📈 Fraud Prevention & Compliance,https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/,0 0 * * 0,Pending Initial Cron,public
+sys_watch_150,government-grant-fraud-detector,📈 Fraud Prevention & Compliance,https://api.ftc.gov/v0/complaints,*/30 * * * *,Pending Initial Cron,public

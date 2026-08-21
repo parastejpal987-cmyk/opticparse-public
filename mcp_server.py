@@ -70,12 +70,17 @@ def handle_request(req: Dict[str, Any]):
     elif method == "tools/call":
         tool_name = params.get("name")
         arguments = params.get("arguments", {})
-        logger.info(f"Calling tool: {tool_name}")
-        
         api_key = os.getenv("OPTICPARSE_API_KEY")
         if not api_key:
-            # Fallback to the live verified api key for internal dev testing
-            api_key = "op_live_86c3b009e8770df4d66dbcf49e84204d13e2b921"
+            send_response({
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "error": {
+                    "code": -32602,
+                    "message": "Missing OPTICPARSE_API_KEY environment variable. Please set OPTICPARSE_API_KEY or obtain a key at https://opticparse.com"
+                }
+            })
+            return
 
         from opticparse import OpticParse
         client = OpticParse(api_key=api_key)

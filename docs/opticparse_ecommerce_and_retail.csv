@@ -1,0 +1,16 @@
+Watch_ID,Template_ID,Category,Target_Feed_URL,Schedule
+sys_watch_001,amazon-price-undercut-alert,🛒 E-Commerce & Retail (Price & Inventory Automation),https://fakestoreapi.com/products,0 */6 * * *
+sys_watch_002,shopify-new-product-alert,🛒 E-Commerce & Retail (Price & Inventory Automation),https://dummyjson.com/products,0 0 * * *
+sys_watch_003,out-of-stock-auto-buyer,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.ebay.com/deals,0 12 * * *
+sys_watch_004,meesho-to-amazon-arbitrage,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.target.com/c/deals,0 0 * * 0
+sys_watch_005,customer-review-sentiment,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299784494.c,*/30 * * * *
+sys_watch_006,etsy-trending-search,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.walmart.com/shop/deals,0 */6 * * *
+sys_watch_007,flipkart-flash-sale-auto-cart,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.newegg.com/todays-deals,0 0 * * *
+sys_watch_008,aliexpress-supplier-finder,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.aliexpress.com/glosearch/api/hotsearch,0 12 * * *
+sys_watch_009,map-(minimum-advertised-price)-violator-tracker,🛒 E-Commerce & Retail (Price & Inventory Automation),https://store.steampowered.com/api/featured,0 0 * * 0
+sys_watch_010,coupon-code-aggregator,🛒 E-Commerce & Retail (Price & Inventory Automation),https://api.escuelajs.co/api/v1/products,*/30 * * * *
+sys_watch_011,walmart-vs-target-local-pricing,🛒 E-Commerce & Retail (Price & Inventory Automation),https://fakestoreapi.com/products,0 */6 * * *
+sys_watch_012,sneaker-drop-monitor,🛒 E-Commerce & Retail (Price & Inventory Automation),https://dummyjson.com/products,0 0 * * *
+sys_watch_013,facebook-ad-library-spy,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.ebay.com/deals,0 12 * * *
+sys_watch_014,amazon-best-seller-rank-tracker,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.target.com/c/deals,0 0 * * 0
+sys_watch_015,product-image-downloader,🛒 E-Commerce & Retail (Price & Inventory Automation),https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299784494.c,*/30 * * * *

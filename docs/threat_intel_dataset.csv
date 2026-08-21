@@ -1,0 +1,71 @@
+Watch_ID,Template_ID,Category,Target_Feed_URL,Schedule,Last_Run_At
+sys_watch_081,typosquatting-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 */6 * * *,Active Scheduled Watch
+sys_watch_082,fake-app-store-listing-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_083,credential-harvester-takedown-generator,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,0 12 * * *,Active Scheduled Watch
+sys_watch_084,social-media-impersonator-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,0 0 * * 0,Active Scheduled Watch
+sys_watch_085,ssl-certificate-expiry-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,*/30 * * * *,Active Scheduled Watch
+sys_watch_086,open-directory-finder-(dorks),🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 */6 * * *,Active Scheduled Watch
+sys_watch_087,subdomain-takeover-scanner,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 0 * * *,Active Scheduled Watch
+sys_watch_088,dark-web-marketplace-scanner,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 12 * * *,Active Scheduled Watch
+sys_watch_089,vip-executive-threat-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,0 0 * * 0,Active Scheduled Watch
+sys_watch_090,counterfeit-product-takedown,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,*/30 * * * *,Active Scheduled Watch
+sys_watch_091,malicious-telegram-group-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,0 */6 * * *,Active Scheduled Watch
+sys_watch_092,github-secrets-leaked-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 0 * * *,Active Scheduled Watch
+sys_watch_093,defacement-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 12 * * *,Active Scheduled Watch
+sys_watch_094,ransomware-blog-tracker,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,0 0 * * 0,Active Scheduled Watch
+sys_watch_095,phishing-email-attachment-sandbox,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://cybercrime-tracker.net/rss.php,*/30 * * * *,Active Scheduled Watch
+sys_watch_096,public-wi-fi-fake-portal-detector,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt,0 */6 * * *,Active Scheduled Watch
+sys_watch_097,stolen-credit-card-shop-monitor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://openphish.com/feed.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_098,fake-customer-support-number-alert,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://urlhaus.abuse.ch/api/,0 12 * * *,Active Scheduled Watch
+sys_watch_099,malware-payload-extractor,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://phishstats.info/phish_score.csv,0 0 * * 0,Active Scheduled Watch
+sys_watch_100,bounty-program-auto-submitter,🛡️ PhishVision & Cybersecurity (The Phishing Side),https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-links-ACTIVE-TODAY.txt,*/30 * * * *,Active Scheduled Watch
+sys_watch_101,typosquatting-auto-assassin,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.chase.com&output=json,0 */6 * * *,Active Scheduled Watch
+sys_watch_102,homograph-attack-detector,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.binance.com&output=json,0 0 * * *,Active Scheduled Watch
+sys_watch_103,vip-executive-deepfake-shield,🏦 Brand & Asset Protection (Enterprise Retainers),https://openphish.com/feed.txt,0 12 * * *,Active Scheduled Watch
+sys_watch_104,counterfeit-goods-sniper,🏦 Brand & Asset Protection (Enterprise Retainers),https://urlhaus.abuse.ch/api/,0 0 * * 0,Active Scheduled Watch
+sys_watch_105,supply-chain-defacement-alert,🏦 Brand & Asset Protection (Enterprise Retainers),https://phishstats.info/phish_score.csv,*/30 * * * *,Active Scheduled Watch
+sys_watch_106,fake-customer-support-number-detector,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.paypal.com&output=json,0 */6 * * *,Active Scheduled Watch
+sys_watch_107,app-store-fake-clone-scanner,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.chase.com&output=json,0 0 * * *,Active Scheduled Watch
+sys_watch_108,malicious-browser-extension-scanner,🏦 Brand & Asset Protection (Enterprise Retainers),https://crt.sh/?q=%.binance.com&output=json,0 12 * * *,Active Scheduled Watch
+sys_watch_109,rogue-social-media-account-takedown,🏦 Brand & Asset Protection (Enterprise Retainers),https://openphish.com/feed.txt,0 0 * * 0,Active Scheduled Watch
+sys_watch_110,logo-infringement-web-crawler,🏦 Brand & Asset Protection (Enterprise Retainers),https://urlhaus.abuse.ch/api/,*/30 * * * *,Active Scheduled Watch
+sys_watch_111,wallet-drainer-real-time-block,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *,Active Scheduled Watch
+sys_watch_112,fake-airdrop-identifier,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *,Active Scheduled Watch
+sys_watch_113,smart-contract-front-end-spoof-alert,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *,Active Scheduled Watch
+sys_watch_114,discord-malicious-bot-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0,Active Scheduled Watch
+sys_watch_115,telegram-fake-token-presale-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *,Active Scheduled Watch
+sys_watch_116,nft-collection-clone-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *,Active Scheduled Watch
+sys_watch_117,phishing-seed-phrase-harvester-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *,Active Scheduled Watch
+sys_watch_118,crypto-influencer-hack-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *,Active Scheduled Watch
+sys_watch_119,defi-yield-protocol-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0,Active Scheduled Watch
+sys_watch_120,mempool-sniping-phish-bait,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *,Active Scheduled Watch
+sys_watch_121,zero-day-phishing-kit-extractor,🕵️ Threat Intelligence & Dark Web (Selling Data),https://urlhaus.abuse.ch/api/,0 */6 * * *,Active Scheduled Watch
+sys_watch_122,stolen-credit-card-(bin)-shop-scanner,🕵️ Threat Intelligence & Dark Web (Selling Data),https://feodotracker.abuse.ch/downloads/ipblocklist.json,0 0 * * *,Active Scheduled Watch
+sys_watch_123,ransomware-leak-site-tracker,🕵️ Threat Intelligence & Dark Web (Selling Data),https://sslbl.abuse.ch/blacklist/sslblacklist.json,0 12 * * *,Active Scheduled Watch
+sys_watch_124,hackerone-bounty-auto-submitter,🕵️ Threat Intelligence & Dark Web (Selling Data),https://bazaar.abuse.ch/export/json/recent/,0 0 * * 0,Active Scheduled Watch
+sys_watch_125,pastebin-leak-monitor,🕵️ Threat Intelligence & Dark Web (Selling Data),https://cve.circl.lu/api/last/30,*/30 * * * *,Active Scheduled Watch
+sys_watch_126,github-secrets-exposure-alert,🕵️ Threat Intelligence & Dark Web (Selling Data),https://urlhaus.abuse.ch/api/,0 */6 * * *,Active Scheduled Watch
+sys_watch_127,open-directory-finder-(dorks),🕵️ Threat Intelligence & Dark Web (Selling Data),https://feodotracker.abuse.ch/downloads/ipblocklist.json,0 0 * * *,Active Scheduled Watch
+sys_watch_128,subdomain-takeover-scanner,🕵️ Threat Intelligence & Dark Web (Selling Data),https://sslbl.abuse.ch/blacklist/sslblacklist.json,0 12 * * *,Active Scheduled Watch
+sys_watch_129,malware-payload-sandbox-analyzer,🕵️ Threat Intelligence & Dark Web (Selling Data),https://bazaar.abuse.ch/export/json/recent/,0 0 * * 0,Active Scheduled Watch
+sys_watch_130,dark-web-credential-harvester-aggregator,🕵️ Threat Intelligence & Dark Web (Selling Data),https://cve.circl.lu/api/last/30,*/30 * * * *,Active Scheduled Watch
+sys_watch_131,email-attachment-sandbox-scraper,🏢 Corporate IT & Employee Security,https://cve.circl.lu/api/last/30,0 */6 * * *,Active Scheduled Watch
+sys_watch_132,public-wi-fi-fake-portal-detector,🏢 Corporate IT & Employee Security,https://openphish.com/feed.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_133,saas-login-portal-spoof-alert,🏢 Corporate IT & Employee Security,https://status.okta.com/api/v2/summary.json,0 12 * * *,Active Scheduled Watch
+sys_watch_134,slack-teams-malicious-link-scanner,🏢 Corporate IT & Employee Security,https://status.slack.com/api/v2.0.0/current,0 0 * * 0,Active Scheduled Watch
+sys_watch_135,employee-remote-worker-ip-check,🏢 Corporate IT & Employee Security,https://status.azure.com/api/v2/summary.json,*/30 * * * *,Active Scheduled Watch
+sys_watch_136,intranet-defacement-monitor,🏢 Corporate IT & Employee Security,https://cve.circl.lu/api/last/30,0 */6 * * *,Active Scheduled Watch
+sys_watch_137,shadow-it-detector,🏢 Corporate IT & Employee Security,https://openphish.com/feed.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_138,spear-phishing-landing-page-analyzer,🏢 Corporate IT & Employee Security,https://status.okta.com/api/v2/summary.json,0 12 * * *,Active Scheduled Watch
+sys_watch_139,corporate-document-watermark-tracker,🏢 Corporate IT & Employee Security,https://status.slack.com/api/v2.0.0/current,0 0 * * 0,Active Scheduled Watch
+sys_watch_140,multi-factor-auth-(mfa)-bypass-detector,🏢 Corporate IT & Employee Security,https://status.azure.com/api/v2/summary.json,*/30 * * * *,Active Scheduled Watch
+sys_watch_141,affiliate-marketing-clone-fraud,📈 Fraud Prevention & Compliance,https://urlhaus.abuse.ch/api/,0 */6 * * *,Active Scheduled Watch
+sys_watch_142,seo-toxic-backlink-shield,📈 Fraud Prevention & Compliance,https://openphish.com/feed.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_143,fake-review-ring-detector,📈 Fraud Prevention & Compliance,https://phishstats.info/phish_score.csv,0 12 * * *,Active Scheduled Watch
+sys_watch_144,e-commerce-chargeback-scammer-tracker,📈 Fraud Prevention & Compliance,https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/,0 0 * * 0,Active Scheduled Watch
+sys_watch_145,kyc-document-forgery-detector,📈 Fraud Prevention & Compliance,https://api.ftc.gov/v0/complaints,*/30 * * * *,Active Scheduled Watch
+sys_watch_146,counterfeit-ticket-resale-monitor,📈 Fraud Prevention & Compliance,https://urlhaus.abuse.ch/api/,0 */6 * * *,Active Scheduled Watch
+sys_watch_147,illegal-streaming-site-takedown,📈 Fraud Prevention & Compliance,https://openphish.com/feed.txt,0 0 * * *,Active Scheduled Watch
+sys_watch_148,pharmaceutical-fake-drug-alert,📈 Fraud Prevention & Compliance,https://phishstats.info/phish_score.csv,0 12 * * *,Active Scheduled Watch
+sys_watch_149,investment-scam-boiler-room-tracker,📈 Fraud Prevention & Compliance,https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/,0 0 * * 0,Active Scheduled Watch
+sys_watch_150,government-grant-fraud-detector,📈 Fraud Prevention & Compliance,https://api.ftc.gov/v0/complaints,*/30 * * * *,Active Scheduled Watch

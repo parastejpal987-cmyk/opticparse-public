@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is facebook.com Safe? | PhishVision threat Report</title>
+  <meta name="description" content="Check if facebook.com is safe or a phishing lure. View PhishVision visual safety analysis, registry details, and risk evaluation for facebook.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+      --red: #ef4444; --green: #22c55e; --yellow: #eab308;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; color: var(--text); }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .hero { min-height: 35vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,.12), transparent); pointer-events: none; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 1rem; }
+    .domain-badge { display: inline-block; padding: 0.4rem 1rem; border-radius: 99px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: var(--cyan); margin-bottom: 1.5rem; }
+
+    /* CONTAINER */
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    
+    /* CARD */
+    .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; position: relative; overflow: hidden; }
+    .verdict-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+    .verdict-title { font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+    .verdict-badge { font-size: 1.5rem; font-weight: 800; padding: 0.5rem 1.5rem; border-radius: 12px; display: inline-flex; align-items: center; }
+    .verdict-badge.safe { background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+    .verdict-badge.suspicious { background: rgba(234,179,8,0.15); color: var(--yellow); border: 1px solid rgba(234,179,8,0.3); }
+    .verdict-badge.malicious { background: rgba(239,68,68,0.15); color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+
+    /* METADATA GRID */
+    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+    .meta-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 1.2rem; border-radius: 10px; }
+    .meta-label { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; margin-bottom: 0.3rem; }
+    .meta-value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+
+    /* DETAILS SECTION */
+    .details-title { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    .details-text { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7; }
+    
+    /* CTA PANEL */
+    .cta-panel { background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(6,182,212,0.1)); border: 1px solid rgba(139,92,246,0.2); border-radius: 16px; padding: 2.5rem; text-align: center; }
+    .cta-panel h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
+    .cta-panel p { color: var(--muted); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; margin-top: 4rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8895745103878140" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span>Opticparse</span> & PhishVision</a>
+  <div class="nav-links">
+    <a href="/#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" class="nav-cta">Try Free →</a>
+</nav>
+
+<main class="container">
+  <div class="hero">
+    <span class="domain-badge">facebook.com</span>
+    <h1>Threat Analysis Report</h1>
+  </div>
+
+  <div class="card">
+    <div class="verdict-header">
+      <div>
+        <div class="verdict-title">PhishVision Analysis</div>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem;">Generated on: 2026-08-21</p>
+      </div>
+      <div class="verdict-badge malicious">Malicious</div>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">Domain Risk Score</div>
+        <div class="meta-value" style="color: var(--red)">92/100</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Registrar</div>
+        <div class="meta-value">Tucows Domains Inc.</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Visual Threat Category</div>
+        <div class="meta-value">Credential Harvesting Lure</div>
+      </div>
+    </div>
+
+    <h3 class="details-title">Security Assessment</h3>
+    <p class="details-text">Critical risk warning. facebook.com is actively flagged as a malicious credential phishing vector. PhishVision's visual analysis detected exact brand asset replication of financial and technology sign-in forms designed to steal credentials.</p>
+
+    <h3 class="details-title">Visual Signatures Detected</h3>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--muted); line-height: 1.8;">
+      
+          <li><strong>Impersonation Detected:</strong> Identical visual brand layout matches bank sign-in interface.</li>
+          <li><strong>Interactive Interception:</strong> Form fields redirect inputs to unverified target servers.</li>
+          <li><strong>Faked Trust Seals:</strong> Non-functional badge images mimicking verified seals.</li>
+        
+    </ul>
+  </div>
+
+  <div class="cta-panel">
+    <h3>Automate Phishing Prevention</h3>
+    <p>Detect credential harvesting, brand spoofing, and prompt injection attacks programmatically before your users or agents fall victim.</p>
+    <a href="https://dashboard.opticparse.com" class="nav-cta" style="padding: 0.8rem 2rem; font-size: 1rem; display: inline-block;">Get Free API Key</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://dashboard.opticparse.com">Dashboard</a>
+    <a href="/api-docs.html">API Documentation</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <p>Built with Playwright, FastAPI, Groq & Gemini Vision. Deployed on Render. © 2026<br>
+  <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>

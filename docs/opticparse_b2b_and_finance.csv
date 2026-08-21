@@ -1,0 +1,46 @@
+Watch_ID,Template_ID,Category,Target_Feed_URL,Schedule
+sys_watch_026,linkedin-decision-maker-finder,💼 B2B Sales & Lead Generation,https://jobicy.com/api/v2/remote-jobs,0 */6 * * *
+sys_watch_027,justdial-yelp-local-lead-extractor,💼 B2B Sales & Lead Generation,https://remotive.com/api/remote-jobs,0 0 * * *
+sys_watch_028,google-maps-local-seo-scraper,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/news,0 12 * * *
+sys_watch_029,crunchbase-new-funding-alert,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/jobs,0 0 * * 0
+sys_watch_030,y-combinator-batch-scraper,💼 B2B Sales & Lead Generation,https://remoteok.com/api,*/30 * * * *
+sys_watch_031,trade-show-exhibitor-extractor,💼 B2B Sales & Lead Generation,https://www.crunchbase.com/discover/organization.companies,0 */6 * * *
+sys_watch_032,job-board-hiring-intent,💼 B2B Sales & Lead Generation,https://wellfound.com/jobs,0 0 * * *
+sys_watch_033,angellist-wellfound-talent-scraper,💼 B2B Sales & Lead Generation,https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss,0 12 * * *
+sys_watch_034,upwork-auto-bidder,💼 B2B Sales & Lead Generation,https://hnhiring.com/api/jobs,0 0 * * 0
+sys_watch_035,freelancer.com-project-monitor,💼 B2B Sales & Lead Generation,https://jobicy.com/api/v2/remote-jobs,*/30 * * * *
+sys_watch_036,chamber-of-commerce-scraper,💼 B2B Sales & Lead Generation,https://remotive.com/api/remote-jobs,0 */6 * * *
+sys_watch_037,apollo.io-free-tier-maximizer,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/news,0 0 * * *
+sys_watch_038,github-repo-star-gazer-lead-gen,💼 B2B Sales & Lead Generation,https://news.ycombinator.com/jobs,0 12 * * *
+sys_watch_039,product-hunt-maker-extractor,💼 B2B Sales & Lead Generation,https://remoteok.com/api,0 0 * * 0
+sys_watch_040,glassdoor-negative-review-alert,💼 B2B Sales & Lead Generation,https://www.crunchbase.com/discover/organization.companies,*/30 * * * *
+sys_watch_041,crypto-exchange-arbitrage,📊 Finance & Crypto,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC,0 */6 * * *
+sys_watch_042,sec-edgar-filing-alert,📊 Finance & Crypto,https://api.coindesk.com/v1/bpi/currentprice.json,0 0 * * *
+sys_watch_043,twitter-crypto-sentiment,📊 Finance & Crypto,https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 12 * * *
+sys_watch_044,earnings-call-transcript-summarizer,📊 Finance & Crypto,https://api.binance.com/api/v3/ticker/24hr,0 0 * * 0
+sys_watch_045,insider-trading-tracker,📊 Finance & Crypto,https://api.kraken.com/0/public/Ticker,*/30 * * * *
+sys_watch_046,forex-rate-monitor,📊 Finance & Crypto,https://api.coinbase.com/v2/exchange-rates,0 */6 * * *
+sys_watch_047,nft-floor-price-tracker,📊 Finance & Crypto,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC,0 0 * * *
+sys_watch_048,stock-options-unusual-volume,📊 Finance & Crypto,https://api.coindesk.com/v1/bpi/currentprice.json,0 12 * * *
+sys_watch_049,ipo-calendar-monitor,📊 Finance & Crypto,https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 0 * * 0
+sys_watch_050,yahoo-finance-daily-movers,📊 Finance & Crypto,https://api.binance.com/api/v3/ticker/24hr,*/30 * * * *
+sys_watch_071,github-issue-auto-responder,🧑‍💻 Developer & IT Operations,https://hub.docker.com/v2/repositories/library/?page_size=20,0 */6 * * *
+sys_watch_072,npm-package-vulnerability-alert,🧑‍💻 Developer & IT Operations,https://status.github.com/api/v2/summary.json,0 0 * * *
+sys_watch_073,stackoverflow-answer-monitor,🧑‍💻 Developer & IT Operations,https://cve.circl.lu/api/last/30,0 12 * * *
+sys_watch_074,hacker-news-front-page-scraper,🧑‍💻 Developer & IT Operations,https://api.github.com/events,0 0 * * 0
+sys_watch_075,aws-azure-status-monitor,🧑‍💻 Developer & IT Operations,https://registry.npmjs.org/-/v1/search?text=security&size=20,*/30 * * * *
+sys_watch_076,app-store-review-aggregator,🧑‍💻 Developer & IT Operations,https://pypi.org/rss/updates.xml,0 */6 * * *
+sys_watch_077,domain-name-expiry-sniper,🧑‍💻 Developer & IT Operations,https://hub.docker.com/v2/repositories/library/?page_size=20,0 0 * * *
+sys_watch_078,wordpress-theme-detector,🧑‍💻 Developer & IT Operations,https://status.github.com/api/v2/summary.json,0 12 * * *
+sys_watch_079,api-documentation-change-alert,🧑‍💻 Developer & IT Operations,https://cve.circl.lu/api/last/30,0 0 * * 0
+sys_watch_080,dark-web-leak-alert-(opticparse-onion),🧑‍💻 Developer & IT Operations,https://api.github.com/events,*/30 * * * *
+sys_watch_111,wallet-drainer-real-time-block,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *
+sys_watch_112,fake-airdrop-identifier,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *
+sys_watch_113,smart-contract-front-end-spoof-alert,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *
+sys_watch_114,discord-malicious-bot-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0
+sys_watch_115,telegram-fake-token-presale-scanner,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *
+sys_watch_116,nft-collection-clone-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50,0 */6 * * *
+sys_watch_117,phishing-seed-phrase-harvester-detector,⛓️ Web3 & Crypto Security (API Integrations),https://api.llama.fi/protocols,0 0 * * *
+sys_watch_118,crypto-influencer-hack-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://raw.githubusercontent.com/0xInuarashi/airdrop-scam-list/main/list.json,0 12 * * *
+sys_watch_119,defi-yield-protocol-monitor,⛓️ Web3 & Crypto Security (API Integrations),https://api.etherscan.io/api?module=stats&action=ethprice,0 0 * * 0
+sys_watch_120,mempool-sniping-phish-bait,⛓️ Web3 & Crypto Security (API Integrations),https://api.dexscreener.com/latest/dex/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,*/30 * * * *

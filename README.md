@@ -1,66 +1,99 @@
 <div align="center">
-  <img src="opticparse_cover.png" alt="OpticParse Logo" width="600"/>
-  <h1>OpticParse Developer Hub</h1>
-  <p><strong>The Next-Generation AI Web Scraper & Threat Detection Engine</strong></p>
+  <img src="opticparse_cover.png" alt="OpticParse Banner" width="700"/>
+  <h1>OpticParse & PhishVision Developer Hub</h1>
+  <p><strong>The Next-Generation AI Vision Web Scraper, Threat Intelligence & Autonomous Agent Tooling Suite</strong></p>
 
-  <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg" alt="PyPI version"></a>
-  <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="https://opticparse-api.onrender.com/"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Status"></a>
+  <p>
+    <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg?color=blue&label=PyPI%20SDK" alt="PyPI version"></a>
+    <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Smithery-MCP%20Verified-blueviolet" alt="Smithery Verified"></a>
+    <a href="https://glama.ai/mcp/servers"><img src="https://img.shields.io/badge/Glama-MCP%20Connector-orange" alt="Glama MCP"></a>
+    <a href="https://rapidapi.com/hub"><img src="https://img.shields.io/badge/RapidAPI-Hub%20Collection-0052CC" alt="RapidAPI Hub"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+    <a href="https://opticparse.parastejpal987.workers.dev"><img src="https://img.shields.io/badge/Edge%20API-Global%20285%2B%20Colos-success" alt="Edge Network"></a>
+  </p>
 </div>
-
-## What is OpticParse?
-OpticParse is a suite of developer tools that connects AI agents and backend systems to the live web. It uses Playwright, custom residential proxy routing (BYOP), and fallback LLM vision heuristics to extract structured data from any website, bypassing the toughest bot protections. 
-
-This repository contains all the open-source developer tools, extensions, and integration logic for the OpticParse API.
-
-## 🚀 Features
-- **opticparse-py**: Official Python SDK for instant integration.
-- **MCP Server**: Connect Claude Desktop or Cursor IDE directly to the live web via Model Context Protocol.
-- **PhishVision Sentinel**: A lightweight Chrome extension for instant zero-day phishing detection using visual AI heuristics.
-- **BYOB Extractor**: A Chrome extension that lets you use your own browser to extract data, completely evading Cloudflare and Datadome.
 
 ---
 
-## 💻 Quick Start (Python SDK)
+## ⚡ What is OpticParse?
 
-To get started, you will need a free API key. [Get your API Key here](https://opticparse-api.onrender.com/).
+**OpticParse** is a multimodal AI scraping, visual extraction, and security threat detection suite engineered for modern developers and autonomous AI agents. Unlike legacy scrapers that rely on fragile CSS selectors or break on Cloudflare Turnstile, OpticParse uses **Computer Vision heuristics, headless Playwright rendering, and multi-model routing** to extract clean, structured JSON from any webpage on Earth.
 
+This repository contains the open-source client SDKs, Model Context Protocol (MCP) server, Chrome extensions, and developer tooling.
+
+```
+                     ┌──────────────────────────────────────────────┐
+                     │           DEVELOPER INTEGRATIONS            │
+                     │  • Python SDK (opticparse-py)                │
+                     │  • MCP Server (Claude, Cursor, Windsurf)     │
+                     │  • RapidAPI Collection                       │
+                     │  • PhishVision Chrome Extension              │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │          CLOUDFLARE EDGE GATEWAY             │
+                     │  • Global Anycast (285+ cities)              │
+                     │  • 150 Pre-Built Extraction Templates        │
+                     │  • Sub-second Semantic KV Cache              │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │          VISION & ENGINE CLUSTER             │
+                     │  • Visual Heuristic Phishing Detection       │
+                     │  • Dynamic JS & Anti-Bot Bypass              │
+                     │  • Forensic Threat Report Synthesis          │
+                     └──────────────────────────────────────────────┘
+```
+
+---
+
+## 🚀 4 Ways to Integrate
+
+Choose the workflow that fits your stack:
+
+### 1. 🐍 Python SDK (`opticparse-py`)
+Install the official Python client:
 ```bash
 pip install opticparse-py
 ```
 
 ```python
-from opticparse import OpticParseClient
+from opticparse import OpticParse
 
-client = OpticParseClient(api_key="your_api_key_here")
+# Initialize with your API key
+client = OpticParse(api_key="your_api_key_here")
 
-# 1. Vision Scrape (Extracts JSON directly from screen pixels)
+# 1. Vision Scrape: Extract structured data from any webpage
 data = client.scrape(
-    target_url="https://example.com", 
-    extraction_query="Extract all product names and prices as JSON",
-    vision_mode=True
+    target_url="https://news.ycombinator.com",
+    extraction_query="Extract top 5 stories with title, url, points, and author as JSON"
 )
 print(data)
 
-# 2. PhishVision Threat Detection (Hybrid Heuristic + LLM Analysis)
-threat = client.detect_phishing("https://google.com")
-print(f"Threat Level: {threat.verdict} (Score: {threat.score})")
+# 2. Template Scrape: Use any of our 150 pre-built enterprise templates
+products = client.scrape_with_template(
+    target_url="https://amazon.com/dp/B08N5WRWNW",
+    template_id="amazon-price-undercut-alert"
+)
+
+# 3. PhishVision: Analyze URL for zero-day phishing, brand spoofing & malware
+threat = client.detect_phishing("https://suspect-banking-login.com")
+print(f"Verdict: {threat['verdict']} | Score: {threat['score']}/100")
 ```
 
-## 🤖 Model Context Protocol (MCP)
+---
 
-Allow your AI coding assistants (like Cursor or Claude) to browse the web autonomously. 
+### 2. 🤖 Model Context Protocol (MCP for AI Agents)
+Connect **Claude Desktop**, **Cursor IDE**, **Windsurf**, or any MCP-compatible agent directly to the live web.
 
-### Install via Smithery
-
-The easiest way to install the OpticParse MCP Server is via [Smithery](https://smithery.ai/):
+#### Install via Smithery:
 ```bash
 npx @smithery/cli install @parastejpal987-cmyk/opticparse-public --client claude
 ```
 
-### Manual Configuration
-Alternatively, add this to your MCP configuration file:
-
+#### Manual Claude Desktop / Cursor Config (`mcpServers`):
 ```json
 {
   "mcpServers": {
@@ -75,16 +108,58 @@ Alternatively, add this to your MCP configuration file:
 }
 ```
 
+**Supported MCP Tools:**
+* `opticparse_scrape`: Autonomous AI vision web scraping and schema enforcement.
+* `phishvision_detect`: Real-time threat, brand impersonation, and JS skimmer analysis.
+
 ---
 
-## 🤝 Contributing
-We welcome community contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting pull requests, requesting features, and setting up the local development environment.
+### 3. 🌐 REST API & RapidAPI Hub
+For teams preferring REST / OpenAPI integration with unified billing:
+
+* **Interactive Sandbox & RapidAPI Collection:** [OpticParse on RapidAPI Hub](https://rapidapi.com/hub)
+* **Direct cURL Example:**
+```bash
+curl -X POST https://opticparse.parastejpal987.workers.dev/api/vision-scrape \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key_here" \
+  -d '{
+    "target_url": "https://example.com",
+    "extraction_query": "Extract the main heading, summary paragraph, and all navigation links"
+  }'
+```
+
+---
+
+### 4. 🧩 Chrome Extensions
+* **PhishVision Sentinel**: Real-time visual threat detector that protects users against zero-day phishing, credential harvesters, and malicious redirects.
+* **BYOB Extractor**: Local DOM & screenshot capture extension for extracting data using your own authenticated session.
+
+---
+
+## 📚 150 Pre-Built Extraction Templates
+
+OpticParse includes **150 production-grade extraction templates** across 13 industries, ready to invoke without writing custom parsers:
+
+| Category | Templates | Sample Templates |
+| :--- | :--- | :--- |
+| 🛒 **E-Commerce & Retail** | 15 | `amazon-price-undercut-alert`, `shopify-new-product-alert`, `flipkart-flash-sale-auto-cart` |
+| 🏢 **Real Estate** | 10 | `zillow-rent-estimate-aggregator`, `airbnb-pricing-spy`, `foreclosure-auction-monitor` |
+| 💼 **B2B & Lead Gen** | 15 | `product-hunt-maker-extractor`, `hiring-signal-aggregator`, `yc-founder-scraper` |
+| 📊 **Finance & Crypto** | 10 | `crypto-exchange-arbitrage`, `dex-liquidity-pool-watcher`, `sec-10k-filing-summarizer` |
+| 🛡️ **PhishVision Threat Intel** | 50 | `typosquatting-auto-assassin`, `zero-day-phishing-kit-extractor`, `ransomware-leak-site-tracker` |
+| 🧑‍💻 **Developer Operations** | 10 | `npm-package-vulnerability-alert`, `cve-zero-day-radar`, `docker-hub-vulnerability-alert` |
+
+👉 **[View the Complete 150-Template Catalog in TEMPLATES.md](TEMPLATES.md)**
+
+---
 
 ## 🛡️ PhishVision GitHub Action
-Automatically audit your LLM integration and prompt structures on every pull request using our composite action:
+
+Add automated prompt injection and URL threat auditing to your CI/CD workflow:
 
 ```yaml
-name: PhishVision Security Scan
+name: Security Audit Pipeline
 on: [push, pull_request]
 
 jobs:
@@ -98,7 +173,27 @@ jobs:
           target_dir: '.'
           output_dir: './audits'
 ```
-Any found vulnerabilities will be written directly to your GitHub PR Summary!
 
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
+
+## 📊 Open Datasets & Ocean Protocol Integration
+
+OpticParse continuously auto-feeds its AI knowledge base with verified multi-industry telemetry. Explore our open datasets:
+* [Master 150-Template Feed Catalog](https://opticparse.parastejpal987.workers.dev/opticparse_master_150_template_catalog.csv)
+* [PhishVision Threat Intelligence Feed](https://opticparse.parastejpal987.workers.dev/threat_intel_dataset.csv)
+* [E-Commerce Pricing Feed](https://opticparse.parastejpal987.workers.dev/opticparse_ecommerce_and_retail.csv)
+* [B2B Leads & Finance Feed](https://opticparse.parastejpal987.workers.dev/opticparse_b2b_and_finance.csv)
+
+---
+
+## 🤝 Community & Contributing
+
+We welcome contributions to SDKs, MCP adapters, and extraction templates!
+* Read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+* Review our [SECURITY.md](SECURITY.md) for responsible disclosure.
+
+---
+
+## 📄 License
+This project is open-sourced under the **[MIT License](LICENSE)**.
+OpticParse & PhishVision are trademarks of the OpticParse Project.

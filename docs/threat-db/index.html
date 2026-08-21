@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Threat database Directory | PhishVision</title>
+  <meta name="description" content="Browse recent website safety evaluations, visual brand impersonation checks, and threat analysis records powered by PhishVision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a12; --bg2: #0f0f1a; --bg3: #13131f;
+      --border: rgba(255,255,255,0.07); --text: #e8e8f0; --muted: #a1a1aa;
+      --purple: #8b5cf6; --purple2: #6d28d9; --cyan: #06b6d4; --cyan2: #0891b2;
+      --red: #ef4444; --green: #22c55e; --yellow: #eab308;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,18,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; color: var(--text); }
+    .nav-logo span { background: linear-gradient(135deg, var(--purple), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero { min-height: 35vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,0.12), transparent); pointer-events: none; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 1rem; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+    /* CONTAINER */
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    
+    /* DIRECTORY LIST */
+    .dir-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .dir-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
+    .dir-item:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-2px); }
+    .domain-name { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 1.1rem; color: var(--cyan); }
+    .verdict-pill { font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 6px; text-transform: uppercase; }
+    .verdict-pill.safe { background: rgba(34,197,94,0.1); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
+    .verdict-pill.suspicious { background: rgba(234,179,8,0.1); color: var(--yellow); border: 1px solid rgba(234,179,8,0.2); }
+    .verdict-pill.malicious { background: rgba(239,68,68,0.1); color: var(--red); border: 1px solid rgba(239,68,68,0.2); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8895745103878140" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span>Opticparse</span> & PhishVision</a>
+  <div class="nav-links">
+    <a href="/#products">Products</a>
+    <a href="/phishvision.html">PhishVision</a>
+    <a href="/api-docs.html">Docs</a>
+    <a href="/about.html">About Us</a>
+  </div>
+  <a href="https://dashboard.opticparse.com" class="nav-cta" style="background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity .2s;">Try Free →</a>
+</nav>
+
+<main class="container">
+  <div class="hero">
+    <h1>Threat Directory</h1>
+    <p>Real-time visual evaluations of domain legitimacy and malicious UI patterns analyzed by PhishVision.</p>
+  </div>
+
+  <div class="dir-grid">
+    <a href="/threat-db/google.com.html" class="dir-item">  <span class="domain-name">google.com</span>  <span class="verdict-pill safe">safe</span></a>
+<a href="/threat-db/amazon.com.html" class="dir-item">  <span class="domain-name">amazon.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/facebook.com.html" class="dir-item">  <span class="domain-name">facebook.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/apple.com.html" class="dir-item">  <span class="domain-name">apple.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/netflix.com.html" class="dir-item">  <span class="domain-name">netflix.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/paypal.com.html" class="dir-item">  <span class="domain-name">paypal.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/chase.com.html" class="dir-item">  <span class="domain-name">chase.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/wellsfargo.com.html" class="dir-item">  <span class="domain-name">wellsfargo.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/bankofamerica.com.html" class="dir-item">  <span class="domain-name">bankofamerica.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/binance.com.html" class="dir-item">  <span class="domain-name">binance.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/coinbase.com.html" class="dir-item">  <span class="domain-name">coinbase.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/meta.com.html" class="dir-item">  <span class="domain-name">meta.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/slack.com.html" class="dir-item">  <span class="domain-name">slack.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/github.com.html" class="dir-item">  <span class="domain-name">github.com</span>  <span class="verdict-pill safe">safe</span></a>
+<a href="/threat-db/linkedin.com.html" class="dir-item">  <span class="domain-name">linkedin.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/instagram.com.html" class="dir-item">  <span class="domain-name">instagram.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/tiktok.com.html" class="dir-item">  <span class="domain-name">tiktok.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/youtube.com.html" class="dir-item">  <span class="domain-name">youtube.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/microsoft.com.html" class="dir-item">  <span class="domain-name">microsoft.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+<a href="/threat-db/twitter.com.html" class="dir-item">  <span class="domain-name">twitter.com</span>  <span class="verdict-pill malicious">malicious</span></a>
+  </div>
+</main>
+
+<footer>
+  <p>Built with Playwright, FastAPI, Groq & Gemini Vision. Deployed on Render. © 2026<br>
+  <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
