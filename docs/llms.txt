@@ -17,9 +17,36 @@ exposing standardized, machine-readable extraction and threat scanning actions.
 - Schema:
 { "url": "https://suspicious-domain.com" }
 
-## 3. Python SDK (Instant Integration)
+## 3. Clean Markdown & RAG Parser (Token-Optimized for LLMs)
+- Endpoint: POST https://opticparse-api.onrender.com/api/extract/markdown
+- Request Schema:
+{
+  "url": "https://example.com/article",
+  "include_images": false,
+  "include_links": true
+}
+- Response: Returns pristine, noise-stripped Markdown text with token count and title.
+
+## 4. Interactive Browser-Use Agent
+- Endpoint: POST https://opticparse-api.onrender.com/api/agent/interact
+- Request Schema:
+{
+  "target_url": "https://example.com",
+  "actions": [
+    {"action": "click", "selector": "#button"},
+    {"action": "type", "selector": "#input", "text": "value"}
+  ],
+  "final_query": "Extract data"
+}
+
+## 5. Real-Time Zero-Day Threat Stream
+- WebSocket: wss://opticparse-api.onrender.com/ws/threat-stream
+- Real-time JSON broadcast of newly discovered phishing domains and malicious kits.
+
+## 6. Python SDK (Instant Integration)
 ```python
 from opticparse import OpticParseClient
 client = OpticParseClient(api_key="dev_key_for_agents")
 result = client.scrape("target_url", "Extract pricing data")
 ```
+
