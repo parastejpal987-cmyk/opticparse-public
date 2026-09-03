@@ -1,0 +1,24 @@
+{
+  "name": "opticparse-agentkit-action",
+  "version": "1.0.0",
+  "description": "Coinbase AgentKit Action Provider for OpticParse Vision Web Scraping on Base",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "agentkit",
+    "coinbase",
+    "base",
+    "opticparse",
+    "web-scraping",
+    "x402"
+  ],
+  "author": "OpticParse Enterprise",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.0.0"
+  }
+}
