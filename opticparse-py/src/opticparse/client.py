@@ -184,19 +184,45 @@ class OpticParse:
         }
         return self._request_with_retry("POST", "/scrape", payload)
 
-    def detect_phishing(self, target_url: str) -> Dict[str, Any]:
+    def extract_markdown(
+        self,
+        target_url: str,
+        include_links: bool = True,
+        include_images: bool = False,
+    ) -> Dict[str, Any]:
+        """
+        Extract token-optimized clean Markdown for LLM RAG pipelines.
+        Strips 98% of noisy HTML, banners, footers, and tracking scripts.
+
+        Args:
+            target_url: The URL to parse into Markdown.
+            include_links: Whether to preserve markdown links (default: True).
+            include_images: Whether to preserve image alt-text (default: False).
+
+        Returns:
+            Dict containing markdown text, title, word_count, and estimated_tokens.
+        """
+        payload = {
+            "url": target_url,
+            "include_links": include_links,
+            "include_images": include_images,
+        }
+        return self._request_with_retry("POST", "/api/extract/markdown", payload)
+
+    def detect_phishing(self, target_url: str, dry_run: bool = False) -> Dict[str, Any]:
         """
         Scan a URL for zero-day phishing, brand spoofing, crypto-drainers, and typosquatting.
+        Powered by PhishVision Multimodal AI Heuristic Engine.
 
         Args:
             target_url: The URL or domain to audit.
+            dry_run: Whether to simulate scan (default: False).
 
         Returns:
-            Dict containing verdict, safety score (0-100), and threat vector details.
+            Dict containing verdict (SAFE / MALICIOUS), threat score (0-100), and IOC signals.
         """
-        payload = {"url": target_url}
-        # PhishVision routes through sentiment / forensic endpoint
-        return self._request_with_retry("POST", "/poison", {"html": f"<a href='{target_url}'>Target</a>", "intensity": "low"})
+        payload = {"url": target_url, "dry_run": dry_run}
+        return self._request_with_retry("POST", "/api/phish-detect", payload)
 
     def get_proxy(self, target_url: str) -> str:
         """
