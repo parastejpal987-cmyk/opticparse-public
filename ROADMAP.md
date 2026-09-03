@@ -16,8 +16,8 @@ Welcome to the public roadmap for OpticParse and PhishVision. This document outl
 
 ## 🌐 Q4 2026: Multi-Agent & Decentralized Expansion
 
-- [x] **Model Context Protocol (MCP) Server**: Smithery & Glama compliant tools for Claude Desktop and Cursor IDE.
-- [ ] **LangChain & LlamaIndex Official Toolkits**: Native 1-line tool integration for autonomous agent frameworks.
+- [x] **LangChain & Multi-Agent Official Toolkits**: Native 1-line tool integration via `langchain-opticparse` (v1.0.1) on PyPI, with CrewAI recipes and ElizaOS plugins.
+- [x] **Coinbase AgentKit Action Provider**: Autonomous crypto agent integration on Base with HTTP 402 USDC micro-settlement.
 - [ ] **Solana & EVM Real-Time Token Sniper Templates**: Autonomous DEX liquidity and token mint extraction schemas.
 - [ ] **Decentralized Compute Pipelines (Ocean Protocol)**: On-chain verifiable dataset compute algorithms.
 
