@@ -9,6 +9,7 @@
     <a href="https://huggingface.co/spaces/paras9909/opticparse-universal-scraper"><img src="https://img.shields.io/badge/Hugging_Face-Live_Demo-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Demo"></a>
     <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py?style=for-the-badge&color=blue&logo=pypi&logoColor=white" alt="PyPI opticparse-py"></a>
     <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
+    <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
     <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
     <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
@@ -99,6 +100,32 @@ print(res["markdown"])
 # 2. Autonomous Zero-Day Threat Inspection
 safety = client.detect_phishing("https://suspicious-dapp-claim.xyz")
 print(f"Verdict: {safety['verdict']} | Threat Score: {safety['threat_score']}/100")
+```
+
+---
+
+## 🤖 ElizaOS Autonomous Agent Plugin (npm)
+
+Install the official ElizaOS autonomous agent plugin:
+
+```bash
+npm install opticparse-eliza-plugin
+```
+
+### ElizaOS Usage:
+```typescript
+import { AgentRuntime } from "@elizaos/core";
+import { opticParsePlugin } from "opticparse-eliza-plugin";
+
+export const webScoutAgent = {
+  name: "WebScoutAgent",
+  plugins: [opticParsePlugin],
+  settings: {
+    secrets: {
+      OPTICPARSE_API_KEY: process.env.OPTICPARSE_API_KEY
+    }
+  }
+};
 ```
 
 ---
