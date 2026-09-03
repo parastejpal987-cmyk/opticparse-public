@@ -16,36 +16,41 @@ pip install langchain-opticparse
 
 ---
 
-## 🚀 Usage with LangChain
+## 🚀 Usage with LangChain (1.x+)
+
+`langchain-opticparse` provides standard `BaseTool` instances compatible with modern LangChain 1.x agent executors, LangGraph, and Tool Calling LLMs:
+
+### Modern Tool Calling Agent (LangChain 1.x)
 
 ```python
-from langchain.agents import initialize_agent, AgentType
 from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_opticparse import OpticParseTool, PhishVisionTool
 
-# Initialize tools
+# 1. Initialize OpticParse and PhishVision tools
 tools = [
     OpticParseTool(),
     PhishVisionTool()
 ]
 
-llm = ChatOpenAI(model="gpt-4o")
+# 2. Bind tools to any modern Tool-Calling model
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
+llm_with_tools = llm.bind_tools(tools)
 
-# Create autonomous agent with vision scraping and threat intelligence
-agent = initialize_agent(
-    tools,
-    llm,
-    agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION,
-    verbose=True
-)
+# 3. Direct Tool Invocation Example
+scraper = OpticParseTool()
+clean_data = scraper.invoke({
+    "url": "https://news.ycombinator.com",
+    "query": "Extract top stories with points and author"
+})
+print("Extracted Data:", clean_data)
 
-# Example 1: Extract live product pricing
-response = agent.run("Scrape the latest pricing and specs from https://news.ycombinator.com")
-print(response)
-
-# Example 2: Inspect a suspicious crypto airdrop URL before clicking
-security_check = agent.run("Verify if this link is a crypto drainer: https://suspicious-airdrop.xyz")
-print(security_check)
+# 4. Threat Inspection Example
+scanner = PhishVisionTool()
+security_report = scanner.invoke({
+    "url": "https://suspicious-dapp-claim.xyz"
+})
+print("Threat Report:", security_report)
 ```
 
 ---
