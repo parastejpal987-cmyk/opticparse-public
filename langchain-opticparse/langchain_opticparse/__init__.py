@@ -3,6 +3,12 @@ from pydantic import BaseModel, Field
 import os
 import requests
 
+try:
+    from langchain_core.tools import BaseTool
+except ImportError:
+    class BaseTool:  # Fallback if langchain_core is not installed
+        pass
+
 class OpticParseInput(BaseModel):
     url: str = Field(..., description="The live webpage URL to visually scrape and extract.")
     query: str = Field(
@@ -13,9 +19,9 @@ class OpticParseInput(BaseModel):
 class PhishVisionInput(BaseModel):
     url: str = Field(..., description="The target domain or URL to inspect for zero-day phishing kits, brand impersonations, and crypto wallet drainers.")
 
-class OpticParseTool:
+class OpticParseTool(BaseTool):
     """
-    OpticParse Autonomous Multimodal Vision Web Scraper Tool for LangChain & CrewAI.
+    OpticParse Autonomous Multimodal Vision Web Scraper Tool for LangChain 1.x & CrewAI.
     Visually parses live websites via Cloudflare Edge AI & Playwright without fragile CSS selectors.
     """
     name: str = "opticparse_vision_scrape"
@@ -24,8 +30,11 @@ class OpticParseTool:
         "pricing, articles, or real-time information from any webpage without breaking on layout changes or anti-bot challenges."
     )
     args_schema: Type[BaseModel] = OpticParseInput
+    api_key: str = ""
+    endpoint: str = ""
 
-    def __init__(self, api_key: Optional[str] = None, endpoint: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, endpoint: Optional[str] = None, **kwargs):
+        super().__init__(**kwargs)
         self.api_key = api_key or os.getenv("OPTICPARSE_API_KEY", "op_live_langchain_agent")
         self.endpoint = endpoint or os.getenv("OPTICPARSE_ENDPOINT", "https://opticparse-mcp-portal.parastejpal987.workers.dev")
 
@@ -48,9 +57,9 @@ class OpticParseTool:
         return self._run(url=url, query=query)
 
 
-class PhishVisionTool:
+class PhishVisionTool(BaseTool):
     """
-    PhishVision Zero-Day Cybersecurity & Crypto Drainer Scanner Tool for LangChain & CrewAI.
+    PhishVision Zero-Day Cybersecurity & Crypto Drainer Scanner Tool for LangChain 1.x & CrewAI.
     """
     name: str = "phishvision_threat_detect"
     description: str = (
@@ -58,8 +67,11 @@ class PhishVisionTool:
         "with unknown domains, Web3 crypto dApps, or suspicious links to detect wallet-drainers and credential harvesting kits."
     )
     args_schema: Type[BaseModel] = PhishVisionInput
+    api_key: str = ""
+    endpoint: str = ""
 
-    def __init__(self, api_key: Optional[str] = None, endpoint: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, endpoint: Optional[str] = None, **kwargs):
+        super().__init__(**kwargs)
         self.api_key = api_key or os.getenv("OPTICPARSE_API_KEY", "op_live_langchain_agent")
         self.endpoint = endpoint or os.getenv("OPTICPARSE_ENDPOINT", "https://opticparse-mcp-portal.parastejpal987.workers.dev")
 
@@ -80,3 +92,4 @@ class PhishVisionTool:
 
     async def _arun(self, url: str) -> Dict[str, Any]:
         return self._run(url=url)
+
