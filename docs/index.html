@@ -795,23 +795,93 @@ console.log(result.data); <span style="color:#6b7280">// { price: 999.99, title:
   <div id="agent-protocol" class="tab-content">
     <div class="bento-section">
       <div class="bento-grid" style="grid-template-columns: 1fr;">
-        <div class="bento-card" style="border-color: rgba(16, 185, 129, 0.4); text-align: center; padding: 4rem 2rem;">
-          <span class="bento-badge-text" style="color: var(--emerald); font-size: 0.85rem; margin-bottom: 1rem;">Model Context Protocol (MCP)</span>
-          <h3 class="bento-card-title" style="font-size: 2.5rem; margin-bottom: 1rem;">The Agent-to-Agent Economy</h3>
-          <p class="bento-card-desc" style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
-            When your autonomous AI agent gets blocked by a CAPTCHA or a 403 Forbidden wall, it can securely pay our specialized edge agents to extract the data for them via microtransactions.
+        <div class="bento-card" style="border-color: rgba(16, 185, 129, 0.4); text-align: center; padding: 3rem 2rem;">
+          <span class="bento-badge-text" style="color: var(--emerald); font-size: 0.85rem; margin-bottom: 1rem;">Multi-Agent & Developer SDKs</span>
+          <h3 class="bento-card-title" style="font-size: 2.3rem; margin-bottom: 1rem;">Autonomous Agent Scraping & Threat Defense</h3>
+          <p class="bento-card-desc" style="max-width: 650px; margin: 0 auto 2rem; font-size: 1.05rem;">
+            Power your LangChain, CrewAI, AutoGen, and ElizaOS agents with real multimodal Vision-Language scraping and proactive zero-day threat interception.
           </p>
-          
-          <div style="display: flex; justify-content: center; gap: 2rem;">
-            <div class="mini-ui-card" style="flex-direction: column; align-items: flex-start; background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.2);">
-              <span class="bento-badge-text">API Call</span>
-              <div style="font-size: 1.5rem; font-weight: 900; color: var(--emerald);">$0.05</div>
-              <div style="font-size: 0.75rem; color: var(--muted);">Per successful bypass</div>
+
+          <!-- 3-Way SDK Install Tabs -->
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <div class="install-pill" onclick="copySnippet('pip install opticparse-py', 'copy-pill-1')" style="font-size: 0.82rem;">
+              <span style="color: var(--emerald); font-weight: 700;">Python SDK:</span> pip install opticparse-py
+              <button class="copy-btn" id="copy-pill-1">Copy</button>
             </div>
+            <div class="install-pill" onclick="copySnippet('pip install langchain-opticparse', 'copy-pill-2')" style="font-size: 0.82rem;">
+              <span style="color: var(--cyan); font-weight: 700;">LangChain / CrewAI:</span> pip install langchain-opticparse
+              <button class="copy-btn" id="copy-pill-2">Copy</button>
+            </div>
+            <div class="install-pill" onclick="copySnippet('npm i opticparse-eliza-plugin', 'copy-pill-3')" style="font-size: 0.82rem;">
+              <span style="color: var(--purple); font-weight: 700;">ElizaOS Plugin:</span> npm i opticparse-eliza-plugin
+              <button class="copy-btn" id="copy-pill-3">Copy</button>
+            </div>
+          </div>
+
+          <!-- Code Snippets Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; text-align: left;">
+            <!-- LangChain Snippet -->
+            <div style="background: rgba(10, 10, 18, 0.85); border: 1px solid rgba(34, 211, 238, 0.3); border-radius: 16px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-weight: 800; font-size: 0.85rem; color: var(--cyan);">🦜 LangChain 1.x Tool Calling</span>
+                <span style="font-size: 0.72rem; color: var(--muted);">Python</span>
+              </div>
+              <pre style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #cbd5e1; line-height: 1.5; overflow-x: auto; background: transparent; padding: 0;"><code>from langchain_openai import ChatOpenAI
+from langchain_opticparse import OpticParseTool, PhishVisionTool
+
+# 1. Initialize Tools (inherits from BaseTool)
+scraper = OpticParseTool()
+scanner = PhishVisionTool()
+
+# 2. Bind directly to any Tool-Calling LLM
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
+llm_with_tools = llm.bind_tools([scraper, scanner])
+
+# 3. Direct Tool Invocation Example
+data = scraper.invoke({
+    "url": "https://news.ycombinator.com",
+    "query": "Extract top 5 stories with points and author"
+})
+print("Extracted Data:", data)</code></pre>
+            </div>
+
+            <!-- ElizaOS TypeScript Snippet -->
+            <div style="background: rgba(10, 10, 18, 0.85); border: 1px solid rgba(192, 132, 252, 0.3); border-radius: 16px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-weight: 800; font-size: 0.85rem; color: var(--purple);">🤖 ElizaOS Autonomous Agent</span>
+                <span style="font-size: 0.72rem; color: var(--muted);">TypeScript</span>
+              </div>
+              <pre style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #cbd5e1; line-height: 1.5; overflow-x: auto; background: transparent; padding: 0;"><code>import { AgentRuntime } from "@elizaos/core";
+import { opticParsePlugin } from "opticparse-eliza-plugin";
+
+// Add OpticParse & PhishVision plugin to Eliza agent
+export const agentConfig = {
+  name: "WebScoutAgent",
+  plugins: [opticParsePlugin],
+  settings: {
+    secrets: {
+      OPTICPARSE_API_KEY: process.env.OPTICPARSE_API_KEY
+    }
+  }
+};
+
+// Agent automatically exposes actions:
+// - VISION_SCRAPE: zero-CSS multimodal extraction
+// - PHISH_SCAN: URL reputation & crypto drainer scan
+// - BOT_REGISTER: autonomous machine API key issuance</code></pre>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem;">
             <div class="mini-ui-card" style="flex-direction: column; align-items: flex-start; background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.2);">
-              <span class="bento-badge-text">Success Rate</span>
-              <div style="font-size: 1.5rem; font-weight: 900; color: var(--emerald);">99.9%</div>
-              <div style="font-size: 0.75rem; color: var(--muted);">Guaranteed extraction</div>
+              <span class="bento-badge-text">Direct PyPI</span>
+              <div style="font-size: 1.4rem; font-weight: 900; color: var(--emerald);">v1.0.0 Live</div>
+              <div style="font-size: 0.75rem; color: var(--muted);">opticparse-py &amp; langchain</div>
+            </div>
+            <div class="mini-ui-card" style="flex-direction: column; align-items: flex-start; background: rgba(34, 211, 238, 0.05); border-color: rgba(34, 211, 238, 0.2);">
+              <span class="bento-badge-text">Autonomous M2M</span>
+              <div style="font-size: 1.4rem; font-weight: 900; color: var(--cyan);">Instant Keys</div>
+              <div style="font-size: 0.75rem; color: var(--muted);">POST /api/auth/bot-key</div>
             </div>
           </div>
         </div>
@@ -1243,6 +1313,17 @@ console.log(result.data); <span style="color:#6b7280">// { price: 999.99, title:
       navigator.clipboard.writeText('pip install opticparse-py').then(() => {
         const btn = document.getElementById('copy-btn-text');
         if(btn) { btn.innerText = 'Copied!'; setTimeout(() => { btn.innerText = 'Copy'; }, 2000); }
+      });
+    }
+
+    function copySnippet(text, btnId) {
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById(btnId);
+        if(btn) {
+          const original = btn.innerText;
+          btn.innerText = 'Copied!';
+          setTimeout(() => { btn.innerText = original; }, 2000);
+        }
       });
     }
 
