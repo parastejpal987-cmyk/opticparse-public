@@ -8,13 +8,11 @@ version = "1.0.0"
 description = "Official LangChain & CrewAI Integration for OpticParse Zero-CSS Multimodal Vision Web Scraping & PhishVision Threat Detection"
 readme = "README.md"
 authors = [{ name = "OpticParse Enterprise", email = "support@opticparse.com" }]
-license = { text = "MIT" }
+license = "MIT"
 keywords = ["langchain", "crewai", "web-scraping", "vision-ai", "phishing-detection", "ai-agents"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Framework :: LangChain",
 ]
 dependencies = [
     "langchain-core>=0.1.0",
