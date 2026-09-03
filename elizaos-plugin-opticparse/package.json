@@ -1,5 +1,5 @@
 {
-  "name": "@elizaos/plugin-opticparse",
+  "name": "opticparse-eliza-plugin",
   "version": "1.0.0",
   "description": "ElizaOS Autonomous AI Agent Plugin for Zero-CSS Multimodal Vision Scraping & PhishVision Zero-Day Threat Intelligence",
   "main": "dist/index.js",
