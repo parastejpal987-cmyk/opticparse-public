@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "langchain-opticparse"
-version = "1.0.0"
-description = "Official LangChain & CrewAI Integration for OpticParse Zero-CSS Multimodal Vision Web Scraping & PhishVision Threat Detection"
+version = "1.0.1"
+description = "Official LangChain 1.x & CrewAI BaseTool Integration for OpticParse Vision Web Scraping & PhishVision Threat Detection"
 readme = "README.md"
 authors = [{ name = "OpticParse Enterprise", email = "support@opticparse.com" }]
 license = "MIT"
