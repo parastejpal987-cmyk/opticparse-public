@@ -6,7 +6,8 @@
   <p>
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/stargazers"><img src="https://img.shields.io/github/stars/parastejpal987-cmyk/opticparse-public?style=for-the-badge&color=gold&logo=github" alt="GitHub Stars"></a>
-    <a href="https://huggingface.co/spaces/paras9909/opticparse-universal-scraper"><img src="https://img.shields.io/badge/Hugging_Face-Live_Demo-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Demo"></a>
+    <a href="https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark"><img src="https://img.shields.io/badge/Hugging_Face-Live_Benchmark-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Benchmark"></a>
+    <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-150_Dataset-blue?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
     <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py?style=for-the-badge&color=blue&logo=pypi&logoColor=white" alt="PyPI opticparse-py"></a>
     <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
     <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
