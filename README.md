@@ -1,7 +1,8 @@
 <div align="center">
-  <img src="opticparse_cover.png" alt="OpticParse Enterprise Banner" width="750"/>
-  <h1>OpticParse Enterprise Developer Hub</h1>
-  <p><strong>The Autonomous AI Vision Web Scraper, Continuous Threat Refinery & MCP Agent Protocol</strong></p>
+  <img src="opticparse_cover.png" alt="OpticParse & PhishVision Banner" width="750"/>
+  <h1>OpticParse &bull; PhishVision</h1>
+  <p><strong>The Autonomous Agent Web Browsing & Threat Shield Stack</strong></p>
+  <p><em>Zero-CSS Visual Extraction &bull; Zero-Day Phishing & Wallet Drainer Defense &bull; MCP Server &bull; Multi-Agent Toolkits</em></p>
 
   <p>
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
@@ -31,11 +32,51 @@
 
 ---
 
-## 📌 Overview
+## 📌 Why This Stack Exists: The Dual-Engine Agent Architecture
+ 
+Giving an autonomous AI agent unrestricted internet access introduces two critical vulnerabilities:
+1. **Context Window & DOM Fragility (OpticParse solves this):** Raw HTML consumes 90%+ of LLM token context, while rigid CSS/XPath selectors break the moment websites change frontend frameworks.
+2. **The Autonomous Link Trap (PhishVision solves this):** When agents follow links autonomously, malicious actors can exploit them with zero-day credential harvesting kits, fake Web3 dApps, and hidden prompt-injection redirects.
 
-**OpticParse** is an edge-native, computer vision web scraper and continuous threat intelligence refinery. Operating **150 autonomous extraction pipelines** across **13 industries**, it auto-harvests **1,250+ verified intelligence records every 24 hours** at the global edge on Cloudflare Workers, R2, and D1.
+**OpticParse + PhishVision provides the complete solution:**
+- **The Shield (PhishVision):** Inspects target URLs in real-time for SSL age, brand spoofing, and drainer signatures *before* the agent executes navigation.
+- **The Engine (OpticParse):** Visually renders the authenticated page at the edge, converting dynamic JavaScript into token-optimized clean Markdown (96% noise reduction) without brittle CSS selectors.
 
-Designed natively for the **Agent-to-Agent (A2A) Economy**, OpticParse provides direct **Model Context Protocol (MCP)** tools for Claude Desktop, Cursor, and autonomous AI agents to interact with structured web data without fragile CSS selector breakages.
+Operating **150 autonomous extraction & threat pipelines** across **13 industries**, the network auto-harvests **1,250+ verified intelligence records every 24 hours** at the global edge on Cloudflare Workers, R2, and D1.
+
+---
+
+## 🏛️ Autonomous Agent Dual-Shield Workflow
+
+```
+       ┌─────────────────────────────────────────────────────────────┐
+       │             Autonomous AI Agent (LangChain / LlamaIndex)     │
+       └──────────────────────────────┬──────────────────────────────┘
+                                      │ Target URL
+                                      ▼
+                      ┌──────────────────────────────┐
+                      │ PhishVision Security Shield  │
+                      │  - Heuristic Brand Distance  │
+                      │  - Zero-Day Phishing Kits    │
+                      │  - Web3 Drainer Signatures   │
+                      └──────────────┬───────────────┘
+                                     │
+                    ┌────────────────┴────────────────┐
+                    │ Verdict                         │
+             [ MALICIOUS ]                       [ SAFE ]
+                    │                                 │
+                    ▼                                 ▼
+      ┌───────────────────────────┐     ┌───────────────────────────┐
+      │  Halt & Shield Agent Loop │     │ OpticParse Edge Extractor │
+      │  (Protect API & Wallet)   │     │  - Zero-CSS Visual Parse  │
+      └───────────────────────────┘     │  - 96% Token Reduction    │
+                                        └─────────────┬─────────────┘
+                                                      │ Clean Markdown
+                                                      ▼
+                                        ┌───────────────────────────┐
+                                        │  LLM Context Window / RAG │
+                                        └───────────────────────────┘
+```
 
 ---
 
@@ -94,17 +135,27 @@ pip install langchain-opticparse
 pip install llama-index-tools-opticparse
 ```
 
-### LangChain & CrewAI Usage:
+### LangChain Dual-Shield Agent Usage:
 ```python
 from langchain_opticparse import OpticParseTool, PhishVisionTool
 
-# Initialize tools for autonomous agents
-optic_tool = OpticParseTool(api_key="your_api_key")
-phish_tool = PhishVisionTool(api_key="your_api_key")
+# Initialize tools
+phish_shield = PhishVisionTool(api_key="your_api_key")
+optic_scraper = OpticParseTool(api_key="your_api_key")
 
-# Run zero-selector visual web scraping
-result = optic_tool.run({"url": "https://example.com/pricing", "query": "Extract tier prices and plan limits"})
-print(result)
+target_url = "https://example.com/pricing"
+
+# 1. Pre-flight security audit: Block phishing kits & wallet drainers
+threat_audit = phish_shield.run({"url": target_url})
+if threat_audit.get("verdict") == "MALICIOUS":
+    print(f"🚨 Security Alert: Agent halted. Threat detected (Score: {threat_audit['threat_score']}/100)")
+else:
+    # 2. Extract clean visual Markdown without brittle CSS selectors
+    clean_data = optic_scraper.run({
+        "url": target_url, 
+        "query": "Extract tier prices, plan limits, and feature comparisons"
+    })
+    print(clean_data)
 ```
 
 ### LlamaIndex Usage:
