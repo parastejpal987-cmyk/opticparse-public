@@ -41,5 +41,8 @@ Documentation = "https://opticparse.com/api-docs.html"
 Repository = "https://github.com/parastejpal987-cmyk/opticparse-public"
 "Bug Tracker" = "https://github.com/parastejpal987-cmyk/opticparse-public/issues"
 
+[project.scripts]
+opticparse = "opticparse.cli:main"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/opticparse"]
