@@ -5,6 +5,7 @@
 
   <p>
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/parastejpal987-cmyk/opticparse-public/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/stargazers"><img src="https://img.shields.io/github/stars/parastejpal987-cmyk/opticparse-public?style=for-the-badge&color=gold&logo=github" alt="GitHub Stars"></a>
     <a href="https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark"><img src="https://img.shields.io/badge/Hugging_Face-Live_Benchmark-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Benchmark"></a>
     <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-150_Dataset-blue?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
