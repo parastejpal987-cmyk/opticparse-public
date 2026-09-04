@@ -10,8 +10,10 @@
     <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-150_Dataset-blue?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
     <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py?style=for-the-badge&color=blue&logo=pypi&logoColor=white" alt="PyPI opticparse-py"></a>
     <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
+    <a href="https://pypi.org/project/llama-index-tools-opticparse/"><img src="https://img.shields.io/pypi/v/llama-index-tools-opticparse?style=for-the-badge&color=purple&logo=pypi&logoColor=white" alt="PyPI llama-index-tools-opticparse"></a>
     <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
     <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
+    <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Glama_MCP-Indexed-informational?style=for-the-badge" alt="Glama MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
     <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
   </p>
@@ -86,6 +88,36 @@ pip install opticparse-py
 
 # LangChain & CrewAI Tool Integration
 pip install langchain-opticparse
+
+# LlamaIndex Tool Integration
+pip install llama-index-tools-opticparse
+```
+
+### LangChain & CrewAI Usage:
+```python
+from langchain_opticparse import OpticParseTool, PhishVisionTool
+
+# Initialize tools for autonomous agents
+optic_tool = OpticParseTool(api_key="your_api_key")
+phish_tool = PhishVisionTool(api_key="your_api_key")
+
+# Run zero-selector visual web scraping
+result = optic_tool.run({"url": "https://example.com/pricing", "query": "Extract tier prices and plan limits"})
+print(result)
+```
+
+### LlamaIndex Usage:
+```python
+from llama_index.tools.opticparse import OpticParseToolSpec
+from llama_index.core.agent import FunctionCallingAgentWorker
+
+# Initialize tool spec and extract documents
+tool_spec = OpticParseToolSpec(api_key="your_api_key")
+docs = tool_spec.extract(url="https://example.com", query="Extract specs")
+print(docs[0].text)
+
+# Convert directly to agent tool list
+tools = tool_spec.to_tool_list()
 ```
 
 ### Python Agent Usage:
