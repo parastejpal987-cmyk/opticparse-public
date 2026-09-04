@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-index-tools-opticparse"
+version = "1.0.0"
+description = "Official LlamaIndex BaseToolSpec Integration for OpticParse Vision Web Scraping & PhishVision Threat Detection"
+readme = "README.md"
+authors = [{ name = "OpticParse Enterprise", email = "support@opticparse.com" }]
+license = "MIT"
+keywords = ["llamaindex", "llama-index", "web-scraping", "vision-ai", "phishing-detection", "ai-agents", "rag", "rag-tools"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://opticparse.com"
+Repository = "https://github.com/parastejpal987-cmyk/opticparse-public"
