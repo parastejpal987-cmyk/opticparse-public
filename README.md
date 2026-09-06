@@ -36,6 +36,23 @@
 
 ---
 
+## ⚡ Feature & Architecture Comparison
+
+Looking for a **Firecrawl alternative**, **Crawl4AI alternative**, or a **Zero-Day Phishing Shield** for your autonomous AI agents? Here is how OpticParse + PhishVision compares to traditional scraping engines and legacy security blacklists:
+
+| Feature / Capability | OpticParse & PhishVision | Firecrawl | Crawl4AI | Jina Reader | Google Safe Browsing / VirusTotal |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Primary Extraction Engine** | **Multimodal AI Vision (Zero-CSS)** | HTML / Markdown | DOM Tree / XPath | Regex / Markdown | N/A (Security Only) |
+| **0-Day Phishing & Wallet Drainer Shield** | 🛡️ **Built-in (Instant Day 0)** | ❌ None | ❌ None | ❌ None | ⚠️ Historical Blacklist (12-48h delay) |
+| **In-IDE Developer Free Trial** | ✅ **200 Requests Out-of-the-Box** | ❌ Mandatory Credit Card | ❌ Self-hosted Setup | ⚠️ Limited Free Tier | ⚠️ Strict Rate Limits |
+| **In-Terminal Instant Checkout** | ✅ **ASCII QR in Console + .env Save**| ❌ Web Portal Only | ❌ None | ❌ Web Portal Only | ❌ Enterprise Contract |
+| **Agent Ecosystem Toolkits** | **LangChain, ElizaOS, AgentKit, MCP** | LangChain, LlamaIndex | Generic Python | Generic HTTP | None (Raw API) |
+| **Payment & Settlement Flexibility** | **USDC / MetaMask / $0.05 M2M** | Stripe ($16+/mo SaaS) | None (Open Source) | Stripe ($$$) | Enterprise ($$$) |
+| **Token Optimization Noise Reduction** | **96% Token Reduction** | ~80% | ~70% | ~85% | N/A |
+
+---
+
+
 ## 📌 Why This Stack Exists: The Dual-Engine Agent Architecture
  
 Giving an autonomous AI agent unrestricted internet access introduces two critical vulnerabilities:
@@ -365,9 +382,19 @@ Explore live brand safety evaluations and visual impersonation checks:
 
 ---
 
+## 🔍 Common Search Index & Developer Integrations
+
+OpticParse & PhishVision are natively integrated across the agent and web extraction ecosystem:
+* **Alternative To:** Firecrawl, Crawl4AI, Jina AI Reader, ScrapeGraphAI, Playwright Python, Puppeteer, Google Safe Browsing API, VirusTotal API, URLScan.io.
+* **Autonomous Agent Compatibility:** LangChain (`langchain-opticparse`), LlamaIndex (`llama-index-tools-opticparse`), ElizaOS (`opticparse-eliza-plugin`), Coinbase AgentKit (`opticparse-agentkit-action`), Model Context Protocol (`mcp_server.py`).
+* **Use Cases:** AI Web Scraping, Multimodal LLM Vision RAG, Zero-Day Phishing Detection, Web3 Crypto Drainer Defense, Real-Time SKU & Price Intelligence, Continuous Snappy Parquet Datasets.
+
+---
+
 ## 🤝 Open Source & Licensing
 
 OpticParse developer tools, client SDKs, and MCP servers are proudly released under the **MIT License**.
 
 * **Author:** Paras Tejpal ([@parastejpal](https://github.com/parastejpal987-cmyk))
 * **Official Website:** [https://opticparse.com](https://opticparse.com)
+
