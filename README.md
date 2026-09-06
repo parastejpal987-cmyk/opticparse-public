@@ -13,9 +13,10 @@
     <a href="https://huggingface.co/datasets/paras9909/phishvision-zero-day-phishing-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Threat_Corpus-critical?style=for-the-badge&logo=huggingface&logoColor=white" alt="PhishVision Threat Corpus"></a>
     <a href="https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Kaggle-150_Template_Corpus-informational?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle Web Corpus"></a>
     <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py?style=for-the-badge&color=blue&logo=pypi&logoColor=white" alt="PyPI opticparse-py"></a>
-    <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
+    <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse/1.0.2?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
     <a href="https://pypi.org/project/llama-index-tools-opticparse/"><img src="https://img.shields.io/pypi/v/llama-index-tools-opticparse?style=for-the-badge&color=purple&logo=pypi&logoColor=white" alt="PyPI llama-index-tools-opticparse"></a>
     <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
+    <a href="https://www.npmjs.com/package/opticparse-agentkit-action"><img src="https://img.shields.io/npm/v/opticparse-agentkit-action?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm AgentKit Action"></a>
     <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
     <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Glama_MCP-Indexed-informational?style=for-the-badge" alt="Glama MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
@@ -24,6 +25,7 @@
   <p>
     <a href="https://github.com/sponsors/parastejpal987-cmyk"><img src="https://img.shields.io/badge/Sponsor_Web3-0xd458...DD27-ff69b4?style=flat&logo=ethereum&logoColor=white" alt="Web3 Sponsor"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+    <img src="https://img.shields.io/badge/Trial_Allowance-200_Free_Requests-brightgreen" alt="Free Trial">
     <img src="https://img.shields.io/badge/Autonomous_x402-$0.05_USDC-purple" alt="x402 Paywall">
     <img src="https://img.shields.io/badge/Daily_Velocity-%2B1%2C250_Records%2F24h-blueviolet" alt="Velocity">
     <img src="https://img.shields.io/badge/MCP_Protocol-2024--11--05-orange" alt="MCP Protocol">
@@ -202,6 +204,10 @@ else:
     })
     print(clean_data)
 ```
+
+> ⚡ **200 Free Trial Extractions & In-IDE Activation:**  
+> Every IP receives **200 free trial requests** out of the box. When your free trial completes, the terminal automatically prints an ASCII QR code + 1-click checkout link. Upon paying on-chain ($10 Starter / $50 Growth / $200 Scale / $0.05 M2M via MetaMask or mobile wallet), your live API key is automatically minted, saved directly to your local `.env`, and your code resumes execution seamlessly.
+
 
 ### LlamaIndex Usage:
 ```python
