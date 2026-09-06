@@ -4,6 +4,7 @@
  * Official ElizaOS Agent Plugin for OpticParse & PhishVision.
  * Enables autonomous AI agents to scrape live websites via multimodal Vision AI
  * and analyze zero-day crypto phishing threats and drainers.
+ * Features 200 free trial requests and autonomous Web3/USDC settlement.
  */
 
 export interface ScrapeParams {
@@ -49,6 +50,21 @@ export const opticParsePlugin = {
             body: JSON.stringify({ url, query })
           });
 
+          if (response.status === 402) {
+            let payData: any = {};
+            try {
+              payData = await response.json();
+            } catch {}
+            const checkoutUrl = payData.checkout_url || "https://opticparse-edge.parastejpal987.workers.dev/checkout";
+            if (callback) {
+              callback({
+                text: `[402 PAYMENT REQUIRED] Free trial quota of 200 requests exhausted. Settle 0.05 USDC to ${EVM_TREASURY} or unlock prepaid tier at: ${checkoutUrl}`,
+                data: payData
+              });
+            }
+            return false;
+          }
+
           const data = await response.json();
           if (callback) {
             callback({
@@ -88,6 +104,21 @@ export const opticParsePlugin = {
             },
             body: JSON.stringify({ url })
           });
+
+          if (response.status === 402) {
+            let payData: any = {};
+            try {
+              payData = await response.json();
+            } catch {}
+            const checkoutUrl = payData.checkout_url || "https://opticparse-edge.parastejpal987.workers.dev/checkout";
+            if (callback) {
+              callback({
+                text: `[402 PAYMENT REQUIRED] PhishVision security scan quota reached (200 requests). Settle 0.05 USDC or activate credits at: ${checkoutUrl}`,
+                data: payData
+              });
+            }
+            return false;
+          }
 
           const data = await response.json();
           if (callback) {
