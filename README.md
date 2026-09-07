@@ -1,3 +1,43 @@
+
+---
+
+## 🍽️ The OpticParse Unified Platform Suite
+
+OpticParse provides an end-to-end visual intelligence and security ecosystem structured into three high-performance pillars for autonomous AI agents, enterprise automation, and developers:
+
+`
+                       ╔════════════════════════════════════════════╗
+                       ║            OPTICPARSE PLATFORM             ║
+                       ║       The Visual Intelligence Engine       ║
+                       ╚════════════════════════════════════════════╝
+                                            │
+         ┌──────────────────────────────────┼──────────────────────────────────┐
+         ▼                                  ▼                                  ▼
+┌───────────────────┐             ┌───────────────────┐              ┌───────────────────┐
+│     PILLAR 1      │             │     PILLAR 2      │              │     PILLAR 3      │
+│  OPTICPARSE CORE  │             │ PHISHVISION SHIELD│              │    AGENT-GUARD    │
+│ (Visual Parsing)  │             │ (Threat Defense)  │              │(Agentic Security) │
+├───────────────────┤             ├───────────────────┤              ├───────────────────┤
+│• Human-Grade DOM  │             │• Dual-Shield AI   │              │• Pre-Flight Tx    │
+│  Layout Parser    │             │  Visual Scanner   │              │  Oracle (Web3)    │
+│• Bounding Box OCR │             │• Zero-Day Phishing│              │• ToxicCanvas      │
+│• 150-Template     │             │  Corpus           │              │  (Prompt-Inject   │
+│  Web Corpus       │             │• Cloaking & Scam  │              │   Firewall)       │
+│• MCP Tool Server  │             │  Ad Intelligence  │              │• Reverse CAPTCHA  │
+│  (Glama Verified) │             │• Dynamic SVG Badge│              │  UI Attestation   │
+└───────────────────┘             └───────────────────┘              └───────────────────┘
+`
+
+### 📦 Unified Products & Packages:
+| Product | Package / Surface | Target Use Case | Pricing / Access |
+| :--- | :--- | :--- | :--- |
+| **OpticParse Core** | pip install langchain-opticparse <br> llama-index-tools-opticparse | Vision-driven web scraping bypassing Cloudflare/anti-bot | 200 Free Trial Calls ➔ .005/req |
+| **PhishVision Shield** | @opticparse/phishvision <br> GitHub Marketplace Action | Zero-Day phishing & malicious wallet drainer detection in <1.6s | 200 Free Trial Calls ➔ /mo |
+| **Agent-Guard** | packages/opticparse-agent-guard <br> @opticparse/agentkit-action | Inline safety oracle for autonomous swarms (ElizaOS, AgentKit) | .05 USDC per pre-flight verification |
+| **ToxicCanvas Guard** | Built-in via AgentGuard.sanitizeVisualTokens() | Neutralizes cloaked visual prompt injections in multimodal screenshots | Included in Agent-Guard SDK |
+| **E-Commerce & Ad Alpha**| Real-time threat feeds & restock signals | Sub-500ms luxury liquidation & cloaked scam ad intelligence | Private VIP Webhook Feed |
+
+---
 <div align="center">
   <img src="opticparse_cover.png" alt="OpticParse & PhishVision Banner" width="750"/>
   <h1>OpticParse &bull; PhishVision</h1>
