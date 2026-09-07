@@ -1,0 +1,150 @@
+{
+  "info": {
+    "_postman_id": "ecc4a2eb-e9f4-4828-a1ea-355f8e7347e8",
+    "name": "OpticParse \u2014 Visual Zero-CSS Web Scraper API",
+    "description": "### OpticParse \u2014 Multimodal Vision Web Scraper for AI Agents & Developers\n\nOpticParse reasons over web page layouts using edge multimodal vision rather than brittle CSS selectors, achieving **96% token noise reduction** and automated bypass of Cloudflare challenges.\n\n### \u26a1 Free Trial Quota\nEvery developer receives **200 free trial requests** out-of-the-box. \n- Headers returned on each call: `X-OpticParse-Trial-Limit` and `X-OpticParse-Trial-Remaining`.\n- Once 200 requests are exhausted, the endpoint responds with `HTTP 402 Payment Required` with instant Stripe and Web3 credit pack options.\n\n### \ud83d\udcb0 Treasury Settlement (x402 Protocol)\n- **Settlement Wallet:** `0xd458E709e7d54fd3659EF66624A621Cde74EDD27` (Base / Polygon / Arbitrum)\n- **Direct Pay-per-Call:** Send $0.05 USDC with transaction hash in header `X-Payment-TxHash`.\n\n### \ud83d\udce6 Client Packages:\n- PyPI: `pip install langchain-opticparse` / `pip install llama-index-tools-opticparse`\n- npm: `npm install opticparse-eliza-plugin`\n- GitHub: https://github.com/parastejpal987-cmyk/opticparse-public\n",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-08-30T18:42:15.000Z",
+    "updatedAt": "2026-09-07T03:52:24.000Z",
+    "lastUpdatedBy": "56296985",
+    "uid": "56296985-ecc4a2eb-e9f4-4828-a1ea-355f8e7347e8"
+  },
+  "item": [
+    {
+      "name": "1. Edge Scrape (Fast 200 Trial)",
+      "id": "f655a3f3-43e2-4c22-b416-a26d6d08dc61",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer op_live_postman_trial"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://news.ycombinator.com\",\n  \"query\": \"Extract top 5 news titles with links and point scores\"\n}"
+        },
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/mcp/tools/opticparse_extract",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "mcp",
+            "tools",
+            "opticparse_extract"
+          ]
+        },
+        "description": "Extract structured JSON from any live webpage via multimodal edge AI vision."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:24.000Z",
+      "updatedAt": "2026-09-07T03:52:24.000Z",
+      "uid": "56296985-f655a3f3-43e2-4c22-b416-a26d6d08dc61"
+    },
+    {
+      "name": "2. Clean Markdown & RAG Parser",
+      "id": "77923873-bdec-480f-bb18-5a1c0ed106e6",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://en.wikipedia.org/wiki/Artificial_intelligence\",\n  \"include_images\": false,\n  \"include_links\": true\n}"
+        },
+        "url": {
+          "raw": "https://opticparse-api.onrender.com/api/extract/markdown",
+          "protocol": "https",
+          "host": [
+            "opticparse-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "extract",
+            "markdown"
+          ]
+        },
+        "description": "Convert complex cluttered HTML into pristine, token-optimized Markdown for LLM context windows."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:24.000Z",
+      "updatedAt": "2026-09-07T03:52:24.000Z",
+      "uid": "56296985-77923873-bdec-480f-bb18-5a1c0ed106e6"
+    },
+    {
+      "name": "3. Scrapeability Badge (SVG)",
+      "id": "e6c5dab7-399c-4b58-b063-af2607645048",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/scrapeable?score=98",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "api",
+            "badge",
+            "scrapeable"
+          ],
+          "query": [
+            {
+              "key": "score",
+              "value": "98"
+            }
+          ]
+        },
+        "description": "Returns dynamic SVG badge for embedding in README or website footers."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:24.000Z",
+      "updatedAt": "2026-09-07T03:52:24.000Z",
+      "uid": "56296985-e6c5dab7-399c-4b58-b063-af2607645048"
+    },
+    {
+      "name": "4. API Health & Gateway Status",
+      "id": "d0ae83ff-ceb1-4fd8-ad06-f52067942ade",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://opticparse-api.onrender.com/health",
+          "protocol": "https",
+          "host": [
+            "opticparse-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "health"
+          ]
+        },
+        "description": "Inspect live system uptime and worker health."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:24.000Z",
+      "updatedAt": "2026-09-07T03:52:24.000Z",
+      "uid": "56296985-d0ae83ff-ceb1-4fd8-ad06-f52067942ade"
+    }
+  ]
+}
