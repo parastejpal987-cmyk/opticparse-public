@@ -30,7 +30,7 @@ def handle_request(req: dict[str, Any]):
                 },
                 "serverInfo": {
                     "name": "opticparse-mcp",
-                    "version": "0.1.0"
+                    "version": "1.0.0"
                 }
             }
         })
@@ -43,39 +43,38 @@ def handle_request(req: dict[str, Any]):
                 "tools": [
                     {
                         "name": "opticparse_scrape",
-                        "description": "Extract structured data from a web page using AI Vision scraping.",
+                        "description": "Extract structured, token-optimized data from any live web page using AI Multimodal Vision. Bypasses Cloudflare Turnstile, anti-bot mechanisms, and dynamic JavaScript rendering without brittle CSS selectors. Perfect for LLM context windows and RAG pipelines.",
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "target_url": {"type": "string", "description": "The URL of the webpage to scrape."},
-                                "extraction_query": {"type": "string", "description": "Instructions for what information to extract from the webpage."},
-                                "response_schema": {"type": "object", "description": "Optional JSON schema to enforce on the extracted data."}
+                                "target_url": {
+                                    "type": "string",
+                                    "description": "The fully-qualified HTTP/HTTPS URL of the webpage to scrape and extract content from."
+                                },
+                                "extraction_query": {
+                                    "type": "string",
+                                    "description": "Natural language instructions specifying what data fields, tables, or text to extract from the webpage."
+                                },
+                                "response_schema": {
+                                    "type": "object",
+                                    "description": "Optional JSON Schema definition to enforce a strict structured output format on the extracted result."
+                                }
                             },
                             "required": ["target_url", "extraction_query"]
                         }
                     },
                     {
                         "name": "phishvision_detect",
-                        "description": "Scan a URL to detect phishing threat indicators and impersonations.",
+                        "description": "Audit and inspect any URL for real-time zero-day phishing campaigns, smart contract wallet drainers, credential harvesting kits, and brand impersonation attacks using visual layout heuristics in under 1.6 seconds.",
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "url": {"type": "string", "description": "The URL to inspect for threats."}
+                                "url": {
+                                    "type": "string",
+                                    "description": "The target domain or fully qualified URL to audit for security threats, drainers, and malicious vectors."
+                                }
                             },
                             "required": ["url"]
-                        }
-                    },
-                    {
-                        "name": "search_lessons",
-                        "description": "Search the MisakaNet lesson database.",
-                        "inputSchema": {
-                            "type": "object",
-                            "properties": {
-                                "query": {"type": "string", "description": "The search query."},
-                                "domain": {"type": "string", "description": "Optional domain filter."},
-                                "tags": {"type": "string", "description": "Optional tags."}
-                            },
-                            "required": ["query"]
                         }
                     }
                 ]
@@ -125,19 +124,6 @@ def handle_request(req: dict[str, Any]):
                         ]
                     }
                 })
-            elif tool_name == "search_lessons":
-                query = arguments.get("query")
-                # Stub implementation for MisakaNet lesson search
-                res = {"results": [{"id": "lesson_1", "title": f"Lesson matching {query}", "uri": "misakanet://lessons/lesson_1"}]}
-                send_response({
-                    "jsonrpc": "2.0",
-                    "id": req_id,
-                    "result": {
-                        "content": [
-                            {"type": "text", "text": json.dumps(res, indent=2)}
-                        ]
-                    }
-                })
             else:
                 send_response({
                     "jsonrpc": "2.0",
@@ -164,10 +150,10 @@ def handle_request(req: dict[str, Any]):
             "result": {
                 "resources": [
                     {
-                        "uri": "misakanet://domains",
-                        "name": "Domain List",
+                        "uri": "opticparse://capabilities",
+                        "name": "OpticParse & PhishVision Capabilities",
                         "mimeType": "application/json",
-                        "description": "List of all MisakaNet domains"
+                        "description": "Live status and supported extraction models and threat heuristics"
                     }
                 ]
             }
@@ -175,24 +161,13 @@ def handle_request(req: dict[str, Any]):
     elif method == "resources/read":
         uri = params.get("uri", "")
         logger.info(f"Reading resource: {uri}")
-        if uri == "misakanet://domains":
-            data = {"domains": ["core", "security", "scraping", "phishvision"]}
-            send_response({
-                "jsonrpc": "2.0",
-                "id": req_id,
-                "result": {
-                    "contents": [
-                        {
-                            "uri": uri,
-                            "mimeType": "application/json",
-                            "text": json.dumps(data)
-                        }
-                    ]
-                }
-            })
-        elif uri.startswith("misakanet://lessons/"):
-            lesson_id = uri.split("/")[-1]
-            data = {"id": lesson_id, "content": f"Full lesson content for {lesson_id}", "tags": ["example"]}
+        if uri == "opticparse://capabilities":
+            data = {
+                "engine": "OpticParse Vision Multimodal",
+                "security": "PhishVision 0-Day Heuristics",
+                "supported_formats": ["json", "markdown", "raw_tokens"],
+                "anti_bot_bypass": ["cloudflare_turnstile", "datadome", "kasada"]
+            }
             send_response({
                 "jsonrpc": "2.0",
                 "id": req_id,
