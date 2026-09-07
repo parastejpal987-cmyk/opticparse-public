@@ -1,15 +1,26 @@
 {
   "": "https://glama.ai/mcp/glama.schema.json",
   "name": "opticparse",
-  "description": "Universal visual web scraper and zero-day threat defense MCP server for AI agents.",
+  "description": "Universal multimodal AI vision web scraper and zero-day threat defense MCP server for autonomous agents.",
+  "repository": "https://github.com/parastejpal987-cmyk/opticparse-public",
+  "homepage": "https://opticparse.com",
+  "license": "MIT",
+  "tags": [
+    "web-scraping",
+    "security",
+    "phishing",
+    "vision-ai",
+    "agentkit",
+    "elizaos"
+  ],
   "tools": [
     {
-      "name": "opticparse_extract",
-      "description": "Extract structured data from any webpage using multimodal vision AI."
+      "name": "opticparse_scrape",
+      "description": "Extract structured data from any webpage using multimodal vision AI, bypassing Cloudflare challenges."
     },
     {
-      "name": "phishvision_scan",
-      "description": "Scan URLs for zero-day phishing, credential harvesting, and crypto drainers."
+      "name": "phishvision_detect",
+      "description": "Scan URLs for zero-day phishing, credential harvesting, and smart contract wallet drainers."
     }
   ]
 }
