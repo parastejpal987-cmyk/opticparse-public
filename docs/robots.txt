@@ -4,14 +4,44 @@ Disallow: /api/
 Disallow: /gateway/
 Disallow: /admin/
 
-# Allow good bots specifically
+# Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-# Block known bad bots
+# AI Search & Answer Engines (Permitted for LLM Discovery & Citation)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Amazonbot
+Allow: /
+Allow: /llms.txt
+
+# Block Aggressive SEO Scrapers
 User-agent: AhrefsBot
 Disallow: /
 
@@ -21,4 +51,7 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
+# Sitemaps and AI Machine Manifests
 Sitemap: https://opticparse.com/sitemap.xml
+Sitemap: https://opticparse.com/llms.txt
+Sitemap: https://opticparse.com/llms-full.txt
