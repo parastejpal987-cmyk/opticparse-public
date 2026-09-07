@@ -1,0 +1,151 @@
+# OpticParse & PhishVision -- Comprehensive AI Agent Integration Manifest (llms-full.txt)
+
+> Standardized machine-readable reference for Autonomous LLM Agents, Agentic IDEs (Cursor, Windsurf, Devin), and Multi-Agent Orchestrators (LangChain, LlamaIndex, ElizaOS, AutoGPT, CrewAI).
+
+---
+
+## 1. Executive Summary & Capabilities
+
+OpticParse and PhishVision provide a dual-engine architecture engineered for autonomous AI agents navigating the modern web:
+
+1. **OpticParse (Visual Zero-CSS Web Scraping):**
+   - Extracts clean, structured JSON from dynamic JavaScript-rendered web pages using multimodal edge vision.
+   - Eliminates 96% of raw DOM/HTML token noise before context injection.
+   - Bypasses anti-bot friction, dynamic layouts, and layout refactors without brittle CSS/XPath selectors.
+2. **PhishVision (Real-Time Zero-Day Threat Shield):**
+   - Sub-1.6s heuristic inspection for zero-day phishing kits, brand impersonation clones, and Web3 crypto wallet drainers.
+   - Prevents autonomous agents from executing transactions or submitting credentials to compromised targets.
+
+---
+
+## 2. Fast Install & Free Trial Quota
+
+All official client packages provide **200 free trial requests out of the box**. No credit card required.
+
+### Python:
+```bash
+pip install langchain-opticparse
+pip install llama-index-tools-opticparse
+pip install opticparse-py
+```
+
+### TypeScript / Node.js:
+```bash
+npm install opticparse-agentkit-action
+npm install opticparse-eliza-plugin
+```
+
+---
+
+## 3. Production Code Recipes
+
+### Recipe A: LangChain / Multi-Agent Swarm (Python)
+
+```python
+import os
+from langchain_opticparse import OpticParseTool, PhishVisionTool
+
+# Initialize tools (automatically adopts 200 free trial requests if key is not set)
+optic_tool = OpticParseTool(api_key=os.getenv("OPTICPARSE_API_KEY", "op_live_trial_200"))
+phish_tool = PhishVisionTool(api_key=os.getenv("OPTICPARSE_API_KEY", "op_live_trial_200"))
+
+# Step 1: Verify target URL safety before agent navigation
+threat_result = phish_tool.invoke({"url": "https://example-shop.com"})
+print(f"Safety Verdict: {threat_result}")
+
+# Step 2: Extract structured JSON via visual layout reasoning
+scrape_result = optic_tool.invoke({
+    "url": "https://example-shop.com/products",
+    "query": "Extract list of items with name, price in USD, and in_stock status"
+})
+print(f"Structured Content: {scrape_result}")
+```
+
+### Recipe B: LlamaIndex Agent & RAG Pipeline (Python)
+
+```python
+import os
+from llama_index.tools.opticparse import OpticParseToolSpec
+from llama_index.core.agent import FunctionCallingAgentWorker
+
+# Initialize tool specification
+tool_spec = OpticParseToolSpec(
+    api_key=os.getenv("OPTICPARSE_API_KEY", "op_live_trial_200")
+)
+tools = tool_spec.to_tool_list()
+
+# Standalone execution
+docs = tool_spec.extract(
+    url="https://news.ycombinator.com",
+    query="Extract top 5 news titles with external links and points"
+)
+print("Extracted Content:", docs[0].text)
+```
+
+### Recipe C: ElizaOS Autonomous Agent Swarm (TypeScript)
+
+```typescript
+import { opticParsePlugin } from "opticparse-eliza-plugin";
+
+// Add opticParsePlugin directly to your ElizaOS Character definition
+export const defaultCharacter = {
+  name: "WebScout",
+  plugins: [opticParsePlugin],
+  settings: {
+    secrets: {
+      OPTICPARSE_API_KEY: process.env.OPTICPARSE_API_KEY || "op_live_trial_200"
+    }
+  }
+};
+// Available Actions:
+// 1. VISION_SCRAPE: Visual extraction to structured JSON
+// 2. PHISHVISION_DETECT: Threat inspection for malicious URLs
+```
+
+---
+
+## 4. REST API Direct Endpoints
+
+### Endpoint 1: Visual Extraction
+- **URL:** `POST https://opticparse-mcp-portal.parastejpal987.workers.dev/mcp/tools/opticparse_extract`
+- **Headers:** `Authorization: Bearer <API_KEY>`, `Content-Type: application/json`
+- **Payload:**
+  ```json
+  {
+    "url": "https://example.com/target",
+    "query": "Extract pricing, title, description in JSON"
+  }
+  ```
+
+### Endpoint 2: Zero-Day Threat Inspection
+- **URL:** `POST https://opticparse-mcp-portal.parastejpal987.workers.dev/phishvision/scan`
+- **Headers:** `Authorization: Bearer <API_KEY>`, `Content-Type: application/json`
+- **Payload:**
+  ```json
+  {
+    "url": "https://suspicious-domain.xyz"
+  }
+  ```
+
+---
+
+## 5. Monetization & Treasury Settlement (x402 Protocol)
+
+When an agent or developer exhausts their 200 free trial requests, the API responds with `HTTP 402 Payment Required` or outputs an in-terminal QR code with instant recharge options:
+
+1. **Credit Card / Stripe Portal:** Instant purchase of Starter ($29), Pro ($99), or Enterprise ($499) packs.
+2. **On-Chain Micro-Payments (Zero-Gas):**
+   - Supported Networks: **Base**, **Polygon**, **Arbitrum One**
+   - Treasury Wallet: `0xd458E709e7d54fd3659EF66624A621Cde74EDD27`
+   - Settlement Token: USDC / USDT
+   - Verification: Pass transaction hash in header `X-Payment-TxHash` for instant automated crediting.
+
+---
+
+## 6. Official Registries & Links
+
+- **Main Repository:** https://github.com/parastejpal987-cmyk/opticparse-public
+- **Live Dual-Shield Space:** https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark
+- **Hugging Face Datasets:** https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus
+- **Glama MCP Registry:** https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public
+- **Smithery Registry:** https://smithery.ai/server/@parastejpal987-cmyk/opticparse
