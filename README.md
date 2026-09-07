@@ -20,6 +20,7 @@
     <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
     <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Glama_MCP-Indexed-informational?style=for-the-badge" alt="Glama MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
+    <a href="https://www.postman.com/opticparse"><img src="https://img.shields.io/badge/Postman-Verified_Collections-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Collections"></a>
     <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
   </p>
   <p>
@@ -311,6 +312,38 @@ npx -y @smithery/cli install @parastejpal987-cmyk/opticparse --client claude
 * `opticparse_scrape`: Vision-based structured data extraction from any web URL.
 * `phishvision_detect`: Real-time phishing and brand impersonation heuristic scanner.
 * `search_lessons`: Query indexed threat telemetry records.
+
+---
+
+## 📮 Postman Public API Collections
+
+Test the live endpoints instantly in Postman with **200 free trial requests** built-in:
+
+* **OpticParse Visual Web Scraper Collection:** [Run in Postman](https://god.net.objectstorage.softlayer.net/v1/AUTH_084e34cb-d467-422f-87d2-7c3a81283d08/postman-run-button/run-button.svg) — Includes visual extraction, token-optimized RAG markdown parsing, and live system health checks.
+* **PhishVision AI Threat Shield Collection:** Includes 0-day phishing scanning, brand impersonation detection, and permit2 drainer audits in <1.6s.
+* **Offline Import:** Both collections are available directly in this repository under [`postman/`](postman/):
+  - `postman/opticparse_api_collection.json`
+  - `postman/phishvision_api_collection.json`
+
+---
+
+## 🛡️ Embed Dynamic Scrapeability & Security Badges
+
+Showcase that your open-source repository, documentation, or SaaS application is scrapeable by autonomous AI agents or verified safe against zero-day phishing:
+
+### 1. OpticParse Scrapeability Badge
+```markdown
+[![Scrapeable with OpticParse](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/scrapeable?score=98)](https://opticparse.com)
+```
+Output:  
+![Scrapeable with OpticParse](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/scrapeable?score=98)
+
+### 2. PhishVision 0-Day Safe Badge
+```markdown
+[![PhishVision 0-Day Safe](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/phishvision?status=safe)](https://opticparse.com)
+```
+Output:  
+![PhishVision 0-Day Safe](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/phishvision?status=safe)
 
 ---
 
