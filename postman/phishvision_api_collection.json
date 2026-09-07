@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "5df181a1-a8f6-4083-9ebb-4140236270c9",
     "name": "PhishVision \u2014 Real-Time AI Zero-Day Threat Shield",
-    "description": "### PhishVision \u2014 AI Threat Intelligence & Web3 Drainer Detection\n\nPhishVision audits suspicious domains, credential harvesting kits, and malicious smart contract wallet drainers in **<1.6 seconds** using edge visual layout analysis and heuristics.\n\n### \ud83d\udee1\ufe0f Features\n- **Zero-Day Catch:** Identifies malicious domains before traditional feeds (VirusTotal, Google SafeBrowsing) index them.\n- **Web3 Wallet Sentinel:** Detects malicious Permit2 drainers, fake MetaMask popups, and spoofed DEX clones.\n- **200 Free Trial Calls:** Built directly into the API and client libraries.\n\n### \ud83d\udcb0 Treasury Settlement\n- **Treasury Wallet:** `0xd458E709e7d54fd3659EF66624A621Cde74EDD27`\n- **Pricing:** 200 Free Trial calls \u2794 $29 Starter / $99 Pro / $499 Enterprise or $0.05 USDC per on-chain call.\n",
+    "description": "### PhishVision & Agent-Guard - Real-Time Autonomous Threat Shield\n\nPhishVision & Agent-Guard audit suspicious dApps, smart contract drainers, and visual prompt injections in <1.2 seconds.\n\n### Features:\n- **Agent-Guard Pre-Flight Oracle:** In-line safety wrapper before autonomous agents (ElizaOS, AgentKit) sign transactions.\n- **ToxicCanvas Firewall:** Blocks visual prompt injections cloaked in invisible SVG layers.\n- **Zero-Day Catch:** Detects wallet drainers before VirusTotal or Google SafeBrowsing.\n\n### Settlement:\n- Treasury: 0xd458E709e7d54fd3659EF66624A621Cde74EDD27 (Base / Polygon / Arbitrum)\n- Pay-per-Audit: .05 USDC per pre-flight verification.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "createdAt": "2026-08-30T18:42:26.000Z",
     "updatedAt": "2026-09-07T03:52:25.000Z",
@@ -108,6 +108,47 @@
       "createdAt": "2026-09-07T03:52:25.000Z",
       "updatedAt": "2026-09-07T03:52:25.000Z",
       "uid": "56296985-d66f7119-65f9-4aaf-86f5-8287c5d89f98"
+    },
+    {
+      "name": "4. Agent-Guard Pre-Flight Tx Oracle",
+      "id": "agent-guard-preflight-001",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer op_live_postman_trial"
+          },
+          {
+            "key": "X-Agent-Framework",
+            "value": "ElizaOS-CoinbaseAgentKit"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://app.uniswap.org\",\n  \"action\": \"pre_flight_audit\"\n}"
+        },
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/phishvision/scan",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "phishvision",
+            "scan"
+          ]
+        },
+        "description": "Zero-trust pre-flight audit for autonomous agent swarms (ElizaOS, AgentKit) before executing on-chain swaps or interacting with untrusted dApps."
+      },
+      "response": []
     }
   ]
 }
