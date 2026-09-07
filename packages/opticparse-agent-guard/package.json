@@ -1,0 +1,27 @@
+{
+  "name": "@opticparse/agent-guard",
+  "version": "1.0.0",
+  "description": "Pre-Flight Visual Prompt Injection & Web3 Drainer Safety Oracle for Autonomous AI Agents (ElizaOS, AgentKit, LangChain, Browserbase)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-guard",
+    "prompt-injection",
+    "web3-security",
+    "toxic-canvas",
+    "elizaos",
+    "agentkit",
+    "opticparse",
+    "phishvision"
+  ],
+  "author": "OpticParse Enterprise",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.5"
+  }
+}
