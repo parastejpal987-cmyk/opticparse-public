@@ -1,0 +1,23 @@
+{
+  "name": "@elizaos/plugin-opticparse",
+  "version": "1.0.0",
+  "description": "OpticParse Autonomous Vision AI Scraper and x402 Micropayment Plugin for ElizaOS Agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "elizaos",
+    "eliza-plugin",
+    "opticparse",
+    "web-scraping",
+    "x402",
+    "crypto-micropayments"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.0.0"
+  }
+}
