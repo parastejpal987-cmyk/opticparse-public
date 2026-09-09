@@ -55,3 +55,7 @@ Disallow: /
 Sitemap: https://opticparse.com/sitemap.xml
 Sitemap: https://opticparse.com/llms.txt
 Sitemap: https://opticparse.com/llms-full.txt
+
+# Machine-to-Machine & Autonomous Agent Discovery
+Agent-Card: https://opticparse.com/.well-known/agent.json
+Agent-Service: https://opticparse.com/.well-known/agent-service.json
