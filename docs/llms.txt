@@ -3,9 +3,10 @@
 This file is provided for LLMs (ChatGPT, Claude, Devin, Perplexity, ElizaOS)
 exposing standardized, machine-readable extraction and threat scanning actions.
 
-## 1. Vision Web Scraping (Cloudflare Bypass & LMM Compression)
-- Endpoint: POST https://opticparse-rapidapi-gateway.parastejpal987.workers.dev/scrape
-- Autonomous Paywall: HTTP 402 via XX-Payment-TxHash ($0.05 USDC to 0xd458E709e7d54fd3659EF66624A621Cde74EDD27)
+## 1. Vision Web Scraping (Cloudflare Bypass & Multimodal Vision)
+- Endpoint: POST https://opticparse-edge.parastejpal987.workers.dev/api/edge/scrape
+- Autonomous Starter Trial: POST https://opticparse-api.onrender.com/api/auth/bot-key (payload: {"bot_name": "MyAgent", "framework": "ElizaOS", "owner_contact": "agent@domain.com"} -> 100 free requests)
+- Autonomous Paywall: HTTP 402 via X-Payment-TxHash ($0.05 USDC micro-settlement on Base, Polygon, or Arbitrum to 0xd458E709e7d54fd3659EF66624A621Cde74EDD27)
 - Request Schema:
 {
   "url": "https://example.com",
