@@ -1,0 +1,52 @@
+{
+  "$schema": "https://a2a-standard.org/v1/schema.json",
+  "name": "OpticParse Autonomous Perception & Security Node",
+  "version": "2.0.0",
+  "description": "Secure, injection-proof web perception, vision extraction, and adversarial prompt firewall for autonomous AI agents and embodied robotic systems.",
+  "url": "https://opticparse-api.onrender.com",
+  "provider": {
+    "name": "OpticParse Network",
+    "website": "https://opticparse.com",
+    "contact": "admin@opticparse.com"
+  },
+  "endpoints": {
+    "scrape": {
+      "path": "/scrape",
+      "method": "POST",
+      "description": "Extracts high-fidelity clean markdown and structured DOM with ToxicCanvas visual prompt injection sanitization.",
+      "cost_usdc": 0.01,
+      "avg_latency_ms": 1800,
+      "sla_uptime_percent": 99.8
+    },
+    "audit": {
+      "path": "/audit",
+      "method": "POST",
+      "description": "Runs PhishVision brand spoof detection and visual attack surface analysis.",
+      "cost_usdc": 0.01,
+      "avg_latency_ms": 1200,
+      "sla_uptime_percent": 99.9
+    }
+  },
+  "payment": {
+    "protocol": "HTTP-402",
+    "currency": "USDC",
+    "networks": ["base", "polygon"],
+    "treasury_address": "0xd458E709e7d54fd3659EF66624A621Cde74EDD27",
+    "settlement": "instant_onchain"
+  },
+  "capabilities": [
+    "visual_prompt_injection_defense",
+    "toxic_canvas_sanitization",
+    "adversarial_text_filtering",
+    "anti_bot_bypass",
+    "dynamic_javascript_rendering",
+    "cryptographic_data_attestation",
+    "embodied_ai_telemetry_offload"
+  ],
+  "trust": {
+    "status": "operational",
+    "edge_nodes": 62,
+    "resilience_layers": 7,
+    "attestation_supported": true
+  }
+}
