@@ -26,8 +26,9 @@
   <p>
     <a href="https://github.com/sponsors/parastejpal987-cmyk"><img src="https://img.shields.io/badge/Sponsor_Web3-0xd458...DD27-ff69b4?style=flat&logo=ethereum&logoColor=white" alt="Web3 Sponsor"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+    <a href="https://opticparse.com/.well-known/agent.json"><img src="https://img.shields.io/badge/A2A_Protocol-v1.0_Compliant-00e5ff?style=flat" alt="A2A Protocol"></a>
     <img src="https://img.shields.io/badge/Trial_Allowance-200_Free_Requests-brightgreen" alt="Free Trial">
-    <img src="https://img.shields.io/badge/Autonomous_x402-$0.05_USDC-purple" alt="x402 Paywall">
+    <img src="https://img.shields.io/badge/Autonomous_x402-$0.01_USDC-purple" alt="x402 Paywall">
     <img src="https://img.shields.io/badge/Daily_Velocity-%2B1%2C250_Records%2F24h-blueviolet" alt="Velocity">
     <img src="https://img.shields.io/badge/MCP_Protocol-2024--11--05-orange" alt="MCP Protocol">
   </p>
@@ -39,16 +40,18 @@
 
 ## ⚡ Feature & Architecture Comparison
 
-Looking for a **Firecrawl alternative**, **Crawl4AI alternative**, or a **Zero-Day Phishing Shield** for your autonomous AI agents? Here is how OpticParse + PhishVision compares to traditional scraping engines and legacy security blacklists:
+Looking for a **Firecrawl alternative**, **Crawl4AI alternative**, or a **Zero-Day Phishing & Visual Shield** for your autonomous AI agents? Here is how OpticParse + PhishVision compares to traditional scraping engines and legacy security blacklists:
 
 | Feature / Capability | OpticParse & PhishVision | Firecrawl | Crawl4AI | Jina Reader | Google Safe Browsing / VirusTotal |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Primary Extraction Engine** | **Multimodal AI Vision (Zero-CSS)** | HTML / Markdown | DOM Tree / XPath | Regex / Markdown | N/A (Security Only) |
+| **Visual Prompt Injection Shield (`ToxicCanvas`)** | 🛡️ **Built-in (Zero-Opacity & CSS Sanitization)** | ❌ None (Vulnerable) | ❌ None (Vulnerable) | ❌ None | N/A |
 | **0-Day Phishing & Wallet Drainer Shield** | 🛡️ **Built-in (Instant Day 0)** | ❌ None | ❌ None | ❌ None | ⚠️ Historical Blacklist (12-48h delay) |
+| **Machine Discovery Standard (A2A)** | ✅ **Native `agent.json` & `agent-service.json`** | ❌ None | ❌ None | ❌ None | ❌ None |
 | **In-IDE Developer Free Trial** | ✅ **200 Requests Out-of-the-Box** | ❌ Mandatory Credit Card | ❌ Self-hosted Setup | ⚠️ Limited Free Tier | ⚠️ Strict Rate Limits |
 | **In-Terminal Instant Checkout** | ✅ **ASCII QR in Console + .env Save**| ❌ Web Portal Only | ❌ None | ❌ Web Portal Only | ❌ Enterprise Contract |
 | **Agent Ecosystem Toolkits** | **LangChain, ElizaOS, AgentKit, MCP** | LangChain, LlamaIndex | Generic Python | Generic HTTP | None (Raw API) |
-| **Payment & Settlement Flexibility** | **USDC / MetaMask / $0.05 M2M** | Stripe ($16+/mo SaaS) | None (Open Source) | Stripe ($$$) | Enterprise ($$$) |
+| **Payment & Settlement Flexibility** | **USDC (Base/Polygon) / $0.01 M2M** | Stripe ($16+/mo SaaS) | None (Open Source) | Stripe ($$$) | Enterprise ($$$) |
 | **Token Optimization Noise Reduction** | **96% Token Reduction** | ~80% | ~70% | ~85% | N/A |
 
 ---
@@ -56,13 +59,15 @@ Looking for a **Firecrawl alternative**, **Crawl4AI alternative**, or a **Zero-D
 
 ## 📌 Why This Stack Exists: The Dual-Engine Agent Architecture
  
-Giving an autonomous AI agent unrestricted internet access introduces two critical vulnerabilities:
+Giving an autonomous AI agent unrestricted internet access introduces three critical vulnerabilities:
 1. **Context Window & DOM Fragility (OpticParse solves this):** Raw HTML consumes 90%+ of LLM token context, while rigid CSS/XPath selectors break the moment websites change frontend frameworks.
-2. **The Autonomous Link Trap (PhishVision solves this):** When agents follow links autonomously, malicious actors can exploit them with zero-day credential harvesting kits, fake Web3 dApps, and hidden prompt-injection redirects.
+2. **Visual Prompt Injection & Screen Poisoning ([ToxicCanvas](https://opticparse.com/toxic-canvas.html) solves this):** Adversarial sites embed invisible CSS, zero-opacity layers, and prompt injection strings to hijack multimodal vision models (Claude Computer Use, GPT-4o, Operator). ToxicCanvas sanitizes DOM tokens before ingestion.
+3. **The Autonomous Link Trap (PhishVision solves this):** When agents follow links autonomously, malicious actors exploit them with zero-day credential harvesting kits, fake Web3 dApps, and wallet drainers.
 
 **OpticParse + PhishVision provides the complete solution:**
-- **The Shield (PhishVision):** Inspects target URLs in real-time for SSL age, brand spoofing, and drainer signatures *before* the agent executes navigation.
-- **The Engine (OpticParse):** Visually renders the authenticated page at the edge, converting dynamic JavaScript into token-optimized clean Markdown (96% noise reduction) without brittle CSS selectors.
+- **The Shield (PhishVision + ToxicCanvas):** Inspects target URLs in real-time for SSL age, brand spoofing, and visual injection attacks *before* the agent executes navigation.
+- **The Engine (OpticParse):** Visually renders authenticated pages at the edge, converting dynamic JavaScript into token-optimized clean Markdown (96% noise reduction) without brittle CSS selectors.
+- **Embodied AI & Edge Hardware Compatible:** Lightweight token streams structured for low-power edge processors (NVIDIA Jetson, embedded robotics telemetry) that cannot waste local battery and GPU cycles running headless browsers ([Learn more](https://opticparse.com/embodied-ai.html)).
 
 Operating **150 autonomous extraction & threat pipelines** across **13 industries**, the network auto-harvests **1,250+ verified intelligence records every 24 hours** at the global edge on Cloudflare Workers, R2, and D1.
 
@@ -388,9 +393,10 @@ Pay-As-You-Go developer access with **sub-350ms global edge latency** at `$0.008
 
 For autonomous bots, multi-agent frameworks (ElizaOS, AutoGPT, CrewAI), and automated scrapers with no human in the loop, OpticParse supports **instant on-chain settlement**:
 
-* **Price**: `$0.05 USDC` per request
-* **Supported Chains**: **Polygon**, **Base**, **Arbitrum**
+* **Price**: `$0.01 USDC` per request
+* **Supported Chains**: **Base**, **Polygon**, **Arbitrum**
 * **Treasury Address**: `0xd458E709e7d54fd3659EF66624A621Cde74EDD27`
+* **Machine Manifest**: [`https://opticparse.com/.well-known/agent.json`](https://opticparse.com/.well-known/agent.json) (Google A2A Standard)
 
 ### 🤖 1-Line Autonomous Agent Request:
 ```bash
