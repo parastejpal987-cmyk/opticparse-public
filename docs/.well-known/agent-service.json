@@ -1,0 +1,63 @@
+{
+  "service": "OpticParse",
+  "version": "2.0.0",
+  "protocol": "A2A-1.0",
+  "spec_url": "https://opticparse.com/.well-known/agent-service.json",
+  "description": "Autonomous perception & visual injection firewall for AI agents, swarms, and physical robots.",
+  "endpoints": [
+    {
+      "path": "/scrape",
+      "method": "POST",
+      "cost_per_request_usd": 0.01,
+      "settlement_currency": "USDC",
+      "settlement_networks": ["base", "polygon"],
+      "avg_latency_ms": 1800,
+      "uptime_30d_percent": 99.8,
+      "data_freshness": "real-time",
+      "capabilities": [
+        "markdown_extraction",
+        "toxic_canvas_sanitization",
+        "visual_prompt_injection_defense",
+        "anti_bot_bypass",
+        "proxy_rotation"
+      ]
+    },
+    {
+      "path": "/audit",
+      "method": "POST",
+      "cost_per_request_usd": 0.01,
+      "settlement_currency": "USDC",
+      "settlement_networks": ["base", "polygon"],
+      "avg_latency_ms": 1200,
+      "uptime_30d_percent": 99.9,
+      "data_freshness": "real-time",
+      "capabilities": [
+        "phishvision_brand_spoof_detection",
+        "visual_similarity_clustering",
+        "adversarial_domain_check"
+      ]
+    }
+  ],
+  "treasury": {
+    "evm_address": "0xd458E709e7d54fd3659EF66624A621Cde74EDD27",
+    "accepted_tokens": [
+      {
+        "symbol": "USDC",
+        "network": "base",
+        "contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+      },
+      {
+        "symbol": "USDC",
+        "network": "polygon",
+        "contract": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+      }
+    ]
+  },
+  "trust": {
+    "edge_workers_active": 62,
+    "r2_objects_harvested": "15000+",
+    "fallback_providers_depth": 10,
+    "self_healing_daemon": "active",
+    "attestation_supported": true
+  }
+}
