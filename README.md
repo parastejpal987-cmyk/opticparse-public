@@ -34,6 +34,12 @@
   </p>
 </div>
 
+<div align="center">
+  <p>
+    <a href="https://opticparse.com"><img src="assets/opticparse-demo.svg" alt="OpticParse Multimodal Visual Extraction & Threat Sentinel Demo" width="850"/></a>
+  </p>
+</div>
+
 > ⭐ **Support Open Source:** If you find OpticParse or PhishVision useful, please **give us a Star on GitHub**! It helps us maintain free edge scrapers and datasets for everyone.
 
 ---
