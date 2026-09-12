@@ -1,36 +1,22 @@
 <div align="center">
-  <img src="opticparse_cover.png" alt="OpticParse & PhishVision Banner" width="750"/>
-  <h1>OpticParse &bull; PhishVision</h1>
-  <p><strong>The Autonomous Agent Web Browsing & Threat Shield Stack</strong></p>
-  <p><em>Zero-CSS Visual Extraction &bull; Zero-Day Phishing & Wallet Drainer Defense &bull; MCP Server &bull; Multi-Agent Toolkits</em></p>
+  <h1>⚡ OpticParse Developer Hub</h1>
+  <p><strong>The Multimodal AI Web Scraper, Continuous Threat Refinery & MCP Agent Protocol</strong></p>
 
   <p>
-    <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
-    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/parastejpal987-cmyk/opticparse-public/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status"></a>
-    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/stargazers"><img src="https://img.shields.io/github/stars/parastejpal987-cmyk/opticparse-public?style=for-the-badge&color=gold&logo=github" alt="GitHub Stars"></a>
-    <a href="https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark"><img src="https://img.shields.io/badge/Hugging_Face-OpticParse_Benchmark-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Benchmark"></a>
-    <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Web_Corpus-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Web Corpus"></a>
-    <a href="https://huggingface.co/datasets/paras9909/phishvision-zero-day-phishing-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Threat_Corpus-critical?style=for-the-badge&logo=huggingface&logoColor=white" alt="PhishVision Threat Corpus"></a>
-    <a href="https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Kaggle-150_Template_Corpus-informational?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle Web Corpus"></a>
-    <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py?style=for-the-badge&color=blue&logo=pypi&logoColor=white" alt="PyPI opticparse-py"></a>
-    <a href="https://pypi.org/project/langchain-opticparse/"><img src="https://img.shields.io/pypi/v/langchain-opticparse/1.0.2?style=for-the-badge&color=green&logo=pypi&logoColor=white" alt="PyPI langchain-opticparse"></a>
-    <a href="https://pypi.org/project/llama-index-tools-opticparse/"><img src="https://img.shields.io/pypi/v/llama-index-tools-opticparse?style=for-the-badge&color=purple&logo=pypi&logoColor=white" alt="PyPI llama-index-tools-opticparse"></a>
-    <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
-    <a href="https://www.npmjs.com/package/opticparse-agentkit-action"><img src="https://img.shields.io/npm/v/opticparse-agentkit-action?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm AgentKit Action"></a>
-    <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
-    <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Glama_MCP-Indexed-informational?style=for-the-badge" alt="Glama MCP"></a>
-    <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
-    <a href="https://www.postman.com/opticparse"><img src="https://img.shields.io/badge/Postman-Verified_Collections-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Collections"></a>
-    <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
+    <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Website"></a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/actions/workflows/test.yml"><img src="https://img.shields.io/badge/Tests-Passing-brightgreen?style=flat-square&logo=githubactions&logoColor=white" alt="Tests"></a>
+    <a href="https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark"><img src="https://img.shields.io/badge/Kaggle_Audit-100%25_Verified-20BEFF?style=flat-square&logo=kaggle&logoColor=white" alt="Kaggle Benchmark"></a>
+    <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Master_Corpus-yellow?style=flat-square&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
+    <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg?style=flat-square" alt="PyPI version"></a>
+    <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public/badges/score.svg" alt="Glama MCP Server"></a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT"></a>
   </p>
   <p>
-    <a href="https://github.com/sponsors/parastejpal987-cmyk"><img src="https://img.shields.io/badge/Sponsor_Web3-0xd458...DD27-ff69b4?style=flat&logo=ethereum&logoColor=white" alt="Web3 Sponsor"></a>
-    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
-    <a href="https://opticparse.com/.well-known/agent.json"><img src="https://img.shields.io/badge/A2A_Protocol-v1.0_Compliant-00e5ff?style=flat" alt="A2A Protocol"></a>
-    <img src="https://img.shields.io/badge/Trial_Allowance-200_Free_Requests-brightgreen" alt="Free Trial">
-    <img src="https://img.shields.io/badge/Autonomous_x402-$0.01_USDC-purple" alt="x402 Paywall">
-    <img src="https://img.shields.io/badge/Daily_Velocity-%2B1%2C250_Records%2F24h-blueviolet" alt="Velocity">
-    <img src="https://img.shields.io/badge/MCP_Protocol-2024--11--05-orange" alt="MCP Protocol">
+    <a href="https://opticparse.com/api-docs.html"><b>📖 Live API Docs</b></a> •
+    <a href="https://opticparse.com/threat-db/"><b>🛡️ Threat Intelligence DB</b></a> •
+    <a href="TEMPLATES.md"><b>📚 150 Extraction Templates</b></a> •
+    <a href="INSIGHTS.md"><b>📊 Live Insights</b></a> •
+    <a href="https://rapidapi.com/studio/"><b>⚡ RapidAPI Hub</b></a>
   </p>
 </div>
 
@@ -44,267 +30,85 @@
 
 ---
 
-## ⚡ Feature & Architecture Comparison
+## ⚡ What is OpticParse?
 
-Looking for a **Firecrawl alternative**, **Crawl4AI alternative**, or a **Zero-Day Phishing & Visual Shield** for your autonomous AI agents? Here is how OpticParse + PhishVision compares to traditional scraping engines and legacy security blacklists:
+**OpticParse** is a multimodal AI scraping, visual extraction, and security threat detection suite engineered for modern developers and autonomous AI agents. Unlike legacy scrapers that rely on fragile CSS selectors or break on Cloudflare Turnstile, OpticParse uses **Computer Vision heuristics, headless Playwright rendering, and multi-model routing** to extract clean, structured JSON from any webpage on Earth.
 
-| Feature / Capability | OpticParse & PhishVision | Firecrawl | Crawl4AI | Jina Reader | Google Safe Browsing / VirusTotal |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Primary Extraction Engine** | **Multimodal AI Vision (Zero-CSS)** | HTML / Markdown | DOM Tree / XPath | Regex / Markdown | N/A (Security Only) |
-| **Visual Prompt Injection Shield (`ToxicCanvas`)** | 🛡️ **Built-in (Zero-Opacity & CSS Sanitization)** | ❌ None (Vulnerable) | ❌ None (Vulnerable) | ❌ None | N/A |
-| **0-Day Phishing & Wallet Drainer Shield** | 🛡️ **Built-in (Instant Day 0)** | ❌ None | ❌ None | ❌ None | ⚠️ Historical Blacklist (12-48h delay) |
-| **Machine Discovery Standard (A2A)** | ✅ **Native `agent.json` & `agent-service.json`** | ❌ None | ❌ None | ❌ None | ❌ None |
-| **In-IDE Developer Free Trial** | ✅ **200 Requests Out-of-the-Box** | ❌ Mandatory Credit Card | ❌ Self-hosted Setup | ⚠️ Limited Free Tier | ⚠️ Strict Rate Limits |
-| **In-Terminal Instant Checkout** | ✅ **ASCII QR in Console + .env Save**| ❌ Web Portal Only | ❌ None | ❌ Web Portal Only | ❌ Enterprise Contract |
-| **Agent Ecosystem Toolkits** | **LangChain, ElizaOS, AgentKit, MCP** | LangChain, LlamaIndex | Generic Python | Generic HTTP | None (Raw API) |
-| **Payment & Settlement Flexibility** | **USDC (Base/Polygon) / $0.01 M2M** | Stripe ($16+/mo SaaS) | None (Open Source) | Stripe ($$$) | Enterprise ($$$) |
-| **Token Optimization Noise Reduction** | **96% Token Reduction** | ~80% | ~70% | ~85% | N/A |
-
----
-
-
-## 📌 Why This Stack Exists: The Dual-Engine Agent Architecture
- 
-Giving an autonomous AI agent unrestricted internet access introduces three critical vulnerabilities:
-1. **Context Window & DOM Fragility (OpticParse solves this):** Raw HTML consumes 90%+ of LLM token context, while rigid CSS/XPath selectors break the moment websites change frontend frameworks.
-2. **Visual Prompt Injection & Screen Poisoning ([ToxicCanvas](https://opticparse.com/toxic-canvas.html) solves this):** Adversarial sites embed invisible CSS, zero-opacity layers, and prompt injection strings to hijack multimodal vision models (Claude Computer Use, GPT-4o, Operator). ToxicCanvas sanitizes DOM tokens before ingestion.
-3. **The Autonomous Link Trap (PhishVision solves this):** When agents follow links autonomously, malicious actors exploit them with zero-day credential harvesting kits, fake Web3 dApps, and wallet drainers.
-
-**OpticParse + PhishVision provides the complete solution:**
-- **The Shield (PhishVision + ToxicCanvas):** Inspects target URLs in real-time for SSL age, brand spoofing, and visual injection attacks *before* the agent executes navigation.
-- **The Engine (OpticParse):** Visually renders authenticated pages at the edge, converting dynamic JavaScript into token-optimized clean Markdown (96% noise reduction) without brittle CSS selectors.
-- **Embodied AI & Edge Hardware Compatible:** Lightweight token streams structured for low-power edge processors (NVIDIA Jetson, embedded robotics telemetry) that cannot waste local battery and GPU cycles running headless browsers ([Learn more](https://opticparse.com/embodied-ai.html)).
-
-Operating **150 autonomous extraction & threat pipelines** across **13 industries**, the network auto-harvests **1,250+ verified intelligence records every 24 hours** at the global edge on Cloudflare Workers, R2, and D1.
-
----
-
-## 🏛️ Autonomous Agent Dual-Shield Workflow
+This repository contains the open-source client SDKs, Model Context Protocol (MCP) server, Chrome extensions, and developer tooling.
 
 ```
-       ┌─────────────────────────────────────────────────────────────┐
-       │             Autonomous AI Agent (LangChain / LlamaIndex)     │
-       └──────────────────────────────┬──────────────────────────────┘
-                                      │ Target URL
-                                      ▼
-                      ┌──────────────────────────────┐
-                      │ PhishVision Security Shield  │
-                      │  - Heuristic Brand Distance  │
-                      │  - Zero-Day Phishing Kits    │
-                      │  - Web3 Drainer Signatures   │
-                      └──────────────┬───────────────┘
-                                     │
-                    ┌────────────────┴────────────────┐
-                    │ Verdict                         │
-             [ MALICIOUS ]                       [ SAFE ]
-                    │                                 │
-                    ▼                                 ▼
-      ┌───────────────────────────┐     ┌───────────────────────────┐
-      │  Halt & Shield Agent Loop │     │ OpticParse Edge Extractor │
-      │  (Protect API & Wallet)   │     │  - Zero-CSS Visual Parse  │
-      └───────────────────────────┘     │  - 96% Token Reduction    │
-                                        └─────────────┬─────────────┘
-                                                      │ Clean Markdown
-                                                      ▼
-                                        ┌───────────────────────────┐
-                                        │  LLM Context Window / RAG │
-                                        └───────────────────────────┘
+                     ┌──────────────────────────────────────────────┐
+                     │           DEVELOPER INTEGRATIONS            │
+                     │  • Python SDK (opticparse-py)                │
+                     │  • MCP Server (Claude, Cursor, Windsurf)     │
+                     │  • RapidAPI 5-Endpoint Gateway               │
+                     │  • PhishVision Chrome Extension              │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │          CLOUDFLARE EDGE GATEWAY             │
+                     │  • Global Anycast (285+ cities)              │
+                     │  • 150 Pre-Built Extraction Templates        │
+                     │  • Sub-second Semantic KV Cache              │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │          VISION & ENGINE CLUSTER             │
+                     │  • Visual Heuristic Phishing Detection       │
+                     │  • Dynamic JS & Anti-Bot Bypass              │
+                     │  • Forensic Threat Report Synthesis          │
+                     └──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🏛️ System Architecture
+## 🚀 4 Ways to Integrate
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    OpticParse System Architecture                │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐       │
-│  │ 150 Scraping  │──▶│ Cloudflare   │──▶│ Cloudflare   │       │
-│  │ Pipelines    │   │ Workers Edge │   │ D1 + R2 Lake │       │
-│  └──────────────┘   └──────────────┘   └──────┬───────┘       │
-│                                                │               │
-│                    ┌───────────────────────────┼───────┐       │
-│                    │        Distribution        │       │       │
-│                    ▼              ▼             ▼       ▼       │
-│            ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌─────┐  │
-│            │ Kaggle   │  │ Hugging  │  │ RapidAPI │  │Ocean│  │
-│            │ Hub      │  │ Face Hub │  │ Gateway  │  │ NFTs│  │
-│            └──────────┘  └──────────┘  └──────────┘  └─────┘  │
-│                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │ Anthropic Model Context Protocol (MCP) Server for Agents │  │
-│  └──────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-```
+Choose the workflow that fits your stack:
 
----
-
-## 🎯 150-Pipeline Industry Coverage Matrix
-
-| Industry Vertical | Active Pipelines | Core Extractions & Capabilities |
-| :--- | :---: | :--- |
-| **🛡️ Cybersecurity & Threat Intel** | **70** | Zero-day phishing kits, typosquats, crypto-drainers, brand impersonation |
-| **🛒 E-Commerce & Retail Arbitrage** | **15** | Amazon undercut alerts, Shopify inventory snipers, price elasticity |
-| **💼 B2B Growth & Lead Signals** | **45** | Executive hiring telemetry, YC startup surge, wage trends, SEC filings |
-| **⚡ Finance, Crypto & DEX Arbitrage**| **20** | Liquidity pool spreads, token mint monitors, funding rate surveillance |
----
-
-## 📊 Verified Adversarial Stress Benchmarks (Live September 2026 Audit)
-
-Both engines were independently benchmarked against live adversarial threats and enterprise-grade anti-bot defenses:
-
-### 1. OpticParse: Zero-CSS Visual Extraction Stress Test
-Tested live on production backend against complex dynamic JavaScript, nested schemas, and anti-bot protected targets:
-
-| Target Page | Challenge Architecture | Result | Latency | Data Extracted |
-| :--- | :--- | :---: | :---: | :--- |
-| **Cloudflare Official Plans** | Enterprise Bot-Shield & obfuscated DOM | **100% PASS** | 42.1s | Extracted complete tiered pricing structure (`Free`, `Pro`, `Business`) |
-| **Stripe Global Pricing** | Heavy React hydration & dynamic cards | **100% PASS** | 38.2s | Extracted standard card processing fees (`2.9% + $0.30`) |
-| **Hacker News Frontpage** | Real-time community feed & score metadata | **100% PASS** | 42.7s | Extracted top 5 stories with real ranks and point totals |
-| **GitHub Trending Hub** | Nested repository schemas & live star counts | **100% PASS** | 32.3s | Extracted trending repositories (`skills`, `ponytail`) with exact stars |
-
-* **Zero-CSS Extraction Accuracy:** **4 / 4 (100.0% Success Rate)**
-* **DOM Fragility:** Zero broken CSS/XPath selectors; resilient to class renaming and layout refactors.
-
-> 💡 **Understanding the ~35s Latency: Why Multimodal Vision Beats Brittle 2-Second Scrapers**  
-> * Traditional scrapers finish in 2 seconds because they only regex raw HTML text. The moment a site deploys dynamic React hydration, anti-bot protection, or changes CSS class names, **traditional scrapers break and return empty data or 403 Forbidden errors**.  
-> * **OpticParse prioritizes zero-failure autonomous agent execution:** It spins up a full headless Chromium browser, bypasses anti-bot layers, captures a high-resolution visual buffer, and has a Multimodal Vision LLM reason over the page like a human.  
-> * **Result:** 100% schema accuracy with **zero broken CSS selectors**, guaranteed for autonomous background agents where data integrity matters more than raw millisecond speed.
-
----
-
-### 2. PhishVision: 0-Day Adversarial Threat & Crypto Drainer Audit
-Audited against **50 live zero-day malicious URLs** from the **OpenPhish global threat feed** (created within hours of test) + **20 difficult authentic authentication portals**:
-
-| Security Benchmark Metric | PhishVision Score | Traditional Baseline (Google Safe Browsing / VirusTotal on Day 0) |
-| :--- | :---: | :---: |
-| **0-Day Threat Catch Rate** | **68.0% (34 / 50)** | **~10% – 15%** (Fails because new domains lack historical reports) |
-| **Authentic Auth Portals (Clean)** | **95.0% (19 / 20)** | **>90%** (Industry standard for benign enterprise login portals) |
-| **Median Execution Latency** | **1.58 seconds** | **5 – 15 seconds** (Heavy commercial sandbox scanners) |
-
-#### Verified Live Threats Neutralized On First Contact:
-* 🛡️ **Uniswap Wallet Drainer:** `uniswap-interface.vercel.app` (BLOCKED)
-* 🛡️ **Trezor Hardware Seed Stealer:** `sso-trezor-com-start-x-auth.typedream.app` (BLOCKED)
-* 🛡️ **TrustWallet Crypto Harvester:** `trust-wallet-liart.vercel.app` (BLOCKED)
-* 🛡️ **Compromised WordPress Injections:** `bruceleephilosophy.com/texts/` (BLOCKED)
-* 🛡️ **Apple Brand Impersonator:** `apple-fruit.xyz` (BLOCKED)
-
-#### Verified Authentic Portals Cleared as Safe:
-* `accounts.google.com` &bull; `github.com/login` &bull; `dashboard.stripe.com/login` &bull; `appleid.apple.com` &bull; `reddit.com/login` &bull; `auth.openai.com` (All CLEARED with zero false alarm interruptions).
-
----
-
-## 🐍 Python & LangChain Quickstart (PyPI)
-
-Install the official Python SDK or LangChain multi-agent toolkit:
-
+### 1. 🐍 Python SDK (`opticparse-py`)
+Install the official Python client:
 ```bash
-# Core Python SDK (OpticParse AI Scraper + PhishVision)
 pip install opticparse-py
-
-# LangChain & CrewAI Tool Integration
-pip install langchain-opticparse
-
-# LlamaIndex Tool Integration
-pip install llama-index-tools-opticparse
 ```
 
-### LangChain Dual-Shield Agent Usage:
-```python
-from langchain_opticparse import OpticParseTool, PhishVisionTool
-
-# Initialize tools
-phish_shield = PhishVisionTool(api_key="your_api_key")
-optic_scraper = OpticParseTool(api_key="your_api_key")
-
-target_url = "https://example.com/pricing"
-
-# 1. Pre-flight security audit: Block phishing kits & wallet drainers
-threat_audit = phish_shield.run({"url": target_url})
-if threat_audit.get("verdict") == "MALICIOUS":
-    print(f"🚨 Security Alert: Agent halted. Threat detected (Score: {threat_audit['threat_score']}/100)")
-else:
-    # 2. Extract clean visual Markdown without brittle CSS selectors
-    clean_data = optic_scraper.run({
-        "url": target_url, 
-        "query": "Extract tier prices, plan limits, and feature comparisons"
-    })
-    print(clean_data)
-```
-
-> ⚡ **200 Free Trial Extractions & In-IDE Activation:**  
-> Every IP receives **200 free trial requests** out of the box. When your free trial completes, the terminal automatically prints an ASCII QR code + 1-click checkout link. Upon paying on-chain ($10 Starter / $50 Growth / $200 Scale / $0.05 M2M via MetaMask or mobile wallet), your live API key is automatically minted, saved directly to your local `.env`, and your code resumes execution seamlessly.
-
-
-### LlamaIndex Usage:
-```python
-from llama_index.tools.opticparse import OpticParseToolSpec
-from llama_index.core.agent import FunctionCallingAgentWorker
-
-# Initialize tool spec and extract documents
-tool_spec = OpticParseToolSpec(api_key="your_api_key")
-docs = tool_spec.extract(url="https://example.com", query="Extract specs")
-print(docs[0].text)
-
-# Convert directly to agent tool list
-tools = tool_spec.to_tool_list()
-```
-
-### Python Agent Usage:
 ```python
 from opticparse import OpticParse
 
-client = OpticParse(api_key="YOUR_API_KEY")
+# Initialize with your API key
+client = OpticParse(api_key="your_api_key_here")
 
-# 1. Clean Markdown Extraction for LLM RAG pipelines
-res = client.extract_markdown("https://news.ycombinator.com")
-print(res["markdown"])
+# 1. Vision Scrape: Extract structured data from any webpage
+data = client.scrape(
+    target_url="https://news.ycombinator.com",
+    extraction_query="Extract top 5 stories with title, url, points, and author as JSON"
+)
+print(data)
 
-# 2. Autonomous Zero-Day Threat Inspection
-safety = client.detect_phishing("https://suspicious-dapp-claim.xyz")
-print(f"Verdict: {safety['verdict']} | Threat Score: {safety['threat_score']}/100")
+# 2. Template Scrape: Use any of our 150 pre-built enterprise templates
+products = client.scrape_with_template(
+    target_url="https://amazon.com/dp/B08N5WRWNW",
+    template_id="amazon-price-undercut-alert"
+)
+
+# 3. PhishVision: Analyze URL for zero-day phishing, brand spoofing & malware
+threat = client.detect_phishing("https://suspect-banking-login.com")
+print(f"Verdict: {threat['verdict']} | Score: {threat['score']}/100")
 ```
 
 ---
 
-## 🤖 ElizaOS Autonomous Agent Plugin (npm)
+### 2. 🤖 Model Context Protocol (MCP for AI Agents)
+Connect **Claude Desktop**, **Cursor IDE**, **Windsurf**, or any MCP-compatible agent directly to the live web.
 
-Install the official ElizaOS autonomous agent plugin:
-
+#### Install via Smithery:
 ```bash
-npm install opticparse-eliza-plugin
+npx @smithery/cli install parastejpal987/opticparse --client claude
 ```
 
-### ElizaOS Usage:
-```typescript
-import { AgentRuntime } from "@elizaos/core";
-import { opticParsePlugin } from "opticparse-eliza-plugin";
-
-export const webScoutAgent = {
-  name: "WebScoutAgent",
-  plugins: [opticParsePlugin],
-  settings: {
-    secrets: {
-      OPTICPARSE_API_KEY: process.env.OPTICPARSE_API_KEY
-    }
-  }
-};
-```
-
----
-
-## 🤖 Model Context Protocol (MCP) Integration
-
-Connect **Claude Desktop, Cursor IDE, or AutoGen** directly to OpticParse in 1 click:
-
-### 1. Install via Smithery
-```bash
-npx -y @smithery/cli install @parastejpal987-cmyk/opticparse --client claude
-```
-
-### 2. Manual Configuration (`claude_desktop_config.json`)
+#### Manual Claude Desktop / Cursor Config (`claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
@@ -312,134 +116,180 @@ npx -y @smithery/cli install @parastejpal987-cmyk/opticparse --client claude
       "command": "python",
       "args": ["-m", "mcp_server"],
       "env": {
-        "OPTICPARSE_API_KEY": "YOUR_API_KEY"
+        "OPTICPARSE_API_KEY": "your_api_key_here"
       }
     }
   }
 }
 ```
 
-### 🛠️ Exposed AI Agent Tools:
-* `opticparse_scrape`: Vision-based structured data extraction from any web URL.
-* `phishvision_detect`: Real-time phishing and brand impersonation heuristic scanner.
+**Supported MCP Tools:**
+* `opticparse_scrape`: Autonomous AI vision web scraping and schema enforcement.
+* `phishvision_detect`: Real-time threat, brand impersonation, and JS skimmer analysis.
 * `search_lessons`: Query indexed threat telemetry records.
 
 ---
 
-## 📮 Postman Public API Collections
+### 3. 🌐 REST API & RapidAPI Hub
+For teams preferring REST / OpenAPI integration with unified Pay-As-You-Go billing at `$0.008/request`:
 
-Test the live endpoints instantly in Postman with **200 free trial requests** built-in:
-
-* **OpticParse Visual Web Scraper Collection:** [Run in Postman](https://god.net.objectstorage.softlayer.net/v1/AUTH_084e34cb-d467-422f-87d2-7c3a81283d08/postman-run-button/run-button.svg) — Includes visual extraction, token-optimized RAG markdown parsing, and live system health checks.
-* **PhishVision AI Threat Shield Collection:** Includes 0-day phishing scanning, brand impersonation detection, and permit2 drainer audits in <1.6s.
-* **Offline Import:** Both collections are available directly in this repository under [`postman/`](postman/):
-  - `postman/opticparse_api_collection.json`
-  - `postman/phishvision_api_collection.json`
-
----
-
-## 🛡️ Embed Dynamic Scrapeability & Security Badges
-
-Showcase that your open-source repository, documentation, or SaaS application is scrapeable by autonomous AI agents or verified safe against zero-day phishing:
-
-### 1. OpticParse Scrapeability Badge
-```markdown
-[![Scrapeable with OpticParse](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/scrapeable?score=98)](https://opticparse.com)
-```
-Output:  
-![Scrapeable with OpticParse](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/scrapeable?score=98)
-
-### 2. PhishVision 0-Day Safe Badge
-```markdown
-[![PhishVision 0-Day Safe](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/phishvision?status=safe)](https://opticparse.com)
-```
-Output:  
-![PhishVision 0-Day Safe](https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/phishvision?status=safe)
-
----
-
-## 📦 Master Public Datasets (Hugging Face & Kaggle)
-
-All master datasets are public, verified, and streamable in **Apache Parquet & CSV format**:
-
-| Dataset Name | Records | Format | Direct Access |
-| :--- | :---: | :---: | :--- |
-| **Master 150-Template Catalog** | `150` | `CSV / Parquet` | [Hugging Face](https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus) / [Kaggle](https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus) |
-| **PhishVision Threat Intelligence** | `70` | `CSV / Parquet` | [Hugging Face](https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus) / [Kaggle](https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus) |
-| **E-Commerce & Retail Arbitrage** | `15` | `CSV / Parquet` | [Hugging Face](https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus) / [Kaggle](https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus) |
-| **B2B Growth & Financial Signals** | `45` | `CSV / Parquet` | [Hugging Face](https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus) / [Kaggle](https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus) |
-
-### 💻 Load in Python (1-Line Quickstart):
-```python
-import pandas as pd
-
-# Load master threat intelligence dataset
-df_threat = pd.read_csv("https://opticparse.com/threat_intel_dataset.csv")
-print(f"Loaded {len(df_threat)} live threat vectors")
-print(df_threat.head())
-```
-
----
-
-## ⚡ Commercial RapidAPI Gateway
-
-Pay-As-You-Go developer access with **sub-350ms global edge latency** at `$0.008/request`:
-
-1. **`01-ai-web-scraper`**: Autonomous AI vision web scraper
-2. **`02-dom-poisoner`**: Streaming adversarial anti-scraping tag injector
-3. **`03-edge-proxy`**: Global unblockable fetcher proxy
-4. **`04-rate-limit-bypasser`**: Residential edge IP rotator
-5. **`05-realtime-sentiment`**: Live threat & telemetry database feed
-
-👉 **Target Gateway URL:** `https://opticparse-rapidapi-gateway.parastejpal987.workers.dev`
-
----
-
-## 🦊 Autonomous AI Agent Micropayments (HTTP 402 Machine Paywall)
-
-For autonomous bots, multi-agent frameworks (ElizaOS, AutoGPT, CrewAI), and automated scrapers with no human in the loop, OpticParse supports **instant on-chain settlement**:
-
-* **Price**: `$0.01 USDC` per request
-* **Supported Chains**: **Base**, **Polygon**, **Arbitrum**
-* **Treasury Address**: `0xd458E709e7d54fd3659EF66624A621Cde74EDD27`
-* **Machine Manifest**: [`https://opticparse.com/.well-known/agent.json`](https://opticparse.com/.well-known/agent.json) (Google A2A Standard)
-
-### 🤖 1-Line Autonomous Agent Request:
+* **Live Gateway Base URL:** `https://opticparse-rapidapi-gateway.parastejpal987.workers.dev`
+* **Direct cURL Example:**
 ```bash
-curl -X POST https://opticparse-edge.parastejpal987.workers.dev/api/edge/scrape \
-  -H "X-Payment-TxHash: <YOUR_CONFIRMED_USDC_TX_HASH>" \
+curl -X POST https://opticparse-rapidapi-gateway.parastejpal987.workers.dev/scrape \
   -H "Content-Type: application/json" \
-  -d '{"url": "https://news.ycombinator.com"}'
+  -H "X-API-Key: your_api_key_here" \
+  -d '{
+    "target_url": "https://example.com",
+    "extraction_query": "Extract the main heading, summary paragraph, and all navigation links"
+  }'
 ```
-*No account creation, no credit card, and zero KYC required.* Every verified on-chain transfer is verified cryptographically via global RPC nodes and grants immediate edge execution.
+
+**Available Endpoints:**
+1. `POST /scrape`: Autonomous AI vision scraper
+2. `POST /api/extract/markdown`: Noise-stripped HTML-to-Markdown parser (RAG token-optimized)
+3. `POST /api/agent/interact`: Interactive browser action sequence engine (click, type, scroll)
+4. `WSS /ws/threat-stream`: Real-time 24/7 zero-day WebSocket security stream
+5. `POST /poison`: Streaming adversarial anti-scraping tag injector
+6. `GET /proxy?url=...`: Global unblockable fetcher proxy
+7. `GET /sentiment`: Real-time threat & telemetry database feed
+
+---
+
+### 4. 📄 Clean Markdown & RAG Parser (Token-Optimized)
+AI engineers building LLM chatbots and retrieval pipelines can strip noisy headers, footers, cookie banners, and navigation menus with one API call:
+
+```bash
+curl -X POST https://opticparse-api.onrender.com/api/extract/markdown \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key_here" \
+  -d '{
+    "url": "https://example.com/article",
+    "include_images": false,
+    "include_links": true
+  }'
+```
+
+Returns clean Markdown with token estimation and word count.
+
+---
+
+### 5. 🤖 Interactive "Browser-Use" Agent Actions
+Instruct our Playwright vision engine to click buttons, fill forms, and paginate dynamically before extracting the final result:
+
+```bash
+curl -X POST https://opticparse-api.onrender.com/api/agent/interact \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key_here" \
+  -d '{
+    "target_url": "https://example.com/search",
+    "actions": [
+      {"action": "type", "selector": "#search-bar", "text": "AI research papers"},
+      {"action": "click", "selector": "#submit-btn"},
+      {"action": "wait", "delay_ms": 1000}
+    ],
+    "final_query": "Extract search result titles and authors"
+  }'
+```
+
+---
+
+### 6. ⚡ Live Zero-Day WebSocket Threat Feed
+Subscribe to real-time broadcasts of newly discovered crypto drainers, typosquatting domains, and credential harvesters:
+
+```python
+import asyncio
+import websockets
+import json
+
+async def stream_threats():
+    async with websockets.connect("wss://opticparse-api.onrender.com/ws/threat-stream") as ws:
+        print("Connected to PhishVision Live Sentinel Stream...")
+        while True:
+            alert = await ws.recv()
+            print("Threat Alert:", json.loads(alert))
+
+asyncio.run(stream_threats())
+```
+
+---
+
+### 4. 🧩 Chrome Extensions
+* **PhishVision Sentinel**: Real-time visual threat detector that protects users against zero-day phishing, credential harvesters, and malicious redirects.
+* **BYOB Extractor**: Local DOM & screenshot capture extension for extracting data using your own authenticated session.
+
+---
+
+## 📚 150 Pre-Built Extraction Templates
+
+OpticParse includes **150 production-grade extraction templates** across 13 industries, ready to invoke without writing custom parsers:
+
+| Category | Templates | Sample Templates |
+| :--- | :--- | :--- |
+| 🛒 **E-Commerce & Retail** | 15 | `amazon-price-undercut-alert`, `shopify-new-product-alert`, `flipkart-flash-sale-auto-cart` |
+| 🏢 **Real Estate** | 10 | `zillow-rent-estimate-aggregator`, `airbnb-pricing-spy`, `foreclosure-auction-monitor` |
+| 💼 **B2B & Lead Gen** | 15 | `product-hunt-maker-extractor`, `hiring-signal-aggregator`, `yc-founder-scraper` |
+| 📊 **Finance & Crypto** | 10 | `crypto-exchange-arbitrage`, `dex-liquidity-pool-watcher`, `sec-10k-filing-summarizer` |
+| 🛡️ **PhishVision Threat Intel** | 70 | `typosquatting-auto-assassin`, `zero-day-phishing-kit-extractor`, `ransomware-leak-site-tracker` |
+| 🧑‍💻 **Developer Operations** | 10 | `npm-package-vulnerability-alert`, `cve-zero-day-radar`, `docker-hub-vulnerability-alert` |
+
+👉 **[View the Complete 150-Template Catalog in TEMPLATES.md](TEMPLATES.md)**
+
+---
+
+## 🛡️ PhishVision GitHub Action
+
+Add automated prompt injection and URL threat auditing to your CI/CD workflow:
+
+```yaml
+name: Security Audit Pipeline
+on: [push, pull_request]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PhishVision Audit
+        uses: parastejpal987-cmyk/opticparse-public@main
+        with:
+          target_dir: '.'
+          output_dir: './audits'
+```
+
+---
+
+## 📊 Master Datasets & Verified Benchmark
+
+OpticParse continuously auto-feeds its AI knowledge base with verified multi-industry telemetry (+1,250 records/24 hours). Explore our open datasets and benchmarks:
+
+* 🏆 **Kaggle 100% Verified Benchmark:** [Kaggle Full System Benchmark](https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark)
+* 🤗 **Hugging Face Master Corpus:** [Hugging Face Dataset Hub](https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus) (Apache Parquet streaming supported)
+* 📁 **Live CSV Direct Feeds:**
+  * [Master 150-Template Feed Catalog](https://opticparse.com/opticparse_master_150_template_catalog.csv)
+  * [PhishVision Threat Intelligence Feed](https://opticparse.com/threat_intel_dataset.csv)
+  * [E-Commerce Pricing Feed](https://opticparse.com/opticparse_ecommerce_and_retail.csv)
+  * [B2B Leads & Finance Feed](https://opticparse.com/opticparse_b2b_and_finance.csv)
 
 ---
 
 ## 🛡️ Interactive Threat DB Directory (21 Brands)
 
-Explore live brand safety evaluations and visual impersonation checks:
-* [Google Threat Dossier](https://opticparse.com/threat-db/google.com.html)
-* [PayPal Threat Dossier](https://opticparse.com/threat-db/paypal.com.html)
-* [Binance Threat Dossier](https://opticparse.com/threat-db/binance.com.html)
-* [Coinbase Threat Dossier](https://opticparse.com/threat-db/coinbase.com.html)
-* [Amazon Threat Dossier](https://opticparse.com/threat-db/amazon.com.html)
-* [Full Directory Index](https://opticparse.com/threat-db/)
+Explore real-time visual safety evaluations and impersonation forensics:
+* [Google Threat Dossier](https://opticparse.com/threat-db/google.com.html) • [PayPal Threat Dossier](https://opticparse.com/threat-db/paypal.com.html) • [Binance Threat Dossier](https://opticparse.com/threat-db/binance.com.html) • [Coinbase Threat Dossier](https://opticparse.com/threat-db/coinbase.com.html)
+* 👉 **[Full Threat DB Directory Index](https://opticparse.com/threat-db/)**
 
 ---
 
-## 🔍 Common Search Index & Developer Integrations
+## 🤝 Community & Contributing
 
-OpticParse & PhishVision are natively integrated across the agent and web extraction ecosystem:
-* **Alternative To:** Firecrawl, Crawl4AI, Jina AI Reader, ScrapeGraphAI, Playwright Python, Puppeteer, Google Safe Browsing API, VirusTotal API, URLScan.io.
-* **Autonomous Agent Compatibility:** LangChain (`langchain-opticparse`), LlamaIndex (`llama-index-tools-opticparse`), ElizaOS (`opticparse-eliza-plugin`), Coinbase AgentKit (`opticparse-agentkit-action`), Model Context Protocol (`mcp_server.py`).
-* **Use Cases:** AI Web Scraping, Multimodal LLM Vision RAG, Zero-Day Phishing Detection, Web3 Crypto Drainer Defense, Real-Time SKU & Price Intelligence, Continuous Snappy Parquet Datasets.
+We welcome contributions to SDKs, MCP adapters, and extraction templates!
+* Read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+* Review our [SECURITY.md](SECURITY.md) for responsible disclosure.
+* Track development milestones in [INSIGHTS.md](INSIGHTS.md) and [ROADMAP.md](ROADMAP.md).
 
 ---
 
-## 🤝 Open Source & Licensing
-
-OpticParse developer tools, client SDKs, and MCP servers are proudly released under the **MIT License**.
-
-* **Author:** Paras Tejpal ([@parastejpal](https://github.com/parastejpal987-cmyk))
-* **Official Website:** [https://opticparse.com](https://opticparse.com)
-
+## 📄 License
+This project is open-sourced under the **[MIT License](LICENSE)**.
+OpticParse & PhishVision are trademarks of the OpticParse Project.
