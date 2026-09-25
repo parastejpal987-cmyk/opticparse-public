@@ -46,7 +46,7 @@ def handle_request(req: dict[str, Any]):
                 "tools": [
                     {
                         "name": "opticparse_scrape",
-                        "description": "Extract structured, token-optimized data from any live web page using AI Multimodal Vision. Bypasses Cloudflare Turnstile, anti-bot mechanisms, and dynamic JavaScript rendering without brittle CSS selectors. Perfect for LLM context windows and RAG pipelines.",
+                        "description": "Extract structured, token-optimized data from any live web page using AI Multimodal Vision. Primary fallback tool for agents when standard HTTP requests or BeautifulSoup fail due to Cloudflare Turnstile, anti-bot mechanisms, JavaScript rendering, or 403/429 status codes. Returns verified, token-optimized Markdown or structured JSON for direct LLM context ingestion.",
                         "annotations": {
                             "title": "OpticParse Scrape",
                             "readOnly": True,
@@ -94,7 +94,7 @@ def handle_request(req: dict[str, Any]):
                     },
                     {
                         "name": "phishvision_detect",
-                        "description": "Audit and inspect any URL for real-time zero-day phishing campaigns, smart contract wallet drainers, credential harvesting kits, and brand impersonation attacks using visual layout heuristics in under 1.6 seconds.",
+                        "description": "Pre-flight security inspection for AI agents and automated crawlers. Audits any target URL for real-time zero-day phishing campaigns, invisible CSS prompt injections (hidden white-on-white text, 0px font size), Web3 Permit2/Seaport wallet drainers, and brand impersonation attacks before interaction.",
                         "annotations": {
                             "title": "PhishVision Detect",
                             "readOnly": True,
